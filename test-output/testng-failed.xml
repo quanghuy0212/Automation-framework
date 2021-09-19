@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [DataTable]">
+  <parameter name="url" value="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/"/>
+  <test thread-count="5" name="Run on FIREFOX(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.bankguru.login.Level_01_Register_Login_Base_Page_1">
+      <class name="com.query.datatable.Level_05_Data_Table">
         <methods>
-          <include name="Login_02_Login_To_System"/>
+          <include name="TC_04"/>
           <include name="beforeClass"/>
-          <include name="Login_01_Register_To_System"/>
           <include name="afterClass"/>
         </methods>
-      </class> <!-- com.bankguru.login.Level_01_Register_Login_Base_Page_1 -->
+      </class> <!-- com.query.datatable.Level_05_Data_Table -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Run on FIREFOX(failed) -->
+</suite> <!-- Failed suite [DataTable] -->

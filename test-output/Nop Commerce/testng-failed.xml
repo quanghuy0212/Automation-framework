@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Nop Commerce]">
+  <test thread-count="5" name="Run on FIREFOX(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.nopcommerce.login.Level_04_Dynamic_Locator">
+        <methods>
+          <include name="afterClass"/>
+          <include name="TC_04_Dynamic_Locator"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.nopcommerce.login.Level_04_Dynamic_Locator -->
+    </classes>
+  </test> <!-- Run on FIREFOX(failed) -->
+</suite> <!-- Failed suite [Nop Commerce] -->

@@ -3,7 +3,7 @@ package pageObjects.nopcommerce;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.nopcommerce.LoginPageUI;
+import pageUIs.user.nopcommerce.LoginPageUI;
 
 public class LoginPageObjects extends BasePage{
 	private WebDriver driver;
@@ -23,9 +23,10 @@ public class LoginPageObjects extends BasePage{
 		
 	}
 
-	public void clickToLoginButton() {
+	public HomePageObjects clickToLoginButton() {
 		waitForElementCLickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		return new HomePageObjects(driver);
 	}
 
 }

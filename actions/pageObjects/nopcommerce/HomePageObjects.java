@@ -3,7 +3,7 @@ package pageObjects.nopcommerce;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.nopcommerce.HomePageUI;
+import pageUIs.user.nopcommerce.HomePageUI;
 
 public class HomePageObjects extends BasePage {
 	private WebDriver driver;
@@ -17,16 +17,20 @@ public class HomePageObjects extends BasePage {
 		return isElementDisplayed(driver, HomePageUI.HOMEPAGE_SLIDER);
 	}
 
-	public void clicktoRegisterLink() {
+	public RegisterPageObjects clicktoRegisterLink() {
 		waitForElementCLickable(driver, HomePageUI.REGISTER_lINK);
 		clickToElement(driver, HomePageUI.REGISTER_lINK);
+		return new RegisterPageObjects(driver);
 		
 	}
 
-	public void clickToLoginLink() {
+	public LoginPageObjects clickToLoginLink() {
 		waitForElementCLickable(driver, HomePageUI.LOGIN_LINK);
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
+		return new LoginPageObjects(driver);
 		
 	}
+
+	
 
 }
