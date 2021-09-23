@@ -1,5 +1,6 @@
 package commons;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -15,10 +16,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObject.admin.nopcommerce.PageGeneratorManager;
+import pageObject.admin.nopcommerce.ProductSearchPageObject;
 import pageObjects.nopcommerce.LoginPageObjects;
 import pageObjects.nopcommerce.MyAccountPageObjects;
 import pageObjects.nopcommerce.OrdersPageObjects;
 import pageObjects.nopcommerce.SearchPageObjects;
+import pageUIs.admin.nopcommerce.AdminBasePageUI;
+import pageUIs.admin.nopcommerce.DashBoardPageUI;
 import pageUIs.user.nopcommerce.HomePageUI;
 
 public class BasePage extends BasePageUI {
@@ -122,9 +127,11 @@ public class BasePage extends BasePageUI {
 		getElement(driver, locator).click();
 	}
 	
-	public void clickToElement(WebDriver driver,String locator, String...params ) {
+	public void clickToElement(WebDriver driver, String locator,String... params) {
 		getElement(driver, castDynamicLocator(locator, params)).click();
 	}
+	
+	
 	
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {
 		getElement(driver, locator).clear();
@@ -151,6 +158,10 @@ public class BasePage extends BasePageUI {
 	
 	public WebElement getElement(WebDriver driver, String locator) {
 		return driver.findElement(getByXpath(locator));
+	}
+	
+	public WebElement getElement(WebDriver driver, String locator,String... params) {
+		return driver.findElement(getByXpath(castDynamicLocator(locator, params)));
 	}
 	
 	public List<WebElement> getElements(WebDriver driver, String locator) {
@@ -194,6 +205,10 @@ public class BasePage extends BasePageUI {
 	
 	public String getAttributeValue(WebDriver driver,String locator, String attributeName) {
 		return getElement(driver, locator).getAttribute(attributeName);
+	}
+	
+	public String getAttributeValue(WebDriver driver,String locator, String attributeName,String... params) {
+		return getElement(driver, castDynamicLocator(locator, params)).getAttribute(attributeName);
 	}
 	
 	public String getTextElement(WebDriver driver, String locator) {
@@ -452,11 +467,60 @@ public class BasePage extends BasePageUI {
 		clickToElement(driver, BasePageUI.DYNAMIC_PAGE_FOOTER, pageName);
 	}
 	
+	//Admin Nopcommerce
+	public void uploadMultipleFiles(WebDriver driver,String cardname, String... fileNames) {
+		String filePath=GlobalConstants.UPLOAD_FOLDER_PATH;
+		String fullFileName="";
+		for (String file : fileNames) {
+			fullFileName=fullFileName+filePath + file + "\n";
+		}
+		fullFileName=fullFileName.trim();
+		
+		getElement(driver, AdminBasePageUI.UPLOAD_FILE_BY_CARD_NAME, cardname).sendKeys(fullFileName);
+
+	}
+	
+	public ProductSearchPageObject openSubMenuPageByName(WebDriver driver,String menuName, String subMenuName) {
+		waitForElementVisible(driver, AdminBasePageUI.MENU_PAGE_BY_NAME, menuName);
+		clickToElement(driver, AdminBasePageUI.MENU_PAGE_BY_NAME, menuName);
+		waitForElementVisible(driver, AdminBasePageUI.SUB_MENU_BY_NAME, subMenuName);
+		clickToElement(driver, AdminBasePageUI.SUB_MENU_BY_NAME, subMenuName);
+		return PageGeneratorManager.getSearchProductPage(driver);
+	}
+	
+	public void waitToElementInvisible(WebDriver driver,String locator) {
+		By byLocator=By.xpath(locator);
+		explicitWait=new WebDriverWait(driver,shortTimeout);
+		System.out.println("Start time for wait invisible= " + new Date().toString());
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(byLocator));
+		System.out.println("End time for waith invisible = " + new Date().toString());
+		
+	}
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		System.out.println("Start time=" + new Date().toString());
+		List<WebElement>elements=getElements(driver,locator);
+		if(elements.size()==0) {
+			System.out.println("Element not in DOM");
+			System.out.println("End time=" + new Date().toString());
+			return true;
+		}
+		else if(elements.size()>0 && !elements.get(0).isDisplayed()) {
+			System.out.println("Element in Dom but not visible/displayed");
+			System.out.println("End time=" + new Date().toString());
+			return true;
+		}else {
+			System.out.println("Element in Dom and visible");
+			return false;
+		}
+		
+	}
 	
 	private Alert alert;
 	private Select select;
 	private Actions action;
 	private long timeout=15;
+	private long shortTimeout=5;
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 }

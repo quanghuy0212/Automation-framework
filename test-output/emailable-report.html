@@ -9,10 +9,39 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">DataTable</th></tr>
-<tr><td><a href="#t0">Run on FIREFOX</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">4,029</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Run on FIREFOX</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">34,336</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">DataTable</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on FIREFOX &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.admin.nopcommerce.Level_06_UploadFiles</td><td><a href="#m0">TC_04</a></td><td rowspan="1">1632057993695</td><td rowspan="1">3</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">DataTable</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on FIREFOX &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.admin.nopcommerce.Level_06_UploadFiles</td><td><a href="#m0">Login_01_Upload_File</a></td><td rowspan="1">1632243962523</td><td rowspan="1">15978</td></tr></tbody>
 </table>
-<h2>Run on FIREFOX</h2><h3 id="m0">com.admin.nopcommerce.Level_06_UploadFiles#TC_04</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Run on FIREFOX</h2><h3 id="m0">com.admin.nopcommerce.Level_06_UploadFiles#Login_01_Upload_File</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.BasePage.waitForElementVisible(BasePage.java:396)
+	at pageObject.admin.nopcommerce.ProductDetailsPageObject.isPictureUploadedSuccessByFileName(ProductDetailsPageObject.java:29)
+	at com.admin.nopcommerce.Level_06_UploadFiles.Login_01_Upload_File(Level_06_UploadFiles.java:59)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=93.0.4577.82)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61309}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9156815fa3686de5904e2a59af86e32b
+*** Element info: {Using=xpath, value=//a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

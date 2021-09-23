@@ -6,5 +6,7 @@ public class ProductSearchPageUI {
 	public static final String EDIT_BUTTON_BY_PRODUCT_NAME="//td[text()='%s']/following-sibling::td/a";
 	public static final String SUCCESS_MESSAGE_NAME="//div[contains(@class,'alert-success') and contains(string(),'%s')]";
 	public static final String PRODUCT_IMAGE_BY_PRODUCT_NAME="//td[text()='%s']/preceding-sibling::td/img[contains(@src,'%s')]";
-	public static final String DELETE_BUTTON_BY_TITLE="//td[ text()='%s']/following-sibling::td/a[contains(string(),'%s')]";
+	
+	
+	
 }

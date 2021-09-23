@@ -24,46 +24,53 @@ public class Level_06_UploadFiles extends BaseTest {
 	WebDriver driver;
 	String emailaddress,password;
 	String projectLocation=System.getProperty("user.dir");
+	String productAvatarAlt="Alt";
+	String productAvatarTitle="Title";
+	String productAvatarDisplayOrder="1";
+	String productAvatarImg="macbook air.jpg";
+	String productName="Apple MacBook Pro 13-inch";
 	
 	@Parameters({"browser","url"})
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
 		
 		driver=getBrowserDriver(browserName,appUrl);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		loginPage=PageGeneratorManager.getLoginPage(driver);
 		
-		loginPage.inputToEmailTextBox("");
-		loginPage.inputToPasswordTextBox("");
-		dashboardPage=loginPage.clickToLoginButton("");
-		searchProductPage=dashboardPage.openSubMenuPageByName("Catalog","Products");
-		searchProductPage.inputToProductNameTextbox("Apple MacBook Pro 13-inch");
+		loginPage.inputToEmailTextBox("admin@yourstore.com");
+		loginPage.inputToPasswordTextBox("admin");
+		dashboardPage=loginPage.clickToLoginButton();
+		dashboardPage.openSubMenuPageByName(driver,"Catalog","Products");
+		searchProductPage=PageGeneratorManager.getSearchProductPage(driver);
+		searchProductPage.inputToProductNameTextbox(productName);
 		searchProductPage.clickToSearchButton();
-		productDetailsPage= searchProductPage.clickToEditButtonByProductName("");
+		productDetailsPage= searchProductPage.clickToEditButtonByProductName(productName);
 		
 		
 	}
 
-	
+	@Test
 	public void Login_01_Upload_File() {
 		productDetailsPage.clickToExpandPanelByName("Pictures");
-		productDetailsPage.uploadPictureByFileName("");
-		productDetailsPage.isPictureUploadedSuccessByFileName();
-		productDetailsPage.enterToAltTextbox("23");
-		productDetailsPage.enterToTitleTextbox("34");
-		productDetailsPage.enterToDisplayOrderTextbox("");
+		productDetailsPage.uploadMultipleFiles(driver, "pictures", productAvatarImg);
+		Assert.assertTrue(productDetailsPage.isPictureUploadedSuccessByFileName(productName));
+		productDetailsPage.enterToAltTextbox(productAvatarAlt);
+		productDetailsPage.enterToTitleTextbox(productAvatarTitle);
+		productDetailsPage.enterToDisplayOrderTextbox(productAvatarTitle);
 		productDetailsPage.clickToAddProductPictureButton();
-		Assert.assertTrue(productDetailsPage.isPictureImageDisplayed("","","",""));
+		Assert.assertTrue(productDetailsPage.isPictureImageDisplayed(productName,productAvatarDisplayOrder,productAvatarAlt,productAvatarTitle));
 		searchProductPage=productDetailsPage.clickToSaveButton();
 		Assert.assertTrue(searchProductPage.isSuccessMessageDisplayed("The product has been updated successfully."));
 		searchProductPage.inputToProductNameTextbox("Apple MacBook Pro 13-inch");
 		searchProductPage.clickToSearchButton();
-		Assert.assertTrue(searchProductPage.isPictureImageUploaded("macbook air","Apple MacBook Pro 13-inch"));
-		productDetailsPage=searchProductPage.clickToEditButtonByProductName("Apple MacBook Pro 13-inch");
+		Assert.assertTrue(searchProductPage.isPictureImageUploaded(productName,productName));
+		productDetailsPage=searchProductPage.clickToEditButtonByProductName(productName);
 		productDetailsPage.clickToExpandPanelByName("Pictures");	
-		productDetailsPage.clickToDeleteButtonAtPictureName("macbook air"); // Accept Alert
-		Assert.assertTrue(productDetailsPage.isMessageDisplayedInTable("No data available in table"));
+		productDetailsPage.clickToDeleteButtonAtPictureName(productAvatarTitle); // Accept Alert
+		//Assert.assertTrue(productDetailsPage.isMessageDisplayedInTable("No data available in table"));
 		searchProductPage=productDetailsPage.clickToSaveButton();
 		searchProductPage.inputProductNameTextBox("");
 		searchProductPage.clickToSearchButton();
@@ -72,12 +79,8 @@ public class Level_06_UploadFiles extends BaseTest {
 	
 	
 	
-	@Test
-	public void TC_04() {
-		
-			
-		
-	}
+	
+	
 	
 	
 	@AfterClass
