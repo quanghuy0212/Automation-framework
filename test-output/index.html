@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-DataTable" class="navigator-link">
-              <span class="suite-name border-failed">DataTable</span>
+            <a href="#" panel-name="suite-UploadFile" class="navigator-link">
+              <span class="suite-name border-failed">UploadFile</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-DataTable" class="navigator-link ">
+                  <a href="#" panel-name="test-xml-UploadFile" class="navigator-link ">
                     <span>C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru\resources\runAdminNopcommerceTestCase.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-DataTable" class="navigator-link ">
+                  <a href="#" panel-name="testlist-UploadFile" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-DataTable" class="navigator-link ">
+                  <a href="#" panel-name="group-UploadFile" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-DataTable" class="navigator-link ">
+                  <a href="#" panel-name="times-UploadFile" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-DataTable" class="navigator-link ">
+                  <a href="#" panel-name="reporter-UploadFile" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-DataTable" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-UploadFile" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-DataTable" class="navigator-link ">
+                  <a href="#" panel-name="chronological-UploadFile" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -96,16 +96,16 @@
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-DataTable" class="hide-methods failed suite-DataTable"> (hide)</a> <!-- hide-methods failed suite-DataTable -->
-                      <a href="#" panel-name="suite-DataTable" class="show-methods failed suite-DataTable"> (show)</a> <!-- show-methods failed suite-DataTable -->
+                      <a href="#" panel-name="suite-UploadFile" class="hide-methods failed suite-UploadFile"> (hide)</a> <!-- hide-methods failed suite-UploadFile -->
+                      <a href="#" panel-name="suite-UploadFile" class="show-methods failed suite-UploadFile"> (show)</a> <!-- show-methods failed suite-UploadFile -->
                     </span>
-                    <div class="method-list-content failed suite-DataTable">
+                    <div class="method-list-content failed suite-UploadFile">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-DataTable" title="com.admin.nopcommerce.Level_06_UploadFiles" class="method navigator-link" hash-for-method="Login_01_Upload_File">Login_01_Upload_File</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-UploadFile" title="com.admin.nopcommerce.Level_06_UploadFiles" class="method navigator-link" hash-for-method="Login_01_Upload_File">Login_01_Upload_File</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-DataTable -->
+                    </div> <!-- method-list-content failed suite-UploadFile -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,8 +116,8 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-DataTable" class="panel DataTable">
-          <div class="suite-DataTable-class-failed">
+        <div panel-name="suite-UploadFile" class="panel UploadFile">
+          <div class="suite-UploadFile-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
               <span class="class-name">com.admin.nopcommerce.Level_06_UploadFiles</span>
@@ -131,17 +131,16 @@
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;] (tried for 15 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:396)
+	at commons.BasePage.waitForElementVisible(BasePage.java:397)
 	at pageObject.admin.nopcommerce.ProductDetailsPageObject.isPictureUploadedSuccessByFileName(ProductDetailsPageObject.java:29)
-	at com.admin.nopcommerce.Level_06_UploadFiles.Login_01_Upload_File(Level_06_UploadFiles.java:59)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=93.0.4577.82)
+	at com.admin.nopcommerce.Level_06_UploadFiles.Login_01_Upload_File(Level_06_UploadFiles.java:62)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61309}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9156815fa3686de5904e2a59af86e32b
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 5368, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d71c283-3fb1-40e5-a9d1-83bd92544f91
 *** Element info: {Using=xpath, value=//a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -162,9 +161,9 @@ Session ID: 9156815fa3686de5904e2a59af86e32b
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-DataTable-class-failed -->
-        </div> <!-- panel DataTable -->
-        <div panel-name="test-xml-DataTable" class="panel">
+          </div> <!-- suite-UploadFile-class-failed -->
+        </div> <!-- panel UploadFile -->
+        <div panel-name="test-xml-UploadFile" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru\resources\runAdminNopcommerceTestCase.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -172,21 +171,25 @@ Session ID: 9156815fa3686de5904e2a59af86e32b
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;DataTable&quot;&gt;
+&lt;suite name=&quot;UploadFile&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Run on FIREFOX&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.admin.nopcommerce.Level_06_UploadFiles&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Run on FIREFOX --&gt;
-&lt;/suite&gt; &lt;!-- DataTable --&gt;
+&lt;/suite&gt; &lt;!-- UploadFile --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-DataTable" class="panel">
+        <div panel-name="testlist-UploadFile" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for DataTable</span>
+            <span class="header-content">Tests for UploadFile</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
@@ -196,22 +199,22 @@ Session ID: 9156815fa3686de5904e2a59af86e32b
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-DataTable" class="panel">
+        <div panel-name="group-UploadFile" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for DataTable</span>
+            <span class="header-content">Groups for UploadFile</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-DataTable" class="panel">
+        <div panel-name="times-UploadFile" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for DataTable</span>
+            <span class="header-content">Times for UploadFile</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_DataTable');
-function tableData_DataTable() {
+suiteTableInitFunctions.push('tableData_UploadFile');
+function tableData_UploadFile() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -221,32 +224,39 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Login_01_Upload_File')
 data.setCell(0, 2, 'com.admin.nopcommerce.Level_06_UploadFiles')
-data.setCell(0, 3, 15978);
-window.suiteTableData['DataTable']= { tableData: data, tableDiv: 'times-div-DataTable'}
+data.setCell(0, 3, 31267);
+window.suiteTableData['UploadFile']= { tableData: data, tableDiv: 'times-div-UploadFile'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
-              <div id="times-div-DataTable">
-              </div> <!-- times-div-DataTable -->
+              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <div id="times-div-UploadFile">
+              </div> <!-- times-div-UploadFile -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-DataTable" class="panel">
+        <div panel-name="reporter-UploadFile" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for DataTable</span>
+            <span class="header-content">Reporter output for UploadFile</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Login_01_Upload_File</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">[INFO ] [2021-09-25 15:59:49,565] TC_01: Upload Files
+</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-DataTable" class="panel">
+        <div panel-name="ignored-methods-UploadFile" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-DataTable" class="panel">
+        <div panel-name="chronological-UploadFile" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -254,18 +264,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.admin.nopcommerce.Level_06_UploadFiles</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(chrome, https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F)</span>
+                <span class="method-name">beforeClass(firefox, https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Login_01_Upload_File</span>
-                <span class="method-start">18246 ms</span>
+                <span class="method-start">14482 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">34236 ms</span>
+                <span class="method-start">45756 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -33,15 +33,17 @@ public class Level_06_UploadFiles extends BaseTest {
 	@Parameters({"browser","url"})
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
-		
+		log.info("Pre-condition - Step 01: " + driver);
 		driver=getBrowserDriver(browserName,appUrl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		loginPage=PageGeneratorManager.getLoginPage(driver);
-		
+		log.info("Input Email To Textbox");
 		loginPage.inputToEmailTextBox("admin@yourstore.com");
+		log.info("Input Password To Textbox");
 		loginPage.inputToPasswordTextBox("admin");
+		log.info("Click loggin button");
 		dashboardPage=loginPage.clickToLoginButton();
 		dashboardPage.openSubMenuPageByName(driver,"Catalog","Products");
 		searchProductPage=PageGeneratorManager.getSearchProductPage(driver);
@@ -54,6 +56,7 @@ public class Level_06_UploadFiles extends BaseTest {
 
 	@Test
 	public void Login_01_Upload_File() {
+		log.info("TC_01: Upload Files");
 		productDetailsPage.clickToExpandPanelByName("Pictures");
 		productDetailsPage.uploadMultipleFiles(driver, "pictures", productAvatarImg);
 		Assert.assertTrue(productDetailsPage.isPictureUploadedSuccessByFileName(productName));
