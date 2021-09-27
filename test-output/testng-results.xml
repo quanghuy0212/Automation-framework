@@ -1,76 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[[INFO ] [2021-09-25 15:59:35,088] Pre-condition - Step 01: null
-]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-09-25 15:59:39,831] Input Email To Textbox
-]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-09-25 15:59:39,924] Input Password To Textbox
-]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-09-25 15:59:39,992] Click loggin button
-]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-09-25 15:59:49,565] TC_01: Upload Files
-]]>
+      <![CDATA[<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png" height='100' width='150'/> </a></br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-09-25T08:59:35Z" name="UploadFile" finished-at="2021-09-25T09:00:22Z" duration-ms="47203">
+  <suite started-at="2021-09-27T17:51:38Z" name="UploadFile" finished-at="2021-09-27T17:51:46Z" duration-ms="7960">
     <groups>
     </groups>
-    <test started-at="2021-09-25T08:59:35Z" name="Run on FIREFOX" finished-at="2021-09-25T09:00:22Z" duration-ms="47203">
-      <class name="com.admin.nopcommerce.Level_06_UploadFiles">
-        <test-method is-config="true" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.admin.nopcommerce.Level_06_UploadFiles@25df00a0]" started-at="2021-09-25T08:59:35Z" name="beforeClass" finished-at="2021-09-25T08:59:49Z" duration-ms="14477" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2021-09-27T17:51:38Z" name="Run on FIREFOX" finished-at="2021-09-27T17:51:46Z" duration-ms="7960">
+      <class name="takeScreenShot.screenshotTestFailed">
+        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:takeScreenShot.screenshotTestFailed@821330f]" started-at="2021-09-27T17:51:38Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2021-09-27T17:51:38Z" duration-ms="8" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[[INFO ] [2021-09-25 15:59:35,088] Pre-condition - Step 01: null
-]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-09-25 15:59:39,831] Input Email To Textbox
-]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-09-25 15:59:39,924] Input Password To Textbox
-]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-09-25 15:59:39,992] Click loggin button
-]]>
-            </line>
+          </reporter-output>
+        </test-method> <!-- deleteAllFilesInReportNGScreenshot -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:takeScreenShot.screenshotTestFailed@821330f]" started-at="2021-09-27T17:51:38Z" name="beforeClass" finished-at="2021-09-27T17:51:45Z" duration-ms="6958" status="PASS">
+          <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Login_01_Upload_File()[pri:0, instance:com.admin.nopcommerce.Level_06_UploadFiles@25df00a0]" started-at="2021-09-25T08:59:49Z" name="Login_01_Upload_File" finished-at="2021-09-25T09:00:20Z" duration-ms="31267" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="TC_02()[pri:0, instance:takeScreenShot.screenshotTestFailed@821330f]" started-at="2021-09-27T17:51:45Z" name="TC_02" finished-at="2021-09-27T17:51:45Z" duration-ms="50" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@href,'%s')]/parent::td/following-sibling::td[@data-columnname='DisplayOrder' and text()='%s']/following-sibling::td[@data-columnname='OverrideAltAttribute' and text()='%s']/following-sibling::td[@data-columnname='OverrideTitleAttribute' and text()='%s'] (tried for 15 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[expected [Google] but found [Google có các thứ tiếng: English Français 中文（繁體）]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@href,'%s')]/parent::td/following-sibling::td[@data-columnname='DisplayOrder' and text()='%s']/following-sibling::td[@data-columnname='OverrideAltAttribute' and text()='%s']/following-sibling::td[@data-columnname='OverrideTitleAttribute' and text()='%s'] (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.BasePage.waitForElementVisible(BasePage.java:397)
-at pageObject.admin.nopcommerce.ProductDetailsPageObject.isPictureUploadedSuccessByFileName(ProductDetailsPageObject.java:29)
-at com.admin.nopcommerce.Level_06_UploadFiles.Login_01_Upload_File(Level_06_UploadFiles.java:62)
+              <![CDATA[java.lang.AssertionError: expected [Google] but found [Google có các thứ tiếng: English Français 中文（繁體）]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at takeScreenShot.screenshotTestFailed.TC_02(screenshotTestFailed.java:51)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -96,48 +57,24 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(@href,'%s')]/parent::td/following-sibling::td[@data-columnname='DisplayOrder' and text()='%s']/following-sibling::td[@data-columnname='OverrideAltAttribute' and text()='%s']/following-sibling::td[@data-columnname='OverrideTitleAttribute' and text()='%s']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'ADMIN', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 5368, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5d71c283-3fb1-40e5-a9d1-83bd92544f91
-*** Element info: {Using=xpath, value=//a[contains(@href,'%s')]/parent::td/following-sibling::td[@data-columnname='DisplayOrder' and text()='%s']/following-sibling::td[@data-columnname='OverrideAltAttribute' and text()='%s']/following-sibling::td[@data-columnname='OverrideTitleAttribute' and text()='%s']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 28 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[[INFO ] [2021-09-25 15:59:49,565] TC_01: Upload Files
-]]>
+              <![CDATA[<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png" height='100' width='150'/> </a></br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Login_01_Upload_File -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.admin.nopcommerce.Level_06_UploadFiles@25df00a0]" started-at="2021-09-25T09:00:20Z" name="afterClass" finished-at="2021-09-25T09:00:22Z" duration-ms="1439" status="PASS">
+        </test-method> <!-- TC_02 -->
+        <test-method signature="Tc_01()[pri:0, instance:takeScreenShot.screenshotTestFailed@821330f]" started-at="2021-09-27T17:51:45Z" name="Tc_01" finished-at="2021-09-27T17:51:45Z" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_01 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:takeScreenShot.screenshotTestFailed@821330f]" started-at="2021-09-27T17:51:45Z" name="afterClass" finished-at="2021-09-27T17:51:46Z" duration-ms="699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.admin.nopcommerce.Level_06_UploadFiles -->
+      </class> <!-- takeScreenShot.screenshotTestFailed -->
     </test> <!-- Run on FIREFOX -->
   </suite> <!-- UploadFile -->
 </testng-results>

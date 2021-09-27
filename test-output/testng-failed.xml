@@ -5,17 +5,21 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="commons.MethodListener"/>
+    <listener class-name="reportConfig.ExtentReportListenerV2"/>
+    <listener class-name="reportConfig.ReportNGListener"/>
   </listeners>
   <test thread-count="5" name="Run on FIREFOX(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.admin.nopcommerce.Level_06_UploadFiles">
+      <class name="takeScreenShot.screenshotTestFailed">
         <methods>
-          <include name="Login_01_Upload_File"/>
-          <include name="afterClass"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
           <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="TC_02"/>
         </methods>
-      </class> <!-- com.admin.nopcommerce.Level_06_UploadFiles -->
+      </class> <!-- takeScreenShot.screenshotTestFailed -->
     </classes>
   </test> <!-- Run on FIREFOX(failed) -->
 </suite> <!-- Failed suite [UploadFile] -->

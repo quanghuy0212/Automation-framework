@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run on FIREFOX</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Sep 25 15:59:35 ICT 2021</td>
+<td>Started on:</td><td>Tue Sep 28 00:51:38 ICT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>47 seconds (47203 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7960 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,50 +75,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.admin.nopcommerce.Level_06_UploadFiles.Login_01_Upload_File()'><b>Login_01_Upload_File</b><br>Test class: com.admin.nopcommerce.Level_06_UploadFiles<br/>
-<a href="#Output-1519911160" onClick='toggleBox("Output-1519911160", this, "Show output", "Hide output");'>Show output</a>
+<td title='takeScreenShot.screenshotTestFailed.TC_02()'><b>TC_02</b><br>Test class: takeScreenShot.screenshotTestFailed<br/>
+<a href="#Output-823758059" onClick='toggleBox("Output-823758059", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1519911160" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1519911160">
-[INFO ] [2021-09-25 15:59:49,565] TC_01: Upload Files
-<br/>
+<a href="#Output-823758059" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-823758059">
+<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png" height='100' width='150'/> </a></br><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:397)
-	at pageObject.admin.nopcommerce.ProductDetailsPageObject.isPictureUploadedSuccessByFileName(ProductDetailsPageObject.java:29)
-	at com.admin.nopcommerce.Level_06_UploadFiles.Login_01_Upload_File(Level_06_UploadFiles.java:62)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 5368, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5d71c283-3fb1-40e5-a9d1-83bd92544f91
-*** Element info: {Using=xpath, value=//a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 28 more
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1519911160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1519911160'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:397)
-	at pageObject.admin.nopcommerce.ProductDetailsPageObject.isPictureUploadedSuccessByFileName(ProductDetailsPageObject.java:29)
-	at com.admin.nopcommerce.Level_06_UploadFiles.Login_01_Upload_File(Level_06_UploadFiles.java:62)
+<td><div><pre>java.lang.AssertionError: expected [Google] but found [Google có các th? ti?ng: English Français ??????]
+	at takeScreenShot.screenshotTestFailed.TC_02(screenshotTestFailed.java:51)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace823758059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace823758059'><pre>java.lang.AssertionError: expected [Google] but found [Google có các th? ti?ng: English Français ??????]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at takeScreenShot.screenshotTestFailed.TC_02(screenshotTestFailed.java:51)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -144,36 +119,22 @@ Session ID: 5d71c283-3fb1-40e5-a9d1-83bd92544f91
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 5368, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5d71c283-3fb1-40e5-a9d1-83bd92544f91
-*** Element info: {Using=xpath, value=//a[contains(@href,&apos;%s&apos;)]/parent::td/following-sibling::td[@data-columnname=&apos;DisplayOrder&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideAltAttribute&apos; and text()=&apos;%s&apos;]/following-sibling::td[@data-columnname=&apos;OverrideTitleAttribute&apos; and text()=&apos;%s&apos;]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 28 more
 </pre></div></td>
-<td>31</td>
-<td>com.admin.nopcommerce.Level_06_UploadFiles@25df00a0</td></tr>
+<td>0</td>
+<td>takeScreenShot.screenshotTestFailed@821330f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='takeScreenShot.screenshotTestFailed.Tc_01()'><b>Tc_01</b><br>Test class: takeScreenShot.screenshotTestFailed</td>
+<td></td>
+<td>0</td>
+<td>takeScreenShot.screenshotTestFailed@821330f</td></tr>
 </table><p>
 </body>
 </html>

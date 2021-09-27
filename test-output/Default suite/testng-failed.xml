@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.bankguru.login.Level_01_Register_Login_Base_Page_1">
+      <class name="takeScreenShot.screenshotTestFailed">
         <methods>
-          <include name="Login_02_Login_To_System"/>
           <include name="beforeClass"/>
-          <include name="Login_01_Register_To_System"/>
           <include name="afterClass"/>
+          <include name="TC_02"/>
         </methods>
-      </class> <!-- com.bankguru.login.Level_01_Register_Login_Base_Page_1 -->
+      </class> <!-- takeScreenShot.screenshotTestFailed -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
