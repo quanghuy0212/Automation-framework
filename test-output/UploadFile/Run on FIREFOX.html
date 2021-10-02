@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run on FIREFOX</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Sep 28 00:51:38 ICT 2021</td>
+<td>Started on:</td><td>Sun Oct 03 01:42:35 ICT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7960 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18812 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,60 +68,53 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='takeScreenShot.screenshotTestFailed.TC_02()'><b>TC_02</b><br>Test class: takeScreenShot.screenshotTestFailed<br/>
-<a href="#Output-823758059" onClick='toggleBox("Output-823758059", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-823758059" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-823758059">
-<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_28_09_2021_12_51_45.png" height='100' width='150'/> </a></br><br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: expected [Google] but found [Google có các th? ti?ng: English Français ??????]
-	at takeScreenShot.screenshotTestFailed.TC_02(screenshotTestFailed.java:51)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace823758059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace823758059'><pre>java.lang.AssertionError: expected [Google] but found [Google có các th? ti?ng: English Français ??????]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at takeScreenShot.screenshotTestFailed.TC_02(screenshotTestFailed.java:51)
+<td title='takeScreenShot.screenshotTestFailed_ReportNG.cleanBrowser()'><b>cleanBrowser</b><br>Test class: takeScreenShot.screenshotTestFailed_ReportNG<br>Parameters: firefox</td>
+<td><div><pre>java.lang.IllegalArgumentException: Empty command
+	at java.base/java.lang.Runtime.exec(Runtime.java:408)
+	at java.base/java.lang.Runtime.exec(Runtime.java:311)
+	at commons.BaseTest.closeBrowserAndDriver(BaseTest.java:252)
+	at takeScreenShot.screenshotTestFailed_ReportNG.cleanBrowser(screenshotTestFailed_ReportNG.java:94)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2054785437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2054785437'><pre>java.lang.IllegalArgumentException: Empty command
+	at java.base/java.lang.Runtime.exec(Runtime.java:408)
+	at java.base/java.lang.Runtime.exec(Runtime.java:311)
+	at commons.BaseTest.closeBrowserAndDriver(BaseTest.java:252)
+	at takeScreenShot.screenshotTestFailed_ReportNG.cleanBrowser(screenshotTestFailed_ReportNG.java:94)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
 	at org.testng.TestRunner.run(TestRunner.java:505)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
 <td>0</td>
-<td>takeScreenShot.screenshotTestFailed@821330f</td></tr>
+<td>takeScreenShot.screenshotTestFailed_ReportNG@169bb4dd</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -131,10 +124,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='takeScreenShot.screenshotTestFailed.Tc_01()'><b>Tc_01</b><br>Test class: takeScreenShot.screenshotTestFailed</td>
+<td title='takeScreenShot.screenshotTestFailed_ReportNG.TC_01_Register()'><b>TC_01_Register</b><br>Test class: takeScreenShot.screenshotTestFailed_ReportNG</td>
 <td></td>
-<td>0</td>
-<td>takeScreenShot.screenshotTestFailed@821330f</td></tr>
+<td>4</td>
+<td>takeScreenShot.screenshotTestFailed_ReportNG@169bb4dd</td></tr>
 </table><p>
 </body>
 </html>

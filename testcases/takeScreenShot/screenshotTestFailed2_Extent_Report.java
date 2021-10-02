@@ -21,7 +21,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 @Listeners(TestListener.class)
-public class screenshotTestFailed extends BaseTest{
+public class screenshotTestFailed2_Extent_Report extends BaseTest{
 	
 	WebDriver driver;
 	String screenshotLocation=System.getProperty("user.dir") + "/screenshotReportNG/";

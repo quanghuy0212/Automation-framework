@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE  suite SYSTEM 'http://testng.org/testng-1.0.dtd'>
-<suite parallel="false" name="UploadFile">
+<suite parallel="tests" name="UploadFile" thread-count="2">
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
 
 	<listeners>
-        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-        <listener class-name="commons.MethodListener"/>
-        <listener class-name="reportConfig.ExtentReportListenerV2"/>
-        <listener class-name="reportConfig.ReportNGListener"/>
-</listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.ExtentTestListener" />
+		<listener class-name="reportConfig.ReportNGListener" />
+	</listeners>
 
-	<parameter name="url" value="https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F" />
 
 	<test name="Run on FIREFOX">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="takeScreenShot.screenshotTestFailed" />
+			<class name="takeScreenShot.screenshotTestFailed_ReportNG" />
 		</classes>
 	</test>
 
-	<!-- <test name="Run on CHROME"> <parameter name="browser" value="chrome" 
-		/> <classes> <class name="com.nopcommerce.login.Level_03_Switch_Page_Objects"/> 
-		</classes> </test> <test name="Run on EDGE"> <parameter name="browser" value="edge" 
-		/> <classes> <class name="com.nopcommerce.login.Level_03_Switch_Page_Objects"/> 
-		</classes> </test> -->
+	<!-- <test name="Run on CHROME">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class
+				name="com.nopcommerce.login.Level_03_Switch_Page_Objects" />
+		</classes>
+	</test> -->
+		
+	<test name="Run on EDGE">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class
+				name="takeScreenShot.screenshotTestFailed_ReportNG" />
+		</classes>
+	</test>
 </suite> 

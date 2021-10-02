@@ -35,7 +35,7 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		Object testClass=result.getInstance();
-		driver=((screenshotTestFailed) testClass).getWebDriver();
+		driver=((screenshotTestFailed_ReportNG) testClass).getWebDriver();
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
 		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
 		File DestFile=new File(screenshotLocation + result.getName() + ".png");

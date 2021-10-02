@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on FIREFOX"
+           tests="3"
+           failures="2"
+           errors="0"
+           skipped="0"
+           time="18.844">
+  <properties />
+            <testcase name="cleanBrowser" time="0.001" classname="takeScreenShot.screenshotTestFailed_ReportNG">
+                <failure type="java.lang.IllegalArgumentException"
+                  message="Empty command"
+              >
+<![CDATA[java.lang.IllegalArgumentException: Empty command
+  java.base/java.lang.Runtime.exec(Runtime.java:408)
+  java.base/java.lang.Runtime.exec(Runtime.java:311)
+  commons.BaseTest.closeBrowserAndDriver(BaseTest.java:252)
+  takeScreenShot.screenshotTestFailed_ReportNG.cleanBrowser(screenshotTestFailed_ReportNG.java:94)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:567)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+  org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+  org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+  org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+  java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+  java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+  java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+  java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="TC_02_Login" time="14.897" classname="takeScreenShot.screenshotTestFailed_ReportNG">
+                <failure type="org.openqa.selenium.NoSuchElementException"
+                  message="Unable to locate element: //button[@class=&apos;button-1 login-button.&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 2968, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe6d9f41-52b8-4424-a2d0-f2c8155b7e51
+*** Element info: {Using=xpath, value=//button[@class=&apos;button-1 login-button.&apos;]}"
+              >
+<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //button[@class='button-1 login-button.']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'ADMIN', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 2968, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fe6d9f41-52b8-4424-a2d0-f2c8155b7e51
+*** Element info: {Using=xpath, value=//button[@class='button-1 login-button.']}
+  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+  java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+  takeScreenShot.screenshotTestFailed_ReportNG.TC_02_Login(screenshotTestFailed_ReportNG.java:83)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:567)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+  org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+  org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+  java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+  java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+  java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+  java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+            <testcase name="TC_01_Register" time="3.946" classname="takeScreenShot.screenshotTestFailed_ReportNG" />
+      
+</testsuite>

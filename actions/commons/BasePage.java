@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -60,6 +61,7 @@ public class BasePage extends BasePageUI {
 		driver.navigate().refresh();
 	}
 	
+	
 	public void acceptAlert(WebDriver driver) {
 		alert=waitAlertPersence(driver);
 		alert.accept();
@@ -93,6 +95,16 @@ public class BasePage extends BasePageUI {
 				driver.switchTo().window(windowID);
 				break;
 			}
+		}
+	}
+	
+	public Set<Cookie> getAllCookies(WebDriver driver) {
+		return driver.manage().getCookies();
+	}
+	
+	public void setAllCookies(WebDriver driver,Set<Cookie> allCookies) {
+		for (Cookie cookie : allCookies) {
+			driver.manage().addCookie(cookie);
 		}
 	}
 	

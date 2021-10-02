@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [UploadFile]" guice-stage="DEVELOPMENT">
-  <parameter name="url" value="https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F"/>
+<suite thread-count="2" parallel="tests" name="Failed suite [UploadFile]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://demo.nopcommerce.com/"/>
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     <listener class-name="commons.MethodListener"/>
-    <listener class-name="reportConfig.ExtentReportListenerV2"/>
+    <listener class-name="reportConfig.ExtentTestListener"/>
     <listener class-name="reportConfig.ReportNGListener"/>
   </listeners>
-  <test thread-count="5" name="Run on FIREFOX(failed)">
+  <test thread-count="2" parallel="tests" name="Run on FIREFOX(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="takeScreenShot.screenshotTestFailed">
+      <class name="takeScreenShot.screenshotTestFailed_ReportNG">
         <methods>
           <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="TC_02_Login"/>
           <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="TC_02"/>
+          <include name="cleanBrowser"/>
         </methods>
-      </class> <!-- takeScreenShot.screenshotTestFailed -->
+      </class> <!-- takeScreenShot.screenshotTestFailed_ReportNG -->
     </classes>
   </test> <!-- Run on FIREFOX(failed) -->
 </suite> <!-- Failed suite [UploadFile] -->
