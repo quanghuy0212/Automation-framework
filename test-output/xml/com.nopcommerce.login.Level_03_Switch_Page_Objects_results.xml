@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on EDGE"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="13.859">
+  <properties />
+  
+  
+            <testcase name="Login_01_Register_To_System" time="8.547" classname="com.nopcommerce.login.Level_03_Switch_Page_Objects" />
+                <testcase name="Login_02_Login_To_System" time="2.201" classname="com.nopcommerce.login.Level_03_Switch_Page_Objects" />
+                <testcase name="TC_03_Switch_Page_Objects" time="3.111" classname="com.nopcommerce.login.Level_03_Switch_Page_Objects" />
+      
+</testsuite>
