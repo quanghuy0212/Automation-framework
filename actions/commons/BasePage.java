@@ -21,6 +21,9 @@ import org.testng.Reporter;
 
 import pageObject.admin.nopcommerce.PageGeneratorManager;
 import pageObject.admin.nopcommerce.ProductSearchPageObject;
+import pageObject.hrm.DashboardPO;
+import pageObject.hrm.LoginPO;
+import pageObject.hrm.PageGenerator;
 import pageObjects.nopcommerce.LoginPageObjects;
 import pageObjects.nopcommerce.MyAccountPageObjects;
 import pageObjects.nopcommerce.OrdersPageObjects;
@@ -255,7 +258,7 @@ public class BasePage extends BasePageUI {
 	
 	public void checktoCheckbox(WebDriver driver, String locator,String... params) {
 		if(!isElementSelected(driver, castDynamicLocator(locator, params))) {
-			getElement(driver, locator).click();
+			getElement(driver, castDynamicLocator(locator, params)).click();
 		}
 	}
 	
@@ -469,6 +472,18 @@ public class BasePage extends BasePageUI {
 		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
 	}
 
+	public boolean isJQueryAjaxLoadedSuccess(WebDriver driver) {
+		explicitWait=new WebDriverWait(driver,timeout);
+		jsExecutor=(JavascriptExecutor) driver;
+		ExpectedCondition<Boolean> jQueryLoad=new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver driver) {
+				return (Boolean) jsExecutor.executeScript("return (window.jQuery != null)&&(jQuery.active ===0);");
+			}
+		};
+		return explicitWait.until(jQueryLoad);
+	}
+	
 	public String getElementValidationMessage(WebDriver driver, String locator) {
 		jsExecutor = (JavascriptExecutor) driver;
 		return (String) jsExecutor.executeScript("return arguments[0].validationMessage;", getElement(driver, locator));
@@ -561,7 +576,7 @@ public class BasePage extends BasePageUI {
 	 */
 	
 	//Admin Nopcommerce
-	public void uploadMultipleFiles(WebDriver driver,String cardname, String... fileNames) {
+	public void uploadFileAtCardName(WebDriver driver,String cardname, String... fileNames) {
 		String filePath=GlobalConstants.UPLOAD_FOLDER_PATH;
 		String fullFileName="";
 		for (String file : fileNames) {
@@ -650,9 +665,9 @@ public class BasePage extends BasePageUI {
 	 * @param textboxIDName
 	 * return attribute value
 	 */
-	public String getTextboxValueByID(WebDriver driver,String textboxIDName) {
+	public String getTextboxValueByID(WebDriver driver,String textboxIDName,String attributeName) {
 		waitForElementVisible(driver, BasePageUI.TEXTBOX_BY_ID, textboxIDName);
-		return getAttributeValue(driver, BasePageUI.TEXTBOX_BY_ID, textboxIDName);
+		return getAttributeValue(driver, BasePageUI.TEXTBOX_BY_ID, attributeName, textboxIDName);
 	}
 	
 	public void selectItemInDropdownByID(WebDriver driver,String dropdownID,String valueName) {
@@ -691,12 +706,31 @@ public class BasePage extends BasePageUI {
 		checktoCheckbox(driver, BasePageUI.RADIO_BY_LABLE, radioLableName);
 	}
 	
-	public String getValueInTableAtColumnNameAndRowIndex(WebDriver driver,String tableID, String headerName, String rowIndex) {
+	public String getValueInTableIDAtColumnNameAndRowIndex(WebDriver driver,String tableID, String headerName, String rowIndex ) {
 		int columIndex=getElementSize(driver, BasePageUI.TABLE_HEADER_BY_ID_ANDNAME, headerName) + 1 ;
 		waitForElementVisible(driver, BasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX, tableID,rowIndex,String.valueOf(columIndex));
 		return getTextElement(driver, BasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX, tableID,rowIndex,String.valueOf(columIndex));
 	}
 	
+	public LoginPO logoutToSystem(WebDriver driver) {
+		waitForElementCLickable(driver, BasePageUI.WELCOME_USER_LINK);
+		clickToElement(driver, BasePageUI.WELCOME_USER_LINK);
+		waitForElementCLickable(driver, BasePageUI.LOGOUT_LINK);
+		clickToElement(driver, BasePageUI.LOGOUT_LINK);
+		return PageGenerator.getLoginPage(driver);
+	}
+	
+	public DashboardPO loginToSystem(WebDriver driver,String userName,String password) {
+		waitForElementVisible(driver, BasePageUI.USER_LOGIN_TEXTBOX);
+		sendkeyToElement(driver, BasePageUI.USER_LOGIN_TEXTBOX, userName);
+		sendkeyToElement(driver, BasePageUI.PASSWORD_LOGIN_TEXTBOX, password);
+		clickToElement(driver, BasePageUI.LOGIN_BUTTON);
+		return PageGenerator.getDashboardPage(driver);
+	}
+	
+	public void uploadImage(WebDriver driver, String filePath) {
+		getElement(driver, BasePageUI.UPLOAD_FILE).sendKeys(filePath);
+	}
 	
 	private Alert alert;
 	private Select select;

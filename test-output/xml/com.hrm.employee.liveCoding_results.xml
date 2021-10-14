@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on FIREFOX"
+           tests="2"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="14.423">
+  <properties />
+            <testcase name="TC_02_Upload_Avatar" time="6.784" classname="com.hrm.employee.liveCoding">
+                <failure type="java.lang.NumberFormatException"
+                  message="null"
+              >
+<![CDATA[java.lang.NumberFormatException: null
+  java.base/java.lang.Integer.parseInt(Integer.java:622)
+  java.base/java.lang.Integer.parseInt(Integer.java:778)
+  pageObject.hrm.PersonalDetailsPO.isNewAvatarImageDisplayed(PersonalDetailsPO.java:33)
+  com.hrm.employee.liveCoding.TC_02_Upload_Avatar(liveCoding.java:134)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:567)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+  org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+  org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+  java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+  java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+  java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+  java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+            <testcase name="TC_01_Register" time="7.639" classname="com.hrm.employee.liveCoding" />
+      
+</testsuite>

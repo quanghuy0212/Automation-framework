@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [UploadFile]" guice-stage="DEVELOPMENT">
-  <parameter name="url" value="https://demo.nopcommerce.com/"/>
+<suite thread-count="2" parallel="tests" name="Failed suite [Saucelab]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://www.saucedemo.com/"/>
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
@@ -12,14 +12,14 @@
   <test thread-count="2" parallel="tests" name="Run on FIREFOX(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="takeScreenShot.screenshotTestFailed_ReportNG">
+      <class name="com.saucelab.sort.Sort">
         <methods>
-          <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="TC_02_Login"/>
           <include name="beforeClass"/>
+          <include name="Sort_02_Price"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
           <include name="cleanBrowser"/>
         </methods>
-      </class> <!-- takeScreenShot.screenshotTestFailed_ReportNG -->
+      </class> <!-- com.saucelab.sort.Sort -->
     </classes>
   </test> <!-- Run on FIREFOX(failed) -->
-</suite> <!-- Failed suite [UploadFile] -->
+</suite> <!-- Failed suite [Saucelab] -->

@@ -58,7 +58,7 @@ public class Level_06_UploadFiles extends BaseTest {
 	public void Login_01_Upload_File() {
 		log.info("TC_01: Upload Files");
 		productDetailsPage.clickToExpandPanelByName("Pictures");
-		productDetailsPage.uploadMultipleFiles(driver, "pictures", productAvatarImg);
+		productDetailsPage.uploadFileAtCardName(driver, "pictures", productAvatarImg);
 		Assert.assertTrue(productDetailsPage.isPictureUploadedSuccessByFileName(productName));
 		productDetailsPage.enterToAltTextbox(productAvatarAlt);
 		productDetailsPage.enterToTitleTextbox(productAvatarTitle);
