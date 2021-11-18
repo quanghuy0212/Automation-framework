@@ -33,7 +33,7 @@ public class paymentTestCase extends BaseTest {
 		mobile="4555442476";
 		emailCus="automation@gmail.com";
 		passwordCus="automation";
-		loginPage = PageGenerator.getLoginPage(driver);
+		loginPage = PageGenerator.getLoginPage(driver); 
 	}
 
 	@Test
