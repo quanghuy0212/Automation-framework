@@ -34,7 +34,6 @@ public class paymentTestCase extends BaseTest {
 		emailCus="automation@gmail.com";
 		passwordCus="automation";
 		loginPage = PageGenerator.getLoginPage(driver);
-
 	}
 
 	@Test
