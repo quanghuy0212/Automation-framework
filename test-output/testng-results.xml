@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png" height='100' width='150'/> </a></br>]]>
+      <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png" height='100' width='150'/> </a></br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-14T16:21:06Z" name="Saucelab" finished-at="2021-10-14T16:21:13Z" duration-ms="7247">
+  <suite started-at="2021-11-18T16:26:32Z" name="UploadFile" finished-at="2021-11-18T16:27:07Z" duration-ms="34668">
     <groups>
     </groups>
-    <test started-at="2021-10-14T16:21:06Z" name="Run on FIREFOX" finished-at="2021-10-14T16:21:13Z" duration-ms="7247">
-      <class name="com.saucelab.sort.Sort">
-        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:com.saucelab.sort.Sort@66ea810]" started-at="2021-10-14T16:21:06Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2021-10-14T16:21:06Z" duration-ms="9" status="PASS">
+    <test started-at="2021-11-18T16:26:32Z" name="Run on CHROME" finished-at="2021-11-18T16:27:07Z" duration-ms="34668">
+      <class name="com.bankguru.livecodingproject.paymentTestCase">
+        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@3e0e1046]" started-at="2021-11-18T16:26:32Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2021-11-18T16:26:32Z" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllFilesInReportNGScreenshot -->
-        <test-method is-config="true" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.saucelab.sort.Sort@66ea810]" started-at="2021-10-14T16:21:06Z" name="beforeClass" finished-at="2021-10-14T16:21:11Z" duration-ms="5160" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@3e0e1046]" started-at="2021-11-18T16:26:32Z" name="beforeClass" finished-at="2021-11-18T16:26:39Z" duration-ms="6502" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,31 +23,25 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://www.saucedemo.com/]]>
+                <![CDATA[http://demo.guru99.com/V4/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Sort_01_Name()[pri:0, instance:com.saucelab.sort.Sort@66ea810]" started-at="2021-10-14T16:21:11Z" name="Sort_01_Name" finished-at="2021-10-14T16:21:11Z" duration-ms="421" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Sort_01_Name -->
-        <test-method signature="Sort_02_Price()[pri:0, instance:com.saucelab.sort.Sort@66ea810]" started-at="2021-10-14T16:21:11Z" name="Sort_02_Price" finished-at="2021-10-14T16:21:12Z" duration-ms="346" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="TC_01_Create_New_Customer_And_Checked_Created_Succesfully()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@3e0e1046]" started-at="2021-11-18T16:26:39Z" name="TC_01_Create_New_Customer_And_Checked_Created_Succesfully" finished-at="2021-11-18T16:27:06Z" duration-ms="26851" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='addr'] (tried for 15 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at commons.BaseTest.checkTrue(BaseTest.java:127)
-at commons.BaseTest.verifyTrue(BaseTest.java:139)
-at com.saucelab.sort.Sort.Sort_02_Price(Sort.java:47)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='addr'] (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at commons.BasePage.waitForElementVisible(BasePage.java:520)
+at pageObjects.bankguru.HomePagePO.inputToAddressField(HomePagePO.java:44)
+at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:89)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -68,16 +62,47 @@ at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name='addr']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-05J6JRM', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 88356ee5-6820-4db2-a206-bae376bc2c14
+*** Element info: {Using=xpath, value=//input[@name='addr']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 23 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
             <line>
-              <![CDATA[<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png" height='100' width='150'/> </a></br>]]>
+              <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png" height='100' width='150'/> </a></br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Sort_02_Price -->
-        <test-method is-config="true" signature="cleanBrowser(java.lang.String)[pri:0, instance:com.saucelab.sort.Sort@66ea810]" started-at="2021-10-14T16:21:12Z" name="cleanBrowser" finished-at="2021-10-14T16:21:13Z" duration-ms="874" status="PASS">
+        </test-method> <!-- TC_01_Create_New_Customer_And_Checked_Created_Succesfully -->
+        <test-method signature="TC_02_Upload_Avatar()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@3e0e1046]" started-at="2021-11-18T16:27:06Z" name="TC_02_Upload_Avatar" finished-at="2021-11-18T16:27:06Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Upload_Avatar -->
+        <test-method is-config="true" signature="cleanBrowser(java.lang.String)[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@3e0e1046]" started-at="2021-11-18T16:27:06Z" name="cleanBrowser" finished-at="2021-11-18T16:27:07Z" duration-ms="1102" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -88,7 +113,7 @@ at java.base/java.lang.Thread.run(Thread.java:831)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanBrowser -->
-      </class> <!-- com.saucelab.sort.Sort -->
-    </test> <!-- Run on FIREFOX -->
-  </suite> <!-- Saucelab -->
+      </class> <!-- com.bankguru.livecodingproject.paymentTestCase -->
+    </test> <!-- Run on CHROME -->
+  </suite> <!-- UploadFile -->
 </testng-results>

@@ -8,20 +8,44 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Saucelab</th></tr>
-<tr><td><a href="#t0">Run on FIREFOX</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">7,247</td><td></td><td></td></tr>
+<tr><th colspan="7">UploadFile</th></tr>
+<tr><td><a href="#t0">Run on CHROME</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">34,668</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Saucelab</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on FIREFOX &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.saucelab.sort.Sort</td><td><a href="#m0">Sort_02_Price</a></td><td rowspan="1">1634228471962</td><td rowspan="1">346</td></tr><tr><th colspan="4">Run on FIREFOX &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.saucelab.sort.Sort</td><td><a href="#m1">Sort_01_Name</a></td><td rowspan="1">1634228471538</td><td rowspan="1">421</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">UploadFile</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on CHROME &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.bankguru.livecodingproject.paymentTestCase</td><td><a href="#m0">TC_01_Create_New_Customer_And_Checked_Created_Succesfully</a></td><td rowspan="1">1637252799306</td><td rowspan="1">26851</td></tr><tr><th colspan="4">Run on CHROME &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.bankguru.livecodingproject.paymentTestCase</td><td><a href="#m1">TC_02_Upload_Avatar</a></td><td rowspan="1">1637252826344</td><td rowspan="1">1</td></tr></tbody>
 </table>
-<h2>Run on FIREFOX</h2><h3 id="m0">com.saucelab.sort.Sort#Sort_02_Price</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png" height='100' width='150'/> </a></br></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at commons.BaseTest.checkTrue(BaseTest.java:127)
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)
-	at com.saucelab.sort.Sort.Sort_02_Price(Sort.java:47)
+<h2>Run on CHROME</h2><h3 id="m0">com.bankguru.livecodingproject.paymentTestCase#TC_01_Create_New_Customer_And_Checked_Created_Succesfully</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png" height='100' width='150'/> </a></br></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name=&apos;addr&apos;] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.BasePage.waitForElementVisible(BasePage.java:520)
+	at pageObjects.bankguru.HomePagePO.inputToAddressField(HomePagePO.java:44)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:89)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.saucelab.sort.Sort#Sort_01_Name</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name=&apos;addr&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-05J6JRM&apos;, ip: &apos;192.168.1.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 88356ee5-6820-4db2-a206-bae376bc2c14
+*** Element info: {Using=xpath, value=//input[@name=&apos;addr&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 23 more
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.bankguru.livecodingproject.paymentTestCase#TC_02_Upload_Avatar</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

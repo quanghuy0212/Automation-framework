@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//actions/commons/BasePage.java=UTF-8
 encoding//actions/commons/BaseTest.java=UTF-8
+encoding//testcases/com/bankguru/livecodingproject/paymentTestCase.java=UTF-8
 encoding//testcases/com/hrm/employee/liveCoding.java=UTF-8
 encoding//testcases/com/saucelab/sort/Sort.java=UTF-8
 encoding//testcases/takeScreenShot/screenshotTestFailed2_Extent_Report.java=UTF-8

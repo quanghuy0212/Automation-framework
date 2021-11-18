@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Saucelab]" guice-stage="DEVELOPMENT">
-  <parameter name="url" value="https://www.saucedemo.com/"/>
+<suite thread-count="2" parallel="tests" name="Failed suite [UploadFile]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="http://demo.guru99.com/V4/"/>
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
@@ -9,17 +9,17 @@
     <listener class-name="reportConfig.ExtentTestListener"/>
     <listener class-name="reportConfig.ReportNGListener"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="Run on FIREFOX(failed)">
+  <test thread-count="2" parallel="tests" name="Run on CHROME(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.saucelab.sort.Sort">
+      <class name="com.bankguru.livecodingproject.paymentTestCase">
         <methods>
           <include name="beforeClass"/>
-          <include name="Sort_02_Price"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
           <include name="cleanBrowser"/>
+          <include name="TC_01_Create_New_Customer_And_Checked_Created_Succesfully"/>
         </methods>
-      </class> <!-- com.saucelab.sort.Sort -->
+      </class> <!-- com.bankguru.livecodingproject.paymentTestCase -->
     </classes>
-  </test> <!-- Run on FIREFOX(failed) -->
-</suite> <!-- Failed suite [Saucelab] -->
+  </test> <!-- Run on CHROME(failed) -->
+</suite> <!-- Failed suite [UploadFile] -->

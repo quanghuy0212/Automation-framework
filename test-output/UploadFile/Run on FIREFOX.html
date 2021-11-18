@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Oct 10 22:12:34 ICT 2021</td>
+<td>Started on:</td><td>Thu Nov 18 21:18:58 ICT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28131 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13430 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,29 +75,63 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.hrm.employee.liveCoding.TC_02_Upload_Avatar()'><b>TC_02_Upload_Avatar</b><br>Test class: com.hrm.employee.liveCoding<br/>
-<a href="#Output-468612228" onClick='toggleBox("Output-468612228", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully()'><b>TC_01_Create_New_Customer_And_Checked_Created_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase<br/>
+<a href="#Output-1310487613" onClick='toggleBox("Output-1310487613", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-468612228" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-468612228">
-<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_Upload_Avatar_10_10_2021_10_13_01.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/TC_02_Upload_Avatar_10_10_2021_10_13_01.png" height='100' width='150'/> </a></br><br/>
+<a href="#Output-1310487613" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1310487613">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_09_19_10.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_09_19_10.png" height='100' width='150'/> </a></br><br/>
 </div>
 </td>
-<td><div><pre>java.lang.NumberFormatException: null
-	at java.base/java.lang.Integer.parseInt(Integer.java:622)
-	at java.base/java.lang.Integer.parseInt(Integer.java:778)
-	at pageObject.hrm.PersonalDetailsPO.isNewAvatarImageDisplayed(PersonalDetailsPO.java:33)
-	at com.hrm.employee.liveCoding.TC_02_Upload_Avatar(liveCoding.java:134)
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: User or Password is not valid: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-05J6JRM&apos;, ip: &apos;192.168.1.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 8464, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e14e99f-4212-4379-8606-be2808fa5d46
+*** Element info: {Using=xpath, value=//td/marquee[contains(text(),&quot;Welcome To Manager&apos;s Page of Guru99 Bank&quot;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:231)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:228)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at commons.BasePage.waitForAllElementVisible(BasePage.java:515)
+	at pageObjects.bankguru.HomePagePO.ToastManagerPageisDisplayed(HomePagePO.java:16)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:66)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace468612228", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace468612228'><pre>java.lang.NumberFormatException: null
-	at java.base/java.lang.Integer.parseInt(Integer.java:622)
-	at java.base/java.lang.Integer.parseInt(Integer.java:778)
-	at pageObject.hrm.PersonalDetailsPO.isNewAvatarImageDisplayed(PersonalDetailsPO.java:33)
-	at com.hrm.employee.liveCoding.TC_02_Upload_Avatar(liveCoding.java:134)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1310487613", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1310487613'><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: User or Password is not valid: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-05J6JRM&apos;, ip: &apos;192.168.1.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 8464, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e14e99f-4212-4379-8606-be2808fa5d46
+*** Element info: {Using=xpath, value=//td/marquee[contains(text(),&quot;Welcome To Manager&apos;s Page of Guru99 Bank&quot;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:231)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:228)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at commons.BasePage.waitForAllElementVisible(BasePage.java:515)
+	at pageObjects.bankguru.HomePagePO.ToastManagerPageisDisplayed(HomePagePO.java:16)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:66)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,8 +153,8 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
-<td>6</td>
-<td>com.hrm.employee.liveCoding@6cd24612</td></tr>
+<td>4</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@1b66c0fb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -130,10 +164,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.hrm.employee.liveCoding.TC_01_Register()'><b>TC_01_Register</b><br>Test class: com.hrm.employee.liveCoding</td>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_02_Upload_Avatar()'><b>TC_02_Upload_Avatar</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
 <td></td>
-<td>7</td>
-<td>com.hrm.employee.liveCoding@6cd24612</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@1b66c0fb</td></tr>
 </table><p>
 </body>
 </html>

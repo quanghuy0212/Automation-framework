@@ -2,6 +2,7 @@ package commons;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
@@ -33,7 +34,7 @@ import pageUIs.admin.nopcommerce.AdminBasePageUI;
 import pageUIs.admin.nopcommerce.DashBoardPageUI;
 import pageUIs.user.nopcommerce.HomePageUI;
 
-public class BasePage extends BasePageUI {
+public class BasePage  {
 
 	public void openPageUrl(WebDriver driver, String pageUrl) {
 		driver.get(pageUrl);
@@ -446,6 +447,16 @@ public class BasePage extends BasePageUI {
 		jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getElement(driver, locator));
 	}
+	
+	public void removeAttributeInDOM(WebDriver driver, String locator, String attributeRemove,String... params) {
+		jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getElement(driver, castDynamicLocator(locator, params)));
+	}
+	
+	public void selectDatePicker(WebDriver driver, String locator) {
+		jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("document.getElementById('dob').setAttribute('value','01 Jan 1989')");
+	}
 
 	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
 		explicitWait = new WebDriverWait(driver, timeout);
@@ -648,10 +659,7 @@ public class BasePage extends BasePageUI {
 		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
 	}
 	
-	public void clickToButtonByID(WebDriver driver,String buttonIDName) {
-		waitForElementCLickable(driver, BasePageUI.BUTTON_BY_ID, buttonIDName);
-		clickToElement(driver, BasePageUI.BUTTON_BY_ID, buttonIDName);
-	}
+	
 	
 	public void enterToTextboxByID(WebDriver driver,String textboxIDName,String value) {
 		waitForElementVisible(driver, BasePageUI.TEXTBOX_BY_ID, textboxIDName);
@@ -730,6 +738,11 @@ public class BasePage extends BasePageUI {
 	
 	public void uploadImage(WebDriver driver, String filePath) {
 		getElement(driver, BasePageUI.UPLOAD_FILE).sendKeys(filePath);
+	}
+	
+	public String getRandomEmail() {
+		Random random=new Random();
+		return "quanghuy" + random.nextInt(9999) + "@gmail.com";
 	}
 	
 	private Alert alert;

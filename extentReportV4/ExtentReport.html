@@ -46,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 14, 2021 11:21:13 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Nov 18, 2021 11:27:07 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -128,15 +128,15 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Sort_02_Price</span>
-						<span class='test-time'>Oct 14, 2021 11:21:11 PM</span>
+						<span class='test-name'>TC_01_Create_New_Customer_And_Checked_Created_Succesfully</span>
+						<span class='test-time'>Nov 18, 2021 11:26:39 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2021 11:21:11 PM</span>
-	<span class='label end-time'>Oct 14, 2021 11:21:13 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+829ms</span>
+	<span class='label start-time'>Nov 18, 2021 11:26:39 PM</span>
+	<span class='label end-time'>Nov 18, 2021 11:27:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+430ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -150,16 +150,14 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>11:21:13 PM</td>
+				<td class='timestamp'>11:27:07 PM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at commons.BaseTest.checkTrue(BaseTest.java:127)
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)
-	at com.saucelab.sort.Sort.Sort_02_Price(Sort.java:47)
+						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='addr'] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.BasePage.waitForElementVisible(BasePage.java:520)
+	at pageObjects.bankguru.HomePagePO.inputToAddressField(HomePagePO.java:44)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:89)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -180,6 +178,33 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name='addr']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-05J6JRM', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 88356ee5-6820-4db2-a206-bae376bc2c14
+*** Element info: {Using=xpath, value=//input[@name='addr']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 23 more
 </textarea>
 					
 				</td>
@@ -191,15 +216,15 @@
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>Sort_01_Name</span>
-						<span class='test-time'>Oct 14, 2021 11:21:11 PM</span>
+						<span class='test-name'>TC_02_Upload_Avatar</span>
+						<span class='test-time'>Nov 18, 2021 11:27:06 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2021 11:21:11 PM</span>
-	<span class='label end-time'>Oct 14, 2021 11:21:13 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+264ms</span>
+	<span class='label start-time'>Nov 18, 2021 11:27:06 PM</span>
+	<span class='label end-time'>Nov 18, 2021 11:27:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+402ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -213,7 +238,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>11:21:13 PM</td>
+				<td class='timestamp'>11:27:07 PM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -264,7 +289,7 @@
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
 						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
@@ -279,17 +304,15 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 14, 2021 11:21:11 PM</td>
-										<td class='linked' test-id='1'>Sort_02_Price</td>
+										<td>Nov 18, 2021 11:26:39 PM</td>
+										<td class='linked' test-id='1'>TC_01_Create_New_Customer_And_Checked_Created_Succesfully</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at commons.BaseTest.checkTrue(BaseTest.java:127)
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)
-	at com.saucelab.sort.Sort.Sort_02_Price(Sort.java:47)
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='addr'] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.BasePage.waitForElementVisible(BasePage.java:520)
+	at pageObjects.bankguru.HomePagePO.inputToAddressField(HomePagePO.java:44)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:89)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -310,6 +333,33 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name='addr']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-05J6JRM', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 9940, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 88356ee5-6820-4db2-a206-bae376bc2c14
+*** Element info: {Using=xpath, value=//input[@name='addr']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 23 more
 </textarea>
 										</td>
 									</tr>
@@ -347,19 +397,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 14, 2021 11:21:13 PM</div>
+					<div class='panel-lead'>Nov 18, 2021 11:27:07 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 14, 2021 11:21:13 PM</div>
+			 		<div class='panel-lead'>Nov 18, 2021 11:27:07 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 0s+120ms</div>
+					<div class='panel-lead'>0h 0m 0s+94ms</div>
 				</div>
 			</div>
 		</div>
@@ -371,7 +421,7 @@
 		<h5>TestRunner Logs</h5>
 		
 		<div class='card-panel'>
-				<br><a target="_blank" href="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png"><img src="file:///C:\Users\Admin\eclipse-workspace\Automation-framework-bankguru/screenshotReportNG/Sort_02_Price_14_10_2021_11_21_12.png" height='100' width='150'/> </a></br><br>
+				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_18_11_2021_11_27_06.png" height='100' width='150'/> </a></br><br>
 		</div>
 	</div>
 </div>
@@ -411,7 +461,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Sort_02_Price":1.829,"Sort_01_Name":2.264
+			        "TC_01_Create_New_Customer_And_Checked_Created_Succesfully":28.43,"TC_02_Upload_Avatar":1.402
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
