@@ -16,7 +16,7 @@ import pageObjects.bankguru.RegisterPO;
 
 public class paymentTestCase extends BaseTest {
 
-	@Parameters({ "browser", "url" })
+	@Parameters({ "browser", "url" }) 
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
 		log.info("Pre-condition - Step 01: Open browser'" + browserName + "' and navigare to '" + appUrl + "'");
