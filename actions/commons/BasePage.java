@@ -453,11 +453,6 @@ public class BasePage  {
 		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getElement(driver, castDynamicLocator(locator, params)));
 	}
 	
-	public void selectDatePicker(WebDriver driver, String locator) {
-		jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("document.getElementById('dob').setAttribute('value','01 Jan 1989')");
-	}
-
 	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
 		explicitWait = new WebDriverWait(driver, timeout);
 		jsExecutor = (JavascriptExecutor) driver;
@@ -742,7 +737,12 @@ public class BasePage  {
 	
 	public String getRandomEmail() {
 		Random random=new Random();
-		return "quanghuy" + random.nextInt(9999) + "@gmail.com";
+		return "quanghuy" + random.nextInt(9999999) + "@gmail.com";
+	}
+	
+	public int getRandomNumber() {
+		Random ran=new Random();
+		return ran.nextInt(99999);
 	}
 	
 	private Alert alert;

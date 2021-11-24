@@ -9,14 +9,22 @@ import org.testng.annotations.Test;
 //import com.relevantcodes.extentreports.LogStatus;
 
 import commons.BaseTest;
+import pageObjects.bankguru.BalanceEnquiryPO;
+import pageObjects.bankguru.DepositPagePO;
+import pageObjects.bankguru.EditAccountPO;
+import pageObjects.bankguru.EditCustomerPO;
+import pageObjects.bankguru.FundTransferPO;
 import pageObjects.bankguru.HomePagePO;
 import pageObjects.bankguru.LoginPO;
+import pageObjects.bankguru.NewAccountPO;
+import pageObjects.bankguru.NewCustomerPO;
 import pageObjects.bankguru.PageGenerator;
 import pageObjects.bankguru.RegisterPO;
+import pageObjects.bankguru.WithdrawalPO;
 
 public class paymentTestCase extends BaseTest {
 
-	@Parameters({ "browser", "url" }) 
+	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
 		log.info("Pre-condition - Step 01: Open browser'" + browserName + "' and navigare to '" + appUrl + "'");
@@ -24,16 +32,31 @@ public class paymentTestCase extends BaseTest {
 		driver.manage().window().maximize();
 		emailRegister = getRandomEmail();
 		urlPage = "http://demo.guru99.com/v4/";
-		customerName="AUTOMATION TESTING";
-		dob="01/01/1989";
-		address="Thi Tran Can Giuoc Tinh Long An";
-		city="Tampa";
-		state="FL";
-		pin="466250";
-		mobile="4555442476";
-		emailCus="automation@gmail.com";
-		passwordCus="automation";
-		loginPage = PageGenerator.getLoginPage(driver); 
+		customerName = "AUTOMATION TESTING";
+		dob = "01/01/1989";
+		address = "Thi Tran Can Giuoc Tinh Long An";
+		city = "Tampa";
+		state = "FL";
+		pin = "466250";
+		mobile = "4555442476";
+		emailCus = "automation@gmail.com";
+		editAddress = "1883 Can Giuoc";
+		editCity = "Go Cong";
+		editState = "Texas";
+		editPin = "166455";
+		initialDeposit = "50000";
+		amount="5000";
+		description="Deposit";
+		currentBalance="55000";
+		amountWithdrawal="15000";
+		descriptionWithdrawal="Withdraw";
+		currentBalanceWithdrawal="40000";
+		payeersAccountNo="100938";
+		amountTransfer="10000";
+		descriptionTransfer="Transfer";
+		balance="30000";
+		passwordCus = "emailrandom" + getRandomNumber();
+		loginPage = PageGenerator.getLoginPage(driver);
 	}
 
 	@Test
@@ -73,49 +96,380 @@ public class paymentTestCase extends BaseTest {
 		verifyTrue(homePage.ToastManagerPageisDisplayed(driver));
 
 		log.info("Open New Customer Page on SubMenu");
-		homePage.clickToNewCustomerOnSubMenu(driver,"New Customer");
+		homePage.clickToNewCustomerOnSubMenu(driver, "New Customer");
+
+		newCustomerPage = PageGenerator.getNewCustomerPage(driver);
 
 		log.info("Input To Customer Name Textbox");
-		homePage.inputToCustomerNameTextbox(driver,"name",customerName);
+		newCustomerPage.inputToCustomerNameTextbox(driver, "name", customerName);
 
 		log.info("Click To Male Radio Button");
-		homePage.clickToMaleRadioButton(driver);
+		newCustomerPage.clickToMaleRadioButton(driver);
 
 		log.info("Input To DOB Textbox");
-		homePage.inputToDOBTextbox(driver,"dob",dob);
+		newCustomerPage.inputToDOBTextbox(driver, "type", dob);
 
 		log.info("Input to Address Textbox");
-		homePage.inputToAddressField(driver,"addr",address);
+		newCustomerPage.inputToAddressField(driver, "addr", address);
 
 		log.info("Input to City Textbox ");
-		homePage.inputToCityTextbox(driver,"city",city);
+		newCustomerPage.inputToCityTextbox(driver, "city", city);
 
 		log.info("Input to State Textbox ");
-		homePage.inputToStateTextbox(driver,"state",state);
+		newCustomerPage.inputToStateTextbox(driver, "state", state);
 
 		log.info("Input to PIN Textbox ");
-		homePage.inputToPINTextbox(driver,"pinno",pin);
-		
+		newCustomerPage.inputToPINTextbox(driver, "pinno", pin);
+
 		log.info("Input to Phone Number TextBox ");
-		homePage.inputToPhoneNumBerTextbox(driver,"telephoneno",mobile);
-		
+		newCustomerPage.inputToPhoneNumBerTextbox(driver, "telephoneno", mobile);
+
 		log.info("Input to Email Textbox ");
-		homePage.inputToEmailTextbox(driver,"emailid",mobile);
-		
+		newCustomerPage.inputToEmailTextbox(driver, "emailid", emailRegister);
+
 		log.info("Input to PasswordTextbox ");
-		homePage.inputToPasswordTextBox(driver,"password",mobile);
-		
+		newCustomerPage.inputToPasswordTextBox(driver, "password", mobile);
+
 		log.info("Click To Submit Button");
-		homePage.clickToSubmitButton(driver,"sub");
-		
+		newCustomerPage.clickToSubmitButton(driver, "sub");
+
+		log.info("Verify Toast Register Successfully");
+		verifyTrue(newCustomerPage.verifyToastRegisterSuccessfully(driver));
+
+		log.info("Get Customer ID");
+		customerID = newCustomerPage.getCustomerID(driver, "Customer ID");
+
+		log.info("Verify CustomerName");
+		verifyEquals(newCustomerPage.verifyCustomerName(driver, "Customer Name"), customerName);
+
+		log.info("Verify Gender");
+		verifyEquals(newCustomerPage.verifyGender(driver, "Gender"), "male");
+
+		log.info("Verify DOB");
+		verifyEquals(newCustomerPage.verifyDOB(driver, "Birthdate"), "1989-01-01");
+
+		log.info("Verify Address");
+		verifyEquals(newCustomerPage.verifyAddress(driver, "Address"), address);
+
+		log.info("Verify City");
+		verifyEquals(newCustomerPage.verifyCity(driver, "City"), city);
+
+		log.info("Verify State");
+		verifyEquals(newCustomerPage.verifyState(driver, "State"), state);
+
+		log.info("Verify Pin");
+		verifyEquals(newCustomerPage.verifyPin(driver, "Pin"), pin);
+
+		log.info("Verify Phone Number");
+		verifyEquals(newCustomerPage.verifyPhoneNumber(driver, "Mobile No."), mobile);
+
+		log.info("Verify Email");
+		verifyEquals(newCustomerPage.verifyEmail(driver, "Email"), emailRegister);
 
 	}
 
 	@Test
-	public void TC_02_Upload_Avatar() {
+	public void TC_02_Edit_Customer_Account_And_Check_Edit_Succesfully() {
+		log.info("Open Guru99 Site");
+		newCustomerPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+
+		log.info("Open EditCustomer On SubMenu");
+		editCustomerPage = homePage.clickToEditCustomerOnSubMenu(driver, "Edit Customer");
+
+		log.info("Verify text Edit Customer Form IsDisplayed");
+		verifyTrue(editCustomerPage.verifyTextEditCustomerIsDisplayed(driver));
+
+		log.info("Input CustomerID To Textbox");
+		editCustomerPage.inputCustomerIDToTextbox(driver, "cusid", customerID);
+
+		log.info("Click To Submit Button");
+		editCustomerPage.clickToSubmitButton(driver, "AccSubmit");
+
+		log.info("Input To Edit Address");
+		editCustomerPage.inputToEditAddress(driver, "addr", editAddress);
+
+		log.info("Input To Edit City");
+		editCustomerPage.inputToEditCity(driver, "city", editCity);
+
+		log.info("Input To Edit State");
+		editCustomerPage.inputToEditState(driver, "state", editState);
+
+		log.info("Input To Edit Pin");
+		editCustomerPage.inputToEditPin(driver, "pinno", editPin);
+
+		log.info("Click To Submit button");
+		editCustomerPage.clickToSubmitButtonForEdit(driver, "sub");
+
+		log.info("Verify Toast Edit Successfully");
+		verifyTrue(editCustomerPage.verifyToastEditSuccessfully(driver));
 
 	}
 
+	@Test
+	public void TC_03_Add_New_Account() {
+		log.info("Open Guru99 site");
+		loginPage = editCustomerPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+
+		log.info("Open New Account On SubMenu");
+		homePage.openNewAccountOnSubMenu(driver, "New Account");
+		newAccountPage = PageGenerator.getNewAccountPage(driver);
+
+		log.info("Verify Add New Account Page");
+		verifyTrue(newAccountPage.AddNewAccountPageIsDisplayed(driver));
+
+		log.info("Input To Customer ID Textbox");
+		newAccountPage.inputCustomerIDToTextbox(driver, "cusid", customerID);
+
+		log.info("Select Account Type in Combobox");
+		newAccountPage.selectAccountTypeInDropdown(driver, "selaccount", "Savings");
+
+		log.info("Input To Initial Deposit Textbox");
+		newAccountPage.inputToInitialDepositTextbox(driver, "inideposit", initialDeposit);
+
+		log.info("Click To Submit button");
+		newAccountPage.clickToSubmitButton(driver, "button2");
+
+		log.info("Verify Add New Account Successfully");
+		verifyTrue(newAccountPage.verifyAddNewAccountSuccessfully(driver));
+
+		log.info("Get Account ID from Table");
+		accountID = newAccountPage.getAccountIDFromTable(driver);
+
+	}
+
+	@Test
+	public void TC_04_Edit_Account() {
+		log.info("Open Guru 99 Site");
+		loginPage = newAccountPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+
+		log.info("Open Edit Account on SubMenu");
+		editAccountPage = homePage.openEditAccountOnSubMenu(driver, "Edit Account");
+		editAccountPage = PageGenerator.getEditAccountPage(driver);
+
+		log.info("Verify Edit Account Page Is Displayed");
+		verifyTrue(editAccountPage.verifyEditAccountPageIsDisplayed(driver));
+
+		log.info("Input AccountID To Textbox");
+		editAccountPage.inputToAccountIDTextbox(driver, "accountno", accountID);
+
+		log.info("Click to Submit Button");
+		editAccountPage.clickToSubmitButton(driver, "AccSubmit");
+
+		log.info("Change Type Of Account To Current");
+		editAccountPage.changeTypeOfAccountToCurrent(driver, "a_type", "Current");
+
+		log.info("Click To Submit Button");
+		editAccountPage.clickToSubmitButton(driver, "AccSubmit");
+
+		log.info("Verify Edit Account Successfully");
+		verifyTrue(editAccountPage.verifyEditAccountSuccessfully(driver));
+
+	}
+	
+	@Test
+	public void TC_05_Tranfer_Money_Into_A_Current_Account() {
+		log.info("Open Guru99 Site");
+		loginPage=editAccountPage.openGuru99Site(driver,urlPage);
+		loginPage=PageGenerator.getLoginPage(driver);
+		
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+		
+		depositPage=homePage.clickToDepositOnSubMenu(driver,"Deposit");
+		depositPage=PageGenerator.getDepositPage(driver);
+		
+		
+		log.info("Verify Deposit Page Is Displayed");
+		verifyTrue(depositPage.verifyDepositPageIsDisplayed(driver));
+		
+		log.info("Input AccountID To Textbox");
+		depositPage.inputAccountIDToTextbox(driver,"accountno",accountID);
+		
+		log.info("Input Amount To Textbox");
+		depositPage.inputAmountToTextbox(driver,"ammount",amount);
+		
+		log.info("Input Description To Textbox");
+		depositPage.inputDescriptionToTextbox(driver,"desc",description);
+		
+		log.info("Click to Submit Button");
+		depositPage.clickToSubmitButton(driver,"AccSubmit");
+		
+		log.info("Verify Transaction details of Deposit for Account");
+		verifyTrue(depositPage.verifyTransactionDetailsForAccount(driver,accountID));
+		
+		log.info("Verify Current Amount");
+		verifyEquals(depositPage.verifyCurrentAmount(driver),currentBalance);
+		
+		
+	}
+	
+	@Test
+	public void TC_06_WithDraw_Money_From_Current_Account() {
+		log.info("Open Guru99 Site");
+		loginPage=depositPage.openGuru99Site(driver,urlPage);
+		loginPage=PageGenerator.getLoginPage(driver);
+		
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+		
+		log.info("Open Withdrawal On SubMenu");
+		withdrawalPage=homePage.openWithdrawaOnSubMenu(driver,"Withdrawal");
+		withdrawalPage=PageGenerator.getWithdrawalPage(driver);
+		
+		log.info("Verify WithdrawalPage Is Displayed");
+		verifyTrue(withdrawalPage.verifyWithdrawalPageIsDisplayed(driver));
+		
+		log.info("Input To AccountID Textbox");
+		withdrawalPage.inputToAccountIDTextbox(driver,"accountno",accountID);
+		
+		log.info("Input To Amount Textbox");
+		withdrawalPage.inputToAmoutTextbox(driver,"ammount",amountWithdrawal);
+		
+		log.info("Input TO Description Textbox");
+		withdrawalPage.inputToDescriptionTextbox(driver,"desc",descriptionWithdrawal);
+		
+		log.info("Click To Submit Button");
+		withdrawalPage.clickToSubmitButton(driver,"AccSubmit");
+		
+		log.info("Verify Transaction details of Withdrawal for Account");
+		verifyTrue(withdrawalPage.verifyTransactionDetailsOfWithDrawalForAccountToastIsDisplayed(driver,accountID));
+		
+		log.info("Verify Current Balance");
+		verifyEquals(withdrawalPage.verifyCurrentBalance(driver),currentBalanceWithdrawal);
+		
+		
+	}
+	
+	@Test
+	public void TC_07_Transfer_The_Money_Into_Another_Account() {
+		log.info("Open Guru99 Site");
+		loginPage=withdrawalPage.openGuru99Site(driver,urlPage);
+		loginPage=PageGenerator.getLoginPage(driver);
+		
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+		
+		log.info("Open Fund Transfer On SubMenu");
+		fundTransferPage=homePage.openFundTransferOnSubMenu(driver,"Fund Transfer");
+		fundTransferPage=PageGenerator.getFundTransferPage(driver);
+		
+		log.info("Verify Fund Transfer Page Is Displayed");
+		verifyTrue(fundTransferPage.verifyFundTransferPageIsDisplayed(driver));
+		
+		log.info("Input To Payers AccountID");
+		fundTransferPage.inputToPayersAccountIDTextbox(driver,"payersaccount",accountID);
+		
+		log.info("Input To Payees AccountID");
+		fundTransferPage.inputToPayeesAccountIDTextbox(driver,"payeeaccount",payeersAccountNo);
+		
+		log.info("Input To Amount Textbox");
+		fundTransferPage.inputToAmountTextbox(driver,"ammount",amountTransfer);
+		
+		log.info("Input To Description Textbox");
+		fundTransferPage.inputToDescriptionTextbox(driver,"desc",descriptionTransfer);
+		
+		log.info("Click To Submit Button");
+		fundTransferPage.clickToSubmitButton(driver,"AccSubmit");
+		
+		log.info("Verify AccountID");
+		verifyEquals(fundTransferPage.verifyAccountID(driver,"From Account Number"),accountID);
+		
+		log.info("Verify Payees Account ID");
+		verifyEquals(fundTransferPage.verifyPayeesAccountID(driver,"To Account Number"),payeersAccountNo);
+		
+		log.info("Verify Amount Transfer");
+		verifyEquals(fundTransferPage.verifyAmountTransfer(driver,"Amount"),amountTransfer);
+		
+		log.info("Verify Description Transfer");
+		verifyEquals(fundTransferPage.verifyDescriptionTransfer(driver,"Description"),descriptionTransfer);
+		
+		
+	}
+	
+	@Test
+	public void TC_08_Check_Current_Account_Balance_Equal_3000() {
+		log.info("Open Guru 99 Site");
+		loginPage=fundTransferPage.openGuru99Site(driver,urlPage);
+		loginPage=PageGenerator.getLoginPage(driver);
+		
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+		
+		log.info("Open Balance Enquiry On SubMenu");
+		balanceEnquiryPage=homePage.openBalaceEnquiryOnSubMenu(driver,"Balance Enquiry");
+		
+		log.info("Verify Balance Enquiry Page Is Displayed");
+		verifyTrue(balanceEnquiryPage.verifyBalanceEnquiryPageIsDisplayed(driver));
+		
+		log.info("Input AccountID To Textbox");
+		balanceEnquiryPage.inputAccountIDToTextbox(driver,"accountno",accountID);
+		
+		log.info("Click To Submit Button");
+		balanceEnquiryPage.clickToSubmitButton(driver,"AccSubmit");
+		
+		log.info("Verify Balance Details for Account Is Displayed");
+		verifyEquals(balanceEnquiryPage.verifyBalanceDetailsForAccountIsDisplayed(driver,"Balance"),balance);
+	
+		
+		
+		
+		
+	}
+	
 	public WebDriver getWebDriver() {
 		return this.driver;
 	}
@@ -131,8 +485,19 @@ public class paymentTestCase extends BaseTest {
 	LoginPO loginPage;
 	HomePagePO homePage;
 	RegisterPO registerPage;
+	NewCustomerPO newCustomerPage;
+	EditCustomerPO editCustomerPage;
+	NewAccountPO newAccountPage;
+	EditAccountPO editAccountPage;
+	DepositPagePO depositPage;
+	WithdrawalPO withdrawalPage;
+	FundTransferPO fundTransferPage;
+	BalanceEnquiryPO balanceEnquiryPage;
 
-	String emailRegister, urlPage, userID,customerName,dob,address,city,state,pin,mobile,emailCus,passwordCus;
+	String emailRegister, urlPage, userID, customerName, dob, address, city, state, pin, mobile, emailCus, passwordCus,
+			customerID;
 	String password;
-
+	String editAddress, editCity, editState, editPin, initialDeposit, accountID,amount,description,currentBalance;
+	String amountWithdrawal,descriptionWithdrawal,currentBalanceWithdrawal;
+	String payeersAccountNo,amountTransfer,descriptionTransfer,balance;
 }

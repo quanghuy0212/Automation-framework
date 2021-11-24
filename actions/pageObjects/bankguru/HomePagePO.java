@@ -9,6 +9,7 @@ import pageUIs.bankguru.HomePageUI;
 
 public class HomePagePO extends BasePage {
 	private WebDriver driver;
+	EditCustomerPO editCustomerPage;
 
 	public HomePagePO(WebDriver driver) {
 		this.driver = driver;
@@ -24,60 +25,52 @@ public class HomePagePO extends BasePage {
 		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
 	}
 
-	public void inputToCustomerNameTextbox(WebDriver driver, String textboxName,String value) {
-		 waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME,textboxName);
-		 sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME,value,textboxName);
+	public EditCustomerPO clickToEditCustomerOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return editCustomerPage=PageGenerator.getEditCustomerPage(driver);
 	}
 
-	public void clickToMaleRadioButton(WebDriver driver) {
-		waitForElementCLickable(driver, HomePageUI.MALE_RADIO_BUTTON);
-		clickToElement(driver, HomePageUI.MALE_RADIO_BUTTON);
+	public void openNewAccountOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
 	}
 
-	public void inputToDOBTextbox(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver,BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		//removeAttributeInDOM(driver, BasePageUI.TEXT_BOX_BY_NAME, attributeName,textboxName);
-		sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+	public EditAccountPO openEditAccountOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return editAccountPage=PageGenerator.getEditAccountPage(driver);
+	}
+	
+	EditAccountPO editAccountPage;
+
+	public DepositPagePO clickToDepositOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return depositPage=PageGenerator.getDepositPage(driver);
 	}
 
-	public void inputToAddressField(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		sendkeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
-	}
+	DepositPagePO depositPage;
 
-	public void inputToCityTextbox(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		sendkeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+	public WithdrawalPO openWithdrawaOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return withdrawalPage=PageGenerator.getWithdrawalPage(driver);
 	}
+	
+	WithdrawalPO withdrawalPage;
 
-	public void inputToStateTextbox(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		sendkeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+	public FundTransferPO openFundTransferOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return fundTransferPage=PageGenerator.getFundTransferPage(driver);
 	}
+	FundTransferPO fundTransferPage;
 
-	public void inputToPINTextbox(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		sendkeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
-		
+	public BalanceEnquiryPO openBalaceEnquiryOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return balanceEnquiryPage=PageGenerator.getBalanceEnquiryPage(driver);
 	}
-
-	public void inputToPhoneNumBerTextbox(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		sendkeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);		
-	}
-
-	public void inputToEmailTextbox(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		sendkeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);		
-	}
-
-	public void inputToPasswordTextBox(WebDriver driver,String textboxName,String value) {
-		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
-		sendkeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);		
-	}
-
-	public void clickToSubmitButton(WebDriver driver,String buttonName) {
-		waitForElementCLickable(driver, BasePageUI.BUTTON_BY_NAME, buttonName);
-		clickToElement(driver, BasePageUI.BUTTON_BY_NAME, buttonName);		
-	}
+	BalanceEnquiryPO balanceEnquiryPage;
 }
