@@ -82,6 +82,13 @@ public class BalanceEnquiryPO extends BasePage {
 		return getTextElement(driver,  BasePageUI.VERIFY_VALUE_ON_TABLE_BY_TEXT, tdText);
 	}
 
+	public LoginPO openGuru99Site(WebDriver driver, String urlPage) {
+		openPageUrl(driver, urlPage);
+		return loginPage=PageGenerator.getLoginPage(driver);
+	}
+	
+	LoginPO loginPage;
+
 
 
 	

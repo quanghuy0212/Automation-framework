@@ -73,4 +73,11 @@ public class HomePagePO extends BasePage {
 		return balanceEnquiryPage=PageGenerator.getBalanceEnquiryPage(driver);
 	}
 	BalanceEnquiryPO balanceEnquiryPage;
+
+	public DeleteAccountPO openDeleteAccountOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return deleteAccountPage=PageGenerator.getDeleteAccountPage(driver);	}
+	
+	DeleteAccountPO deleteAccountPage;
 }

@@ -62,6 +62,11 @@ public class PageGenerator extends BasePage {
 		return new BalanceEnquiryPO(driver);
 	}
 	
+	public static DeleteAccountPO getDeleteAccountPage(WebDriver driver) {
+		
+		return new DeleteAccountPO(driver);
+	}
+	
 	
 	
 	

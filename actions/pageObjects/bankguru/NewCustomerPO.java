@@ -129,4 +129,9 @@ public class NewCustomerPO extends BasePage {
 	public void openGuru99Site(WebDriver driver,String pageUrl) {
 		openPageUrl(driver,pageUrl);
 	}
+
+	public String getCustomerIDForOtherUser(WebDriver driver,String tdText) {
+		waitForElementVisible(driver, BasePageUI.VERIFY_VALUE_ON_TABLE_BY_TEXT, tdText);
+		return getTextElement(driver, BasePageUI.VERIFY_VALUE_ON_TABLE_BY_TEXT, tdText);
+	}
 }
