@@ -15,9 +15,10 @@
       <class name="com.bankguru.livecodingproject.paymentTestCase">
         <methods>
           <include name="beforeClass"/>
+          <include name="TC_11_Delete_Exist_Customer_Account"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="TC_10_Delete_All_Account"/>
           <include name="cleanBrowser"/>
-          <include name="TC_06_WithDraw_Money_From_Current_Account"/>
         </methods>
       </class> <!-- com.bankguru.livecodingproject.paymentTestCase -->
     </classes>

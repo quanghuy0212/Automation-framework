@@ -134,4 +134,10 @@ public class NewCustomerPO extends BasePage {
 		waitForElementVisible(driver, BasePageUI.VERIFY_VALUE_ON_TABLE_BY_TEXT, tdText);
 		return getTextElement(driver, BasePageUI.VERIFY_VALUE_ON_TABLE_BY_TEXT, tdText);
 	}
+
+	public void openNewAccountOnSubMenu(WebDriver driver, String subMenuText) {
+		waitForElementCLickable(driver,HomePageUI.SUB_MENU_BY_TEXT, subMenuText);
+		clickToElement(driver,HomePageUI.SUB_MENU_BY_TEXT, subMenuText);
+		
+	}
 }

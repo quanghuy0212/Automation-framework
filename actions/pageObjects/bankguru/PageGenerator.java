@@ -67,6 +67,11 @@ public class PageGenerator extends BasePage {
 		return new DeleteAccountPO(driver);
 	}
 	
+	public static DeleteCustomerPO getDeleteCustomerPage(WebDriver driver) {
+		
+		return new DeleteCustomerPO(driver);
+	}
+	
 	
 	
 	

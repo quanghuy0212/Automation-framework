@@ -80,4 +80,11 @@ public class HomePagePO extends BasePage {
 		return deleteAccountPage=PageGenerator.getDeleteAccountPage(driver);	}
 	
 	DeleteAccountPO deleteAccountPage;
+
+	public DeleteCustomerPO openDeleteCustomerOnSubMenu(WebDriver driver,String subMenuName) {
+		waitForElementCLickable(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		clickToElement(driver, HomePageUI.SUB_MENU_BY_TEXT, subMenuName);
+		return deleteCustomerPage=PageGenerator.getDeleteCustomerPage(driver);
+	}
+	DeleteCustomerPO deleteCustomerPage;
 }

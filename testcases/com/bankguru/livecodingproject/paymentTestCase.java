@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import pageObjects.bankguru.BalanceEnquiryPO;
 import pageObjects.bankguru.DeleteAccountPO;
+import pageObjects.bankguru.DeleteCustomerPO;
 import pageObjects.bankguru.DepositPagePO;
 import pageObjects.bankguru.EditAccountPO;
 import pageObjects.bankguru.EditCustomerPO;
@@ -32,7 +33,7 @@ public class paymentTestCase extends BaseTest {
 		driver = getBrowserDriver(browserName, appUrl);
 		driver.manage().window().maximize();
 		emailRegister = getRandomEmail();
-		emailOtherUserRegister= getRandomEmail();
+		emailOtherUserRegister = getRandomEmail();
 		urlPage = "http://demo.guru99.com/v4/";
 		customerName = "AUTOMATION TESTING";
 		dob = "01/01/1989";
@@ -47,19 +48,19 @@ public class paymentTestCase extends BaseTest {
 		editState = "Texas";
 		editPin = "166455";
 		initialDeposit = "50000";
-		amount="5000";
-		description="Deposit";
-		currentBalance="55000";
-		amountWithdrawal="15000";
-		descriptionWithdrawal="Withdraw";
-		currentBalanceWithdrawal="40000";
-		amountTransfer="10000";
-		descriptionTransfer="Transfer";
-		balance="40000";
+		amount = "5000";
+		description = "Deposit";
+		currentBalance = "55000";
+		amountWithdrawal = "15000";
+		descriptionWithdrawal = "Withdraw";
+		currentBalanceWithdrawal = "40000";
+		amountTransfer = "10000";
+		descriptionTransfer = "Transfer";
+		balance = "30000";
 		passwordCus = "emailrandom" + getRandomNumber();
 		loginPage = PageGenerator.getLoginPage(driver);
 	}
-	
+
 	@Test
 	public void TC_01_Create_New_Other_User() {
 		log.info("Click to here link to get username and password");
@@ -166,15 +167,41 @@ public class paymentTestCase extends BaseTest {
 
 		log.info("Verify Email");
 		verifyEquals(newCustomerPage.verifyEmail(driver, "Email"), emailOtherUserRegister);
-		
+
+		///////////////////////////////////////
+		log.info("Open New Account On SubMenu");
+		newCustomerPage.openNewAccountOnSubMenu(driver, "New Account");
+		newAccountPage = PageGenerator.getNewAccountPage(driver);
+
+		log.info("Verify Add New Account Page");
+		verifyTrue(newAccountPage.AddNewAccountPageIsDisplayed(driver));
+
+		log.info("Input To Customer ID Textbox");
+		newAccountPage.inputCustomerIDToTextbox(driver, "cusid", otherUserCustomerID);
+
+		log.info("Select Account Type in Combobox");
+		newAccountPage.selectAccountTypeInDropdown(driver, "selaccount", "Savings");
+
+		log.info("Input To Initial Deposit Textbox");
+		newAccountPage.inputToInitialDepositTextbox(driver, "inideposit", initialDeposit);
+
+		log.info("Click To Submit button");
+		newAccountPage.clickToSubmitButton(driver, "button2");
+
+		log.info("Verify Add New Account Successfully");
+		verifyTrue(newAccountPage.verifyAddNewAccountSuccessfully(driver));
+
+		log.info("Get Account ID from Table");
+		otherUserAccountID = newAccountPage.getAccountIDFromTable(driver);
+
 	}
-	
+
 	@Test
 	public void TC_02_Create_New_Customer_And_Checked_Created_Succesfully() {
-		
+
 		log.info("Open Guru99 Site");
-		newCustomerPage.openGuru99Site(driver,urlPage);
-		
+		newCustomerPage.openGuru99Site(driver, urlPage);
+
 		log.info("Click to here link to get username and password");
 		loginPage.clickToHereLinkToGetAccount(driver);
 		registerPage = PageGenerator.getRegisterPage(driver);
@@ -409,13 +436,13 @@ public class paymentTestCase extends BaseTest {
 		verifyTrue(editAccountPage.verifyEditAccountSuccessfully(driver));
 
 	}
-	
+
 	@Test
 	public void TC_06_Tranfer_Money_Into_A_Current_Account() {
 		log.info("Open Guru99 Site");
-		loginPage=editAccountPage.openGuru99Site(driver,urlPage);
-		loginPage=PageGenerator.getLoginPage(driver);
-		
+		loginPage = editAccountPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
 		log.info("Input UserID To Textbox");
 		loginPage.inputUserNametoTextBox(driver, "uid", userID);
 
@@ -424,41 +451,39 @@ public class paymentTestCase extends BaseTest {
 
 		log.info("Click To Submit Button");
 		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
-		
-		depositPage=homePage.clickToDepositOnSubMenu(driver,"Deposit");
-		depositPage=PageGenerator.getDepositPage(driver);
-		
-		
+
+		depositPage = homePage.clickToDepositOnSubMenu(driver, "Deposit");
+		depositPage = PageGenerator.getDepositPage(driver);
+
 		log.info("Verify Deposit Page Is Displayed");
 		verifyTrue(depositPage.verifyDepositPageIsDisplayed(driver));
-		
+
 		log.info("Input AccountID To Textbox");
-		depositPage.inputAccountIDToTextbox(driver,"accountno",accountID);
-		
+		depositPage.inputAccountIDToTextbox(driver, "accountno", accountID);
+
 		log.info("Input Amount To Textbox");
-		depositPage.inputAmountToTextbox(driver,"ammount",amount);
-		
+		depositPage.inputAmountToTextbox(driver, "ammount", amount);
+
 		log.info("Input Description To Textbox");
-		depositPage.inputDescriptionToTextbox(driver,"desc",description);
-		
+		depositPage.inputDescriptionToTextbox(driver, "desc", description);
+
 		log.info("Click to Submit Button");
-		depositPage.clickToSubmitButton(driver,"AccSubmit");
-		
+		depositPage.clickToSubmitButton(driver, "AccSubmit");
+
 		log.info("Verify Transaction details of Deposit for Account");
-		verifyTrue(depositPage.verifyTransactionDetailsForAccount(driver,accountID));
-		
+		verifyTrue(depositPage.verifyTransactionDetailsForAccount(driver, accountID));
+
 		log.info("Verify Current Amount");
-		verifyEquals(depositPage.verifyCurrentAmount(driver),currentBalance);
-		
-		
+		verifyEquals(depositPage.verifyCurrentAmount(driver), currentBalance);
+
 	}
-	
+
 	@Test
 	public void TC_07_WithDraw_Money_From_Current_Account() {
 		log.info("Open Guru99 Site");
-		loginPage=depositPage.openGuru99Site(driver,urlPage);
-		loginPage=PageGenerator.getLoginPage(driver);
-		
+		loginPage = depositPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
 		log.info("Input UserID To Textbox");
 		loginPage.inputUserNametoTextBox(driver, "uid", userID);
 
@@ -467,41 +492,42 @@ public class paymentTestCase extends BaseTest {
 
 		log.info("Click To Submit Button");
 		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
-		
+
 		log.info("Open Withdrawal On SubMenu");
-		withdrawalPage=homePage.openWithdrawaOnSubMenu(driver,"Withdrawal");
-		withdrawalPage=PageGenerator.getWithdrawalPage(driver);
-		
+		withdrawalPage = homePage.openWithdrawaOnSubMenu(driver, "Withdrawal");
+		withdrawalPage = PageGenerator.getWithdrawalPage(driver);
+
 		log.info("Verify WithdrawalPage Is Displayed");
 		verifyTrue(withdrawalPage.verifyWithdrawalPageIsDisplayed(driver));
-		
+
 		log.info("Input To AccountID Textbox");
-		withdrawalPage.inputToAccountIDTextbox(driver,"accountno",accountID);
-		
+		withdrawalPage.inputToAccountIDTextbox(driver, "accountno", accountID);
+
 		log.info("Input To Amount Textbox");
-		withdrawalPage.inputToAmoutTextbox(driver,"ammount",amountWithdrawal);
-		
+		withdrawalPage.inputToAmoutTextbox(driver, "ammount", amountWithdrawal);
+
 		log.info("Input TO Description Textbox");
-		withdrawalPage.inputToDescriptionTextbox(driver,"desc",descriptionWithdrawal);
-		
+		withdrawalPage.inputToDescriptionTextbox(driver, "desc", descriptionWithdrawal);
+
 		log.info("Click To Submit Button");
-		withdrawalPage.clickToSubmitButton(driver,"AccSubmit");
-		
+		withdrawalPage.clickToSubmitButton(driver, "AccSubmit");
+
 		log.info("Verify Transaction details of Withdrawal for Account");
-		verifyTrue(withdrawalPage.verifyTransactionDetailsOfWithDrawalForAccountToastIsDisplayed(driver,accountID));
-		
+		verifyTrue(withdrawalPage.verifyTransactionDetailsOfWithDrawalForAccountToastIsDisplayed(driver, accountID));
+
 		log.info("Verify Current Balance");
-		verifyEquals(withdrawalPage.verifyCurrentBalance(driver),currentBalanceWithdrawal);
-		
-		
+		verifyEquals(withdrawalPage.verifyCurrentBalance(driver), currentBalanceWithdrawal);
+		System.out.println(accountID);
+		System.out.println(otherUserCustomerID);
+
 	}
-	
+
 	@Test
 	public void TC_08_Transfer_The_Money_Into_Another_Account() {
 		log.info("Open Guru99 Site");
-		loginPage=withdrawalPage.openGuru99Site(driver,urlPage);
-		loginPage=PageGenerator.getLoginPage(driver);
-		
+		loginPage = withdrawalPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
 		log.info("Input UserID To Textbox");
 		loginPage.inputUserNametoTextBox(driver, "uid", userID);
 
@@ -510,53 +536,49 @@ public class paymentTestCase extends BaseTest {
 
 		log.info("Click To Submit Button");
 		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
-		
+
 		log.info("Open Fund Transfer On SubMenu");
-		fundTransferPage=homePage.openFundTransferOnSubMenu(driver,"Fund Transfer");
-		fundTransferPage=PageGenerator.getFundTransferPage(driver);
-		
+		fundTransferPage = homePage.openFundTransferOnSubMenu(driver, "Fund Transfer");
+		fundTransferPage = PageGenerator.getFundTransferPage(driver);
+
 		log.info("Verify Fund Transfer Page Is Displayed");
 		verifyTrue(fundTransferPage.verifyFundTransferPageIsDisplayed(driver));
-		
-		log.info("Input To Payers AccountID");
-		fundTransferPage.inputToPayersAccountIDTextbox(driver,"payersaccount",accountID);
-		
-		log.info("Input To Payees AccountID");
-		fundTransferPage.inputToPayeesAccountIDTextbox(driver,"payeeaccount",otherUserCustomerID);
-		
-		log.info("Input To Amount Textbox");
-		fundTransferPage.inputToAmountTextbox(driver,"ammount",amountTransfer);
-		
-		log.info("Input To Description Textbox");
-		fundTransferPage.inputToDescriptionTextbox(driver,"desc",descriptionTransfer);
-		
-		log.info("Click To Submit Button");
-		fundTransferPage.clickToSubmitButton(driver,"AccSubmit");
-		
-		log.info("Verify AccountID");
-		verifyEquals(fundTransferPage.verifyAccountID(driver,"From Account Number"),accountID);
-		
-		log.info("Verify Payees Account ID");
-		verifyEquals(fundTransferPage.verifyPayeesAccountID(driver,"To Account Number"),otherUserCustomerID);
-		
-		log.info("Verify Amount Transfer");
-		verifyEquals(fundTransferPage.verifyAmountTransfer(driver,"Amount"),amountTransfer);
-		
-		log.info("Verify Description Transfer");
-		verifyEquals(fundTransferPage.verifyDescriptionTransfer(driver,"Description"),descriptionTransfer);
-		
-		
-		
-	}
-	
 
-	
+		log.info("Input To Payers AccountID");
+		fundTransferPage.inputToPayersAccountIDTextbox(driver, "payersaccount", accountID);
+
+		log.info("Input To Payees AccountID");
+		fundTransferPage.inputToPayeesAccountIDTextbox(driver, "payeeaccount", otherUserAccountID);
+
+		log.info("Input To Amount Textbox");
+		fundTransferPage.inputToAmountTextbox(driver, "ammount", amountTransfer);
+
+		log.info("Input To Description Textbox");
+		fundTransferPage.inputToDescriptionTextbox(driver, "desc", descriptionTransfer);
+
+		log.info("Click To Submit Button");
+		fundTransferPage.clickToSubmitButton(driver, "AccSubmit");
+
+		log.info("Verify AccountID");
+		verifyEquals(fundTransferPage.verifyAccountID(driver, "From Account Number"), accountID);
+
+		log.info("Verify Payees Account ID");
+		verifyEquals(fundTransferPage.verifyPayeesAccountID(driver, "To Account Number"), otherUserAccountID);
+
+		log.info("Verify Amount Transfer");
+		verifyEquals(fundTransferPage.verifyAmountTransfer(driver, "Amount"), amountTransfer);
+
+		log.info("Verify Description Transfer");
+		verifyEquals(fundTransferPage.verifyDescriptionTransfer(driver, "Description"), descriptionTransfer);
+
+	}
+
 	@Test
 	public void TC_09_Check_Current_Account_Balance_Equal_3000() {
 		log.info("Open Guru 99 Site");
-		loginPage=fundTransferPage.openGuru99Site(driver,urlPage);
-		loginPage=PageGenerator.getLoginPage(driver);
-		
+		loginPage = fundTransferPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
 		log.info("Input UserID To Textbox");
 		loginPage.inputUserNametoTextBox(driver, "uid", userID);
 
@@ -565,32 +587,84 @@ public class paymentTestCase extends BaseTest {
 
 		log.info("Click To Submit Button");
 		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
-		
+
 		log.info("Open Balance Enquiry On SubMenu");
-		balanceEnquiryPage=homePage.openBalaceEnquiryOnSubMenu(driver,"Balance Enquiry");
-		
+		balanceEnquiryPage = homePage.openBalaceEnquiryOnSubMenu(driver, "Balance Enquiry");
+
 		log.info("Verify Balance Enquiry Page Is Displayed");
 		verifyTrue(balanceEnquiryPage.verifyBalanceEnquiryPageIsDisplayed(driver));
-		
+
 		log.info("Input AccountID To Textbox");
-		balanceEnquiryPage.inputAccountIDToTextbox(driver,"accountno",accountID);
-		
+		balanceEnquiryPage.inputAccountIDToTextbox(driver, "accountno", accountID);
+
 		log.info("Click To Submit Button");
-		balanceEnquiryPage.clickToSubmitButton(driver,"AccSubmit");
-		
+		balanceEnquiryPage.clickToSubmitButton(driver, "AccSubmit");
+
 		log.info("Verify Balance Details for Account Is Displayed");
-		verifyEquals(balanceEnquiryPage.verifyBalanceDetailsForAccountIsDisplayed(driver,"Balance"),balance);
-	
-		
-		
-		
-		
+		verifyEquals(balanceEnquiryPage.verifyBalanceDetailsForAccountIsDisplayed(driver, "Balance"), balance);
+
 	}
-	
+
 	@Test
 	public void TC_10_Delete_All_Account() {
 		log.info("Open Guru99 Site");
-		loginPage=balanceEnquiryPage.openGuru99Site(driver,urlPage);
+		loginPage = balanceEnquiryPage.openGuru99Site(driver, urlPage);
+		loginPage = PageGenerator.getLoginPage(driver);
+
+		log.info("Input UserID To Textbox");
+		loginPage.inputUserNametoTextBox(driver, "uid", userID);
+
+		log.info("Input Password To Textbox");
+		loginPage.inputPasswordToTextBox(driver, "password", password);
+
+		log.info("Click To Submit Button");
+		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
+
+		log.info("Open Delete Account On SubMenu");
+		deleteAccountPage = homePage.openDeleteAccountOnSubMenu(driver, "Delete Account");
+
+		log.info("Verify Delete Account Is Displayed");
+		verifyTrue(deleteAccountPage.verifyDeleteAccountPageIsDisplayed(driver));
+
+		log.info("Input CustomerID To Textbox");
+		deleteAccountPage.inputCustomerIDToTextbox(driver, "accountno", accountID);
+
+		log.info("Click To Submit Button");
+		deleteAccountPage.clickToSubmitButton(driver, "AccSubmit");
+		sleepInSecond(2);
+
+		log.info("Veiry message Delete Successfully");
+		verifyEquals(deleteAccountPage.verifyMessageDeleteSuccessfully(driver), "Account Deleted Sucessfully");
+		
+		log.info("Accept alert");
+		deleteAccountPage.acceptAlert(driver);
+		sleepInSecond(2);
+		
+		log.info("Open Edit Account On SubMenu");
+		deleteAccountPage.openEditAccountOnSubMenu(driver,"Edit Account");
+
+		log.info("Check Edit Account Page Is Displayed");
+		verifyTrue(deleteAccountPage.verifyEditAccountPageIsDisplayed(driver));
+		
+		log.info("Input AccountID To Textbox");
+		deleteAccountPage.inputAccountIDToTextbox(driver,"accountno",accountID);
+
+		log.info("Click To Submit Button");
+		deleteAccountPage.clickToSubmitButtonOnEditCustomerPage(driver,"AccSubmit");
+		sleepInSecond(2);
+
+		log.info("Verify message display with content 'Account does not exist");
+		verifyEquals(deleteAccountPage.verifyMessageDisplayed(driver),"Account does not exist");
+
+	
+	}
+
+	
+	
+	@Test
+	public void TC_11_Delete_Exist_Customer_Account() {
+		log.info("Open Guru 99 Site");
+		loginPage=deleteAccountPage.openGuru99Site(driver,urlPage);
 		loginPage=PageGenerator.getLoginPage(driver);
 		
 		log.info("Input UserID To Textbox");
@@ -602,33 +676,23 @@ public class paymentTestCase extends BaseTest {
 		log.info("Click To Submit Button");
 		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
 		
-		log.info("Open Delete Account On SubMenu");
-		deleteAccountPage=homePage.openDeleteAccountOnSubMenu(driver,"Delete Account");
+		log.info("Open Delete Customer On SubMenu");
+		deleteCustomerPage=homePage.openDeleteCustomerOnSubMenu(driver,"Delete Customer");
+		deleteCustomerPage=PageGenerator.getDeleteCustomerPage(driver);
 		
-		log.info("Verify Delete Account Is Displayed");
-		verifyTrue(deleteAccountPage.verifyDeleteAccountPageIsDisplayed(driver));
+		log.info("Verify Delete Customer Page Is Displayed");
+		verifyTrue(deleteCustomerPage.verifyDeleteCustomerPageIsDisplayed(driver));
 		
-		log.info("Input CustomerID To Textbox");
-		deleteAccountPage.inputCustomerIDToTextbox(driver,"accountno",accountID);
+		log.info("Input To CustomerID textbox");
+		deleteCustomerPage.inputToCustomerIDTextbox(driver,"cusid",customerID);
 		
-		log.info("Click To Submit Button");
-		deleteAccountPage.clickToSubmitButton(driver,"AccSubmit");
+		log.info("Click to Submit Button");
+		deleteCustomerPage.clickToSubmitButton(driver,"AccSubmit");
 		
-		log.info("Veiry message Delete Successfully");
-		verifyEquals(deleteAccountPage.verifyMessageDeleteSuccessfully(driver),"Account Deleted Successfully");
+		log.info("Verify Delete Customer Successfully");
+		verifyEquals(deleteCustomerPage.verifyCustomerDeleteSuccessfully(driver),"Customer Deleted Successfully");
 		
-		/*
-		 * log.info("Open Edit Account On SubMenu");
-		 * deleteAccountPage.openEditAccountOnSubMenu();
-		 * 
-		 * log.info("Input AccountID To Textbox");
-		 * deleteAccountPage.inputAccountIDToTextbox();
-		 * 
-		 * log.info("Click To Submit Button"); deleteAccountPage.clickToSubmitButton();
-		 * 
-		 * log.info("Verify message display with content 'Account does not exist");
-		 * deleteAccountPage.verifyMessageDisplayed();
-		 */
+		
 		
 		
 	}
@@ -657,11 +721,12 @@ public class paymentTestCase extends BaseTest {
 	FundTransferPO fundTransferPage;
 	BalanceEnquiryPO balanceEnquiryPage;
 	DeleteAccountPO deleteAccountPage;
+	DeleteCustomerPO deleteCustomerPage;
 
 	String emailRegister, urlPage, userID, customerName, dob, address, city, state, pin, mobile, emailCus, passwordCus,
 			customerID;
-	String password,emailOtherUserRegister,otherUserCustomerID,otheruserID,passwordOtherUser;
-	String editAddress, editCity, editState, editPin, initialDeposit, accountID,amount,description,currentBalance;
-	String amountWithdrawal,descriptionWithdrawal,currentBalanceWithdrawal;
-	String amountTransfer,descriptionTransfer,balance;
+	String password, emailOtherUserRegister, otherUserCustomerID, otheruserID, passwordOtherUser;
+	String editAddress, editCity, editState, editPin, initialDeposit, accountID, amount, description, currentBalance;
+	String amountWithdrawal, descriptionWithdrawal, currentBalanceWithdrawal, otherUserAccountID;
+	String amountTransfer, descriptionTransfer, balance;
 }

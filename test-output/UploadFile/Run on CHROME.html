@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run on CHROME</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 24 23:48:34 ICT 2021</td>
+<td>Started on:</td><td>Sun Nov 28 15:01:57 ICT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>54 seconds (54140 ms)</td>
+<tr><td>Total time:</td><td>65 seconds (65859 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,155 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account()'><b>TC_10_Delete_All_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase<br/>
+<a href="#Output-231761378" onClick='toggleBox("Output-231761378", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-231761378" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-231761378">
+<br><a target="_blank" href="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_10_Delete_All_Account_28_11_2021_03_02_59.png"><img src="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_10_Delete_All_Account_28_11_2021_03_02_59.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Account does not exist: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
+	at pageObjects.bankguru.DeleteAccountPO.refreshPage(DeleteAccountPO.java:65)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:658)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace231761378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace231761378'><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Account does not exist: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
+	at pageObjects.bankguru.DeleteAccountPO.refreshPage(DeleteAccountPO.java:65)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:658)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>10</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_11_Delete_Exist_Customer_Account()'><b>TC_11_Delete_Exist_Customer_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase<br/>
+<a href="#Output-1512423056" onClick='toggleBox("Output-1512423056", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1512423056" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1512423056">
+<br><a target="_blank" href="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_11_Delete_Exist_Customer_Account_28_11_2021_03_03_02.png"><img src="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_11_Delete_Exist_Customer_Account_28_11_2021_03_03_02.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoAlertPresentException: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+	at pageObjects.bankguru.DeleteCustomerPO.verifyCustomerDeleteSuccessfully(DeleteCustomerPO.java:40)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_11_Delete_Exist_Customer_Account(paymentTestCase.java:693)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1512423056", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1512423056'><pre>org.openqa.selenium.NoAlertPresentException: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+	at pageObjects.bankguru.DeleteCustomerPO.verifyCustomerDeleteSuccessfully(DeleteCustomerPO.java:40)
+	at com.bankguru.livecodingproject.paymentTestCase.TC_11_Delete_Exist_Customer_Account(paymentTestCase.java:693)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>2</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,45 +224,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Customer_And_Checked_Created_Succesfully()'><b>TC_01_Create_New_Customer_And_Checked_Created_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User()'><b>TC_01_Create_New_Other_User</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
 <td></td>
-<td>9</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
+<td>8</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_02_Edit_Customer_Account_And_Check_Edit_Succesfully()'><b>TC_02_Edit_Customer_Account_And_Check_Edit_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully()'><b>TC_02_Create_New_Customer_And_Checked_Created_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
 <td></td>
 <td>6</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_03_Add_New_Account()'><b>TC_03_Add_New_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully()'><b>TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td></td>
+<td>4</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_04_Add_New_Account()'><b>TC_04_Add_New_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td></td>
+<td>3</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_05_Edit_Account()'><b>TC_05_Edit_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
 <td></td>
 <td>5</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_04_Edit_Account()'><b>TC_04_Edit_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>7</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
-<tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_05_Tranfer_Money_Into_A_Current_Account()'><b>TC_05_Tranfer_Money_Into_A_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_06_Tranfer_Money_Into_A_Current_Account()'><b>TC_06_Tranfer_Money_Into_A_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
 <td></td>
 <td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_06_WithDraw_Money_From_Current_Account()'><b>TC_06_WithDraw_Money_From_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_07_WithDraw_Money_From_Current_Account()'><b>TC_07_WithDraw_Money_From_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
 <td></td>
 <td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_07_Transfer_The_Money_Into_Another_Account()'><b>TC_07_Transfer_The_Money_Into_Another_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>5</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
-<tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_08_Check_Current_Account_Balance_Equal_3000()'><b>TC_08_Check_Current_Account_Balance_Equal_3000</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_08_Transfer_The_Money_Into_Another_Account()'><b>TC_08_Transfer_The_Money_Into_Another_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
 <td></td>
 <td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@1df8da7a</td></tr>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.paymentTestCase.TC_09_Check_Current_Account_Balance_Equal_3000()'><b>TC_09_Check_Current_Account_Balance_Equal_3000</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td></td>
+<td>4</td>
+<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
 </table><p>
 </body>
 </html>
