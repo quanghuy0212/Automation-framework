@@ -12,7 +12,7 @@
 <body>
 <h1>Run on CHROME</h1>
 <p>
-  Test duration: 65.674s
+  Test duration: 18.042s
 </p>
 
 
@@ -20,40 +20,34 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.bankguru.livecodingproject.paymentTestCase</td>
+        <td colspan="3" class="group">com.bankguru.livecodingproject.newCustomerTestcase</td>
       </tr>
             
 <tr>
   <td class="method">
-                  TC_10_Delete_All_Account
+                  NC_13_Verify_Field_State_Cannot_Be_Numeric
       </td>
   <td class="duration">
-    10.561s
+    0.111s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br><a target="_blank" href="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_10_Delete_All_Account_28_11_2021_03_02_59.png"><img src="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_10_Delete_All_Account_28_11_2021_03_02_59.png" height='100' width='150'/> </a></br>
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br>
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Account does not exist: <br/>
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;<br/>
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;<br/>
-Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
-Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [Numbers are not allowed] but found [First character can not have space]</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)<br />
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)<br />
-              org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)<br />
-              pageObjects.bankguru.DeleteAccountPO.refreshPage(DeleteAccountPO.java:65)<br />
-              com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:658)<br />
+              org.testng.Assert.fail(Assert.java:96)<br />
+              org.testng.Assert.failNotEquals(Assert.java:776)<br />
+              org.testng.Assert.assertEqualsImpl(Assert.java:137)<br />
+              org.testng.Assert.assertEquals(Assert.java:118)<br />
+              org.testng.Assert.assertEquals(Assert.java:442)<br />
+              commons.BaseTest.checkEquals(BaseTest.java:166)<br />
+              commons.BaseTest.verifyEquals(BaseTest.java:178)<br />
+              com.bankguru.livecodingproject.newCustomerTestcase.NC_13_Verify_Field_State_Cannot_Be_Numeric(newCustomerTestcase.java:192)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -79,41 +73,29 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_11_Delete_Exist_Customer_Account
+                  NC_14_Verify_Field_State_Cannot_Have_Special_Character
       </td>
   <td class="duration">
-    2.968s
+    0.115s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br><a target="_blank" href="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_11_Delete_Exist_Customer_Account_28_11_2021_03_03_02.png"><img src="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_11_Delete_Exist_Customer_Account_28_11_2021_03_03_02.png" height='100' width='150'/> </a></br>
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br>
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoAlertPresentException: <br/>
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;<br/>
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;<br/>
-Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
-Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [Special characters are not allowed] but found [First character can not have space]</b></a><br />
     <div class="stackTrace" id="exception-1">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)<br />
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br />
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br />
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)<br />
-              org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)<br />
-              pageObjects.bankguru.DeleteCustomerPO.verifyCustomerDeleteSuccessfully(DeleteCustomerPO.java:40)<br />
-              com.bankguru.livecodingproject.paymentTestCase.TC_11_Delete_Exist_Customer_Account(paymentTestCase.java:693)<br />
+              org.testng.Assert.fail(Assert.java:96)<br />
+              org.testng.Assert.failNotEquals(Assert.java:776)<br />
+              org.testng.Assert.assertEqualsImpl(Assert.java:137)<br />
+              org.testng.Assert.assertEquals(Assert.java:118)<br />
+              org.testng.Assert.assertEquals(Assert.java:442)<br />
+              commons.BaseTest.checkEquals(BaseTest.java:166)<br />
+              commons.BaseTest.verifyEquals(BaseTest.java:178)<br />
+              com.bankguru.livecodingproject.newCustomerTestcase.NC_14_Verify_Field_State_Cannot_Have_Special_Character(newCustomerTestcase.java:201)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -143,15 +125,15 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.bankguru.livecodingproject.paymentTestCase</td>
+        <td colspan="3" class="group">com.bankguru.livecodingproject.newCustomerTestcase</td>
       </tr>
             
 <tr>
   <td class="method">
-                  TC_01_Create_New_Other_User
+                  NC_01_Create_New_Customer_And_Checked_Created_Succesfully
       </td>
   <td class="duration">
-    8.953s
+    6.018s
   </td>
   <td class="result">
         
@@ -162,10 +144,10 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_02_Create_New_Customer_And_Checked_Created_Succesfully
+                  NC_02_Verify_Name_Field_Name_Cannot_Empty
       </td>
   <td class="duration">
-    6.781s
+    0.519s
   </td>
   <td class="result">
         
@@ -176,10 +158,10 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully
+                  NC_03_Verify_Field_Name_Name_Cannot_Numeric
       </td>
   <td class="duration">
-    4.954s
+    0.325s
   </td>
   <td class="result">
         
@@ -190,10 +172,10 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_04_Add_New_Account
+                  NC_04_Verify_Field_Name_Cannot_Have_Special_Character
       </td>
   <td class="duration">
-    3.336s
+    0.320s
   </td>
   <td class="result">
         
@@ -204,10 +186,10 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_05_Edit_Account
+                  NC_05_Verify_Field_Name_Cannot_Have_First_Character_As_Blank_Space
       </td>
   <td class="duration">
-    5.266s
+    0.328s
   </td>
   <td class="result">
         
@@ -218,10 +200,10 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_06_Tranfer_Money_Into_A_Current_Account
+                  NC_06_Verify_Field_Address_Cannot_Be_Empty
       </td>
   <td class="duration">
-    4.037s
+    0.283s
   </td>
   <td class="result">
         
@@ -232,10 +214,10 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_07_WithDraw_Money_From_Current_Account
+                  NC_07_Verify_Field_Address_Cannot_Have_First_Black_Space
       </td>
   <td class="duration">
-    4.047s
+    0.094s
   </td>
   <td class="result">
         
@@ -246,10 +228,10 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_08_Transfer_The_Money_Into_Another_Account
+                  NC_08_Verify_Field_City_Cannot_Be_Empty
       </td>
   <td class="duration">
-    4.195s
+    0.300s
   </td>
   <td class="result">
         
@@ -260,10 +242,234 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  TC_09_Check_Current_Account_Balance_Equal_3000
+                  NC_09_Verify_Field_City_Cannot_Be_Numeric
       </td>
   <td class="duration">
-    4.233s
+    0.195s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_10_Verify_Field_City_Cannot_Have_Special_Character
+      </td>
+  <td class="duration">
+    0.106s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_11_Verify_Field_City_Cannot_First_Blank_Space
+      </td>
+  <td class="duration">
+    0.099s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_12_Verify_Field_State_Cannot_Be_Empty
+      </td>
+  <td class="duration">
+    0.285s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_15_Verify_Field_State_Cannot_Have_First_Blank_Space
+      </td>
+  <td class="duration">
+    0.125s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_16_Verify_Field_Pin_Must_Be_Numeric
+      </td>
+  <td class="duration">
+    0.274s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_17_Verify_Field_Pin_Cannot_Empty
+      </td>
+  <td class="duration">
+    0.097s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_18_Verify_Field_Pin_Must_Have_6_Digits
+      </td>
+  <td class="duration">
+    0.109s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_19_Verify_Field_Pin_Cannot_Have_Special_Character
+      </td>
+  <td class="duration">
+    0.113s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_20_Verify_Field_Pin_Cannot_Have_First_Blank_Space
+      </td>
+  <td class="duration">
+    0.099s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_21_Verify_Field_Telephone_Cannot_Be_Empty
+      </td>
+  <td class="duration">
+    0.244s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_22_Verify_Field_Telephone_Cannot_Have_First_Blank_Space
+      </td>
+  <td class="duration">
+    0.103s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_23_Verify_Field_Telephone_Cannot_Have_Space
+      </td>
+  <td class="duration">
+    0.099s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_24_Verify_Field_Telephone_Cannot_Have_Special_Character
+      </td>
+  <td class="duration">
+    0.102s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_25_Verify_Field_Email_Cannot_Be_Empty
+      </td>
+  <td class="duration">
+    0.324s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_26_Verify_Field_Email_Must_Be_Incorrect
+      </td>
+  <td class="duration">
+    0.100s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NC_27_Verify_Field_Email_Cannot_Have_Space
+      </td>
+  <td class="duration">
+    0.086s
   </td>
   <td class="result">
         

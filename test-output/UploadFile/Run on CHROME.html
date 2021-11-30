@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run on CHROME</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>25/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Nov 28 15:01:57 ICT 2021</td>
+<td>Started on:</td><td>Tue Nov 30 23:27:24 ICT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>65 seconds (65859 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18366 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,49 +75,32 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account()'><b>TC_10_Delete_All_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase<br/>
-<a href="#Output-231761378" onClick='toggleBox("Output-231761378", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_13_Verify_Field_State_Cannot_Be_Numeric()'><b>NC_13_Verify_Field_State_Cannot_Be_Numeric</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase<br/>
+<a href="#Output-1567423695" onClick='toggleBox("Output-1567423695", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-231761378" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-231761378">
-<br><a target="_blank" href="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_10_Delete_All_Account_28_11_2021_03_02_59.png"><img src="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_10_Delete_All_Account_28_11_2021_03_02_59.png" height='100' width='150'/> </a></br><br/>
+<a href="#Output-1567423695" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1567423695">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Account does not exist: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at pageObjects.bankguru.DeleteAccountPO.refreshPage(DeleteAccountPO.java:65)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:658)
+<td><div><pre>java.lang.AssertionError: expected [Numbers are not allowed] but found [First character can not have space]
+	at commons.BaseTest.checkEquals(BaseTest.java:166)
+	at commons.BaseTest.verifyEquals(BaseTest.java:178)
+	at com.bankguru.livecodingproject.newCustomerTestcase.NC_13_Verify_Field_State_Cannot_Be_Numeric(newCustomerTestcase.java:192)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace231761378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace231761378'><pre>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Account does not exist: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-	at pageObjects.bankguru.DeleteAccountPO.refreshPage(DeleteAccountPO.java:65)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:658)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1567423695", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1567423695'><pre>java.lang.AssertionError: expected [Numbers are not allowed] but found [First character can not have space]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:442)
+	at commons.BaseTest.checkEquals(BaseTest.java:166)
+	at commons.BaseTest.verifyEquals(BaseTest.java:178)
+	at com.bankguru.livecodingproject.newCustomerTestcase.NC_13_Verify_Field_State_Cannot_Be_Numeric(newCustomerTestcase.java:192)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,59 +122,35 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
-<td>10</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_11_Delete_Exist_Customer_Account()'><b>TC_11_Delete_Exist_Customer_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase<br/>
-<a href="#Output-1512423056" onClick='toggleBox("Output-1512423056", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_14_Verify_Field_State_Cannot_Have_Special_Character()'><b>NC_14_Verify_Field_State_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase<br/>
+<a href="#Output-1569757511" onClick='toggleBox("Output-1569757511", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1512423056" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1512423056">
-<br><a target="_blank" href="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_11_Delete_Exist_Customer_Account_28_11_2021_03_03_02.png"><img src="file:///C:\Users\Admin\git\Automation-framework/screenshotReportNG/TC_11_Delete_Exist_Customer_Account_28_11_2021_03_03_02.png" height='100' width='150'/> </a></br><br/>
+<a href="#Output-1569757511" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1569757511">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.NoAlertPresentException: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-	at pageObjects.bankguru.DeleteCustomerPO.verifyCustomerDeleteSuccessfully(DeleteCustomerPO.java:40)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_11_Delete_Exist_Customer_Account(paymentTestCase.java:693)
+<td><div><pre>java.lang.AssertionError: expected [Special characters are not allowed] but found [First character can not have space]
+	at commons.BaseTest.checkEquals(BaseTest.java:166)
+	at commons.BaseTest.verifyEquals(BaseTest.java:178)
+	at com.bankguru.livecodingproject.newCustomerTestcase.NC_14_Verify_Field_State_Cannot_Have_Special_Character(newCustomerTestcase.java:201)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1512423056", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1512423056'><pre>org.openqa.selenium.NoAlertPresentException: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
-System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 93.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210927210923, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 6464, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-	at pageObjects.bankguru.DeleteCustomerPO.verifyCustomerDeleteSuccessfully(DeleteCustomerPO.java:40)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_11_Delete_Exist_Customer_Account(paymentTestCase.java:693)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1569757511", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1569757511'><pre>java.lang.AssertionError: expected [Special characters are not allowed] but found [First character can not have space]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:442)
+	at commons.BaseTest.checkEquals(BaseTest.java:166)
+	at commons.BaseTest.verifyEquals(BaseTest.java:178)
+	at com.bankguru.livecodingproject.newCustomerTestcase.NC_14_Verify_Field_State_Cannot_Have_Special_Character(newCustomerTestcase.java:201)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -213,8 +172,8 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
-<td>2</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -224,50 +183,130 @@ Session ID: 2e6a4f97-accd-43cd-99e0-852f7ee47538
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User()'><b>TC_01_Create_New_Other_User</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>8</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
-<tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully()'><b>TC_02_Create_New_Customer_And_Checked_Created_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_01_Create_New_Customer_And_Checked_Created_Succesfully()'><b>NC_01_Create_New_Customer_And_Checked_Created_Succesfully</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
 <td>6</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully()'><b>TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_02_Verify_Name_Field_Name_Cannot_Empty()'><b>NC_02_Verify_Name_Field_Name_Cannot_Empty</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
-<td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_04_Add_New_Account()'><b>TC_04_Add_New_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_03_Verify_Field_Name_Name_Cannot_Numeric()'><b>NC_03_Verify_Field_Name_Name_Cannot_Numeric</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
-<td>3</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_05_Edit_Account()'><b>TC_05_Edit_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_04_Verify_Field_Name_Cannot_Have_Special_Character()'><b>NC_04_Verify_Field_Name_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
-<td>5</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_06_Tranfer_Money_Into_A_Current_Account()'><b>TC_06_Tranfer_Money_Into_A_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_05_Verify_Field_Name_Cannot_Have_First_Character_As_Blank_Space()'><b>NC_05_Verify_Field_Name_Cannot_Have_First_Character_As_Blank_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
-<td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_07_WithDraw_Money_From_Current_Account()'><b>TC_07_WithDraw_Money_From_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_06_Verify_Field_Address_Cannot_Be_Empty()'><b>NC_06_Verify_Field_Address_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
-<td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_08_Transfer_The_Money_Into_Another_Account()'><b>TC_08_Transfer_The_Money_Into_Another_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_07_Verify_Field_Address_Cannot_Have_First_Black_Space()'><b>NC_07_Verify_Field_Address_Cannot_Have_First_Black_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
-<td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_09_Check_Current_Account_Balance_Equal_3000()'><b>TC_09_Check_Current_Account_Balance_Equal_3000</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_08_Verify_Field_City_Cannot_Be_Empty()'><b>NC_08_Verify_Field_City_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
 <td></td>
-<td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@660acfb</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_09_Verify_Field_City_Cannot_Be_Numeric()'><b>NC_09_Verify_Field_City_Cannot_Be_Numeric</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_10_Verify_Field_City_Cannot_Have_Special_Character()'><b>NC_10_Verify_Field_City_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_11_Verify_Field_City_Cannot_First_Blank_Space()'><b>NC_11_Verify_Field_City_Cannot_First_Blank_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_12_Verify_Field_State_Cannot_Be_Empty()'><b>NC_12_Verify_Field_State_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_15_Verify_Field_State_Cannot_Have_First_Blank_Space()'><b>NC_15_Verify_Field_State_Cannot_Have_First_Blank_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_16_Verify_Field_Pin_Must_Be_Numeric()'><b>NC_16_Verify_Field_Pin_Must_Be_Numeric</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_17_Verify_Field_Pin_Cannot_Empty()'><b>NC_17_Verify_Field_Pin_Cannot_Empty</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_18_Verify_Field_Pin_Must_Have_6_Digits()'><b>NC_18_Verify_Field_Pin_Must_Have_6_Digits</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_19_Verify_Field_Pin_Cannot_Have_Special_Character()'><b>NC_19_Verify_Field_Pin_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_20_Verify_Field_Pin_Cannot_Have_First_Blank_Space()'><b>NC_20_Verify_Field_Pin_Cannot_Have_First_Blank_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_21_Verify_Field_Telephone_Cannot_Be_Empty()'><b>NC_21_Verify_Field_Telephone_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_22_Verify_Field_Telephone_Cannot_Have_First_Blank_Space()'><b>NC_22_Verify_Field_Telephone_Cannot_Have_First_Blank_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_23_Verify_Field_Telephone_Cannot_Have_Space()'><b>NC_23_Verify_Field_Telephone_Cannot_Have_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_24_Verify_Field_Telephone_Cannot_Have_Special_Character()'><b>NC_24_Verify_Field_Telephone_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_25_Verify_Field_Email_Cannot_Be_Empty()'><b>NC_25_Verify_Field_Email_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_26_Verify_Field_Email_Must_Be_Incorrect()'><b>NC_26_Verify_Field_Email_Must_Be_Incorrect</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.newCustomerTestcase.NC_27_Verify_Field_Email_Cannot_Have_Space()'><b>NC_27_Verify_Field_Email_Cannot_Have_Space</b><br>Test class: com.bankguru.livecodingproject.newCustomerTestcase</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.newCustomerTestcase@5e3f861</td></tr>
 </table><p>
 </body>
 </html>

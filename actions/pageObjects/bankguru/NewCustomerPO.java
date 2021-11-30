@@ -1,5 +1,6 @@
 package pageObjects.bankguru;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
@@ -140,4 +141,81 @@ public class NewCustomerPO extends BasePage {
 		clickToElement(driver,HomePageUI.SUB_MENU_BY_TEXT, subMenuText);
 		
 	}
+
+	public void inputToNameTextbox(WebDriver driver,String textboxName,String value) {
+		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
+		sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, Keys.TAB, textboxName);
+	}
+
+	public String verifyErrorMessageIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver,NewCustomerUI.ERROR_MESSAGE_NAME_FIELD);
+		return getTextElement(driver, NewCustomerUI.ERROR_MESSAGE_NAME_FIELD);
+	}
+
+	public String verifyErrorMessageAddressIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver,NewCustomerUI.ERROR_MESSAGE_ADDRESS_FIELD);
+		return getTextElement(driver, NewCustomerUI.ERROR_MESSAGE_ADDRESS_FIELD);
+	}
+
+	public String verifyErrorMessageCityIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver,NewCustomerUI.ERROR_MESSAGE_CITY_FIELD);
+		return getTextElement(driver, NewCustomerUI.ERROR_MESSAGE_CITY_FIELD);	}
+
+	public String verifyErrorMessageStateIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver,NewCustomerUI.ERROR_MESSAGE_CITY_FIELD);
+		return getTextElement(driver, NewCustomerUI.ERROR_MESSAGE_CITY_FIELD);	
+	}
+
+	public String verifyErrorMessagePinIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver,NewCustomerUI.ERROR_MESSAGE_PIN_FIELD);
+		return getTextElement(driver, NewCustomerUI.ERROR_MESSAGE_PIN_FIELD);
+	}
+
+	public void checkInputToAddressField(WebDriver driver,String textboxName,String value) {
+		waitForElementVisible(driver, BasePageUI.TEXTAREA_BY_NAME, textboxName);
+		sendkeyToElement(driver,BasePageUI.TEXTAREA_BY_NAME, value, textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXTAREA_BY_NAME, Keys.TAB, textboxName);		
+	}
+
+	public void checkInputToCityTextbox(WebDriver driver,String textboxName,String value) {
+		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
+		sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, Keys.TAB, textboxName);
+	}
+
+	public void checkInputToStateTextbox(WebDriver driver,String textboxName,String value) {
+		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
+		sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, Keys.TAB, textboxName);		
+	}
+
+	public void checkInputToPINTextbox(WebDriver driver,String textboxName,String value) {
+		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
+		sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, Keys.TAB, textboxName);		
+	}
+
+	public void checkInputToPhoneNumBerTextbox(WebDriver driver,String textboxName,String value) {
+		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
+		sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, Keys.TAB, textboxName);			
+	}
+
+	public String verifyErrorMessageTelephoneIsDisplayed(WebDriver driver2) {
+		waitForElementVisible(driver,NewCustomerUI.ERROR_MESSAGE_TELEPHONE_FIELD);
+		return getTextElement(driver, NewCustomerUI.ERROR_MESSAGE_TELEPHONE_FIELD);
+	}
+
+	public void checkInputToEmailTextbox(WebDriver driver,String textboxName,String value) {
+		waitForElementVisible(driver, BasePageUI.TEXT_BOX_BY_NAME, textboxName);
+		sendkeyToElement(driver,BasePageUI.TEXT_BOX_BY_NAME, value, textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, Keys.TAB, textboxName);		
+	}
+
+	public String verifyErrorMessageEmailIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver,NewCustomerUI.ERROR_EMAIL_EMAIL_FIELD);
+		return getTextElement(driver, NewCustomerUI.ERROR_EMAIL_EMAIL_FIELD);
+	}
+
 }
