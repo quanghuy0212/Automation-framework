@@ -745,6 +745,7 @@ public class BasePage  {
 		return ran.nextInt(99999);
 	}
 	
+	
 	private Alert alert;
 	private Select select;
 	private Actions action;

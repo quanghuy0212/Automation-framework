@@ -66,4 +66,30 @@ public class EditCustomerPO extends BasePage {
 	}
 	
 	LoginPO loginPage;
+
+	public String verifyErrorMessageCustomerIDIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver, EditCustomerUI.ERROR_MESSAGE_CUSTOMERID_FIELD);
+		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_CUSTOMERID_FIELD);
+	}
+
+	public String verifyErrorMessageAddressIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver, EditCustomerUI.ERROR_MESSAGE_ADDRESS_FIELD);
+		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_ADDRESS_FIELD);
+		
+	}
+
+	public String verifyErrorMessageCityIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver, EditCustomerUI.ERROR_MESSAGE_CITY_FIELD);
+		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_CITY_FIELD);
+	}
+
+	public String verifyErrorMessageStateIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver, EditCustomerUI.ERROR_MESSAGE_STATE_FIELD);
+		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_STATE_FIELD);
+	}
+
+	public Object verifyErrorMessagePinIsDisplayed(WebDriver driver2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -12,15 +12,16 @@
   <test thread-count="2" parallel="tests" name="Run on CHROME(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.bankguru.livecodingproject.newCustomerTestcase">
+      <class name="com.bankguru.livecodingproject.paymentTestCase">
         <methods>
-          <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="NC_13_Verify_Field_State_Cannot_Be_Numeric"/>
-          <include name="NC_14_Verify_Field_State_Cannot_Have_Special_Character"/>
-          <include name="cleanBrowser"/>
           <include name="beforeClass"/>
+          <include name="TC_02_Create_New_Customer_And_Checked_Created_Succesfully"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="TC_10_Delete_All_Account"/>
+          <include name="cleanBrowser"/>
+          <include name="TC_01_Create_New_Other_User"/>
         </methods>
-      </class> <!-- com.bankguru.livecodingproject.newCustomerTestcase -->
+      </class> <!-- com.bankguru.livecodingproject.paymentTestCase -->
     </classes>
   </test> <!-- Run on CHROME(failed) -->
 </suite> <!-- Failed suite [UploadFile] -->

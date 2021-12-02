@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="27" passed="25" failed="2" skipped="0">
+<testng-results ignored="0" total="10" passed="7" failed="3" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br>]]>
+      <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png" height='100' width='150'/> </a></br>]]>
     </line>
     <line>
-      <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br>]]>
+      <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png" height='100' width='150'/> </a></br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-11-30T16:27:24Z" name="UploadFile" finished-at="2021-11-30T16:27:42Z" duration-ms="18366">
+  <suite started-at="2021-12-01T15:23:58Z" name="UploadFile" finished-at="2021-12-01T15:24:56Z" duration-ms="57733">
     <groups>
     </groups>
-    <test started-at="2021-11-30T16:27:24Z" name="Run on CHROME" finished-at="2021-11-30T16:27:42Z" duration-ms="18366">
-      <class name="com.bankguru.livecodingproject.newCustomerTestcase">
-        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:24Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2021-11-30T16:27:24Z" duration-ms="13" status="PASS">
+    <test started-at="2021-12-01T15:23:58Z" name="Run on CHROME" finished-at="2021-12-01T15:24:56Z" duration-ms="57733">
+      <class name="com.bankguru.livecodingproject.paymentTestCase">
+        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:23:59Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2021-12-01T15:23:59Z" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllFilesInReportNGScreenshot -->
-        <test-method is-config="true" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:24Z" name="beforeClass" finished-at="2021-11-30T16:27:30Z" duration-ms="6107" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:23:59Z" name="beforeClass" finished-at="2021-12-01T15:24:04Z" duration-ms="5507" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,61 +33,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="NC_01_Create_New_Customer_And_Checked_Created_Succesfully()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:30Z" name="NC_01_Create_New_Customer_And_Checked_Created_Succesfully" finished-at="2021-11-30T16:27:36Z" duration-ms="6018" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_01_Create_New_Customer_And_Checked_Created_Succesfully -->
-        <test-method signature="NC_02_Verify_Name_Field_Name_Cannot_Empty()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:36Z" name="NC_02_Verify_Name_Field_Name_Cannot_Empty" finished-at="2021-11-30T16:27:37Z" duration-ms="519" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_02_Verify_Name_Field_Name_Cannot_Empty -->
-        <test-method signature="NC_03_Verify_Field_Name_Name_Cannot_Numeric()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:37Z" name="NC_03_Verify_Field_Name_Name_Cannot_Numeric" finished-at="2021-11-30T16:27:37Z" duration-ms="325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_03_Verify_Field_Name_Name_Cannot_Numeric -->
-        <test-method signature="NC_04_Verify_Field_Name_Cannot_Have_Special_Character()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:37Z" name="NC_04_Verify_Field_Name_Cannot_Have_Special_Character" finished-at="2021-11-30T16:27:37Z" duration-ms="320" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_04_Verify_Field_Name_Cannot_Have_Special_Character -->
-        <test-method signature="NC_05_Verify_Field_Name_Cannot_Have_First_Character_As_Blank_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:37Z" name="NC_05_Verify_Field_Name_Cannot_Have_First_Character_As_Blank_Space" finished-at="2021-11-30T16:27:38Z" duration-ms="328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_05_Verify_Field_Name_Cannot_Have_First_Character_As_Blank_Space -->
-        <test-method signature="NC_06_Verify_Field_Address_Cannot_Be_Empty()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:38Z" name="NC_06_Verify_Field_Address_Cannot_Be_Empty" finished-at="2021-11-30T16:27:38Z" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_06_Verify_Field_Address_Cannot_Be_Empty -->
-        <test-method signature="NC_07_Verify_Field_Address_Cannot_Have_First_Black_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:38Z" name="NC_07_Verify_Field_Address_Cannot_Have_First_Black_Space" finished-at="2021-11-30T16:27:38Z" duration-ms="94" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_07_Verify_Field_Address_Cannot_Have_First_Black_Space -->
-        <test-method signature="NC_08_Verify_Field_City_Cannot_Be_Empty()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:38Z" name="NC_08_Verify_Field_City_Cannot_Be_Empty" finished-at="2021-11-30T16:27:38Z" duration-ms="300" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_08_Verify_Field_City_Cannot_Be_Empty -->
-        <test-method signature="NC_09_Verify_Field_City_Cannot_Be_Numeric()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:38Z" name="NC_09_Verify_Field_City_Cannot_Be_Numeric" finished-at="2021-11-30T16:27:39Z" duration-ms="195" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_09_Verify_Field_City_Cannot_Be_Numeric -->
-        <test-method signature="NC_10_Verify_Field_City_Cannot_Have_Special_Character()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:39Z" name="NC_10_Verify_Field_City_Cannot_Have_Special_Character" finished-at="2021-11-30T16:27:39Z" duration-ms="106" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_10_Verify_Field_City_Cannot_Have_Special_Character -->
-        <test-method signature="NC_11_Verify_Field_City_Cannot_First_Blank_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:39Z" name="NC_11_Verify_Field_City_Cannot_First_Blank_Space" finished-at="2021-11-30T16:27:39Z" duration-ms="99" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_11_Verify_Field_City_Cannot_First_Blank_Space -->
-        <test-method signature="NC_12_Verify_Field_State_Cannot_Be_Empty()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:39Z" name="NC_12_Verify_Field_State_Cannot_Be_Empty" finished-at="2021-11-30T16:27:39Z" duration-ms="285" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_12_Verify_Field_State_Cannot_Be_Empty -->
-        <test-method signature="NC_13_Verify_Field_State_Cannot_Be_Numeric()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:39Z" name="NC_13_Verify_Field_State_Cannot_Be_Numeric" finished-at="2021-11-30T16:27:39Z" duration-ms="111" status="FAIL">
+        <test-method signature="TC_01_Create_New_Other_User()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:04Z" name="TC_01_Create_New_Other_User" finished-at="2021-12-01T15:24:13Z" duration-ms="8649" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Numbers are not allowed] but found [First character can not have space]]]>
+              <![CDATA[expected [01/01/1989] but found [1989-01-01]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Numbers are not allowed] but found [First character can not have space]
+              <![CDATA[java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -95,7 +47,7 @@ at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:442)
 at commons.BaseTest.checkEquals(BaseTest.java:166)
 at commons.BaseTest.verifyEquals(BaseTest.java:178)
-at com.bankguru.livecodingproject.newCustomerTestcase.NC_13_Verify_Field_State_Cannot_Be_Numeric(newCustomerTestcase.java:192)
+at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User(paymentTestCase.java:154)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,17 +73,17 @@ at java.base/java.lang.Thread.run(Thread.java:831)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_13_Verify_Field_State_Cannot_Be_Numeric_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br>]]>
+              <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png" height='100' width='150'/> </a></br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- NC_13_Verify_Field_State_Cannot_Be_Numeric -->
-        <test-method signature="NC_14_Verify_Field_State_Cannot_Have_Special_Character()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:39Z" name="NC_14_Verify_Field_State_Cannot_Have_Special_Character" finished-at="2021-11-30T16:27:39Z" duration-ms="115" status="FAIL">
+        </test-method> <!-- TC_01_Create_New_Other_User -->
+        <test-method signature="TC_02_Create_New_Customer_And_Checked_Created_Succesfully()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:13Z" name="TC_02_Create_New_Customer_And_Checked_Created_Succesfully" finished-at="2021-12-01T15:24:19Z" duration-ms="6437" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Special characters are not allowed] but found [First character can not have space]]]>
+              <![CDATA[expected [01/01/1989] but found [1989-01-01]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Special characters are not allowed] but found [First character can not have space]
+              <![CDATA[java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -139,7 +91,7 @@ at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:442)
 at commons.BaseTest.checkEquals(BaseTest.java:166)
 at commons.BaseTest.verifyEquals(BaseTest.java:178)
-at com.bankguru.livecodingproject.newCustomerTestcase.NC_14_Verify_Field_State_Cannot_Have_Special_Character(newCustomerTestcase.java:201)
+at com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:293)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -165,63 +117,144 @@ at java.base/java.lang.Thread.run(Thread.java:831)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/NC_14_Verify_Field_State_Cannot_Have_Special_Character_30_11_2021_11_27_39.png" height='100' width='150'/> </a></br>]]>
+              <![CDATA[<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png" height='100' width='150'/> </a></br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- NC_14_Verify_Field_State_Cannot_Have_Special_Character -->
-        <test-method signature="NC_15_Verify_Field_State_Cannot_Have_First_Blank_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:40Z" name="NC_15_Verify_Field_State_Cannot_Have_First_Blank_Space" finished-at="2021-11-30T16:27:40Z" duration-ms="125" status="PASS">
+        </test-method> <!-- TC_02_Create_New_Customer_And_Checked_Created_Succesfully -->
+        <test-method signature="TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:19Z" name="TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully" finished-at="2021-12-01T15:24:24Z" duration-ms="4510" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_15_Verify_Field_State_Cannot_Have_First_Blank_Space -->
-        <test-method signature="NC_16_Verify_Field_Pin_Must_Be_Numeric()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:40Z" name="NC_16_Verify_Field_Pin_Must_Be_Numeric" finished-at="2021-11-30T16:27:40Z" duration-ms="274" status="PASS">
+        </test-method> <!-- TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully -->
+        <test-method signature="TC_04_Add_New_Account()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:24Z" name="TC_04_Add_New_Account" finished-at="2021-12-01T15:24:27Z" duration-ms="2981" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_16_Verify_Field_Pin_Must_Be_Numeric -->
-        <test-method signature="NC_17_Verify_Field_Pin_Cannot_Empty()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:40Z" name="NC_17_Verify_Field_Pin_Cannot_Empty" finished-at="2021-11-30T16:27:40Z" duration-ms="97" status="PASS">
+        </test-method> <!-- TC_04_Add_New_Account -->
+        <test-method signature="TC_05_Edit_Account()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:27Z" name="TC_05_Edit_Account" finished-at="2021-12-01T15:24:32Z" duration-ms="4801" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_17_Verify_Field_Pin_Cannot_Empty -->
-        <test-method signature="NC_18_Verify_Field_Pin_Must_Have_6_Digits()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:40Z" name="NC_18_Verify_Field_Pin_Must_Have_6_Digits" finished-at="2021-11-30T16:27:40Z" duration-ms="109" status="PASS">
+        </test-method> <!-- TC_05_Edit_Account -->
+        <test-method signature="TC_06_Tranfer_Money_Into_A_Current_Account()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:32Z" name="TC_06_Tranfer_Money_Into_A_Current_Account" finished-at="2021-12-01T15:24:35Z" duration-ms="3875" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_18_Verify_Field_Pin_Must_Have_6_Digits -->
-        <test-method signature="NC_19_Verify_Field_Pin_Cannot_Have_Special_Character()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:40Z" name="NC_19_Verify_Field_Pin_Cannot_Have_Special_Character" finished-at="2021-11-30T16:27:40Z" duration-ms="113" status="PASS">
+        </test-method> <!-- TC_06_Tranfer_Money_Into_A_Current_Account -->
+        <test-method signature="TC_07_WithDraw_Money_From_Current_Account()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:35Z" name="TC_07_WithDraw_Money_From_Current_Account" finished-at="2021-12-01T15:24:39Z" duration-ms="3805" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_19_Verify_Field_Pin_Cannot_Have_Special_Character -->
-        <test-method signature="NC_20_Verify_Field_Pin_Cannot_Have_First_Blank_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:40Z" name="NC_20_Verify_Field_Pin_Cannot_Have_First_Blank_Space" finished-at="2021-11-30T16:27:40Z" duration-ms="99" status="PASS">
+        </test-method> <!-- TC_07_WithDraw_Money_From_Current_Account -->
+        <test-method signature="TC_08_Transfer_The_Money_Into_Another_Account()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:39Z" name="TC_08_Transfer_The_Money_Into_Another_Account" finished-at="2021-12-01T15:24:43Z" duration-ms="3904" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_20_Verify_Field_Pin_Cannot_Have_First_Blank_Space -->
-        <test-method signature="NC_21_Verify_Field_Telephone_Cannot_Be_Empty()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:40Z" name="NC_21_Verify_Field_Telephone_Cannot_Be_Empty" finished-at="2021-11-30T16:27:41Z" duration-ms="244" status="PASS">
+        </test-method> <!-- TC_08_Transfer_The_Money_Into_Another_Account -->
+        <test-method signature="TC_09_Check_Current_Account_Balance_Equal_3000()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:43Z" name="TC_09_Check_Current_Account_Balance_Equal_3000" finished-at="2021-12-01T15:24:46Z" duration-ms="3151" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_21_Verify_Field_Telephone_Cannot_Be_Empty -->
-        <test-method signature="NC_22_Verify_Field_Telephone_Cannot_Have_First_Blank_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:41Z" name="NC_22_Verify_Field_Telephone_Cannot_Have_First_Blank_Space" finished-at="2021-11-30T16:27:41Z" duration-ms="103" status="PASS">
+        </test-method> <!-- TC_09_Check_Current_Account_Balance_Equal_3000 -->
+        <test-method signature="TC_10_Delete_All_Account()[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:46Z" name="TC_10_Delete_All_Account" finished-at="2021-12-01T15:24:56Z" duration-ms="9860" status="FAIL">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Multiple failures (2):
+Failure 1 of 2
+java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at commons.BaseTest.checkTrue(BaseTest.java:127)
+at commons.BaseTest.verifyTrue(BaseTest.java:139)
+at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:630)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+
+Failure 2 of 2
+java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Multiple failures (2):
+Failure 1 of 2
+java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at commons.BaseTest.checkTrue(BaseTest.java:127)
+at commons.BaseTest.verifyTrue(BaseTest.java:139)
+at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:630)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+
+Failure 2 of 2
+java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:442)
+at commons.BaseTest.checkEquals(BaseTest.java:166)
+at commons.BaseTest.verifyEquals(BaseTest.java:178)
+at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:640)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NC_22_Verify_Field_Telephone_Cannot_Have_First_Blank_Space -->
-        <test-method signature="NC_23_Verify_Field_Telephone_Cannot_Have_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:41Z" name="NC_23_Verify_Field_Telephone_Cannot_Have_Space" finished-at="2021-11-30T16:27:41Z" duration-ms="99" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_23_Verify_Field_Telephone_Cannot_Have_Space -->
-        <test-method signature="NC_24_Verify_Field_Telephone_Cannot_Have_Special_Character()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:41Z" name="NC_24_Verify_Field_Telephone_Cannot_Have_Special_Character" finished-at="2021-11-30T16:27:41Z" duration-ms="102" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_24_Verify_Field_Telephone_Cannot_Have_Special_Character -->
-        <test-method signature="NC_25_Verify_Field_Email_Cannot_Be_Empty()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:41Z" name="NC_25_Verify_Field_Email_Cannot_Be_Empty" finished-at="2021-11-30T16:27:41Z" duration-ms="324" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_25_Verify_Field_Email_Cannot_Be_Empty -->
-        <test-method signature="NC_26_Verify_Field_Email_Must_Be_Incorrect()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:41Z" name="NC_26_Verify_Field_Email_Must_Be_Incorrect" finished-at="2021-11-30T16:27:41Z" duration-ms="100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_26_Verify_Field_Email_Must_Be_Incorrect -->
-        <test-method signature="NC_27_Verify_Field_Email_Cannot_Have_Space()[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:41Z" name="NC_27_Verify_Field_Email_Cannot_Have_Space" finished-at="2021-11-30T16:27:41Z" duration-ms="86" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NC_27_Verify_Field_Email_Cannot_Have_Space -->
-        <test-method is-config="true" signature="cleanBrowser(java.lang.String)[pri:0, instance:com.bankguru.livecodingproject.newCustomerTestcase@5e3f861]" started-at="2021-11-30T16:27:41Z" name="cleanBrowser" finished-at="2021-11-30T16:27:42Z" duration-ms="949" status="PASS">
+        </test-method> <!-- TC_10_Delete_All_Account -->
+        <test-method is-config="true" signature="cleanBrowser(java.lang.String)[pri:0, instance:com.bankguru.livecodingproject.paymentTestCase@45385f75]" started-at="2021-12-01T15:24:56Z" name="cleanBrowser" finished-at="2021-12-01T15:24:56Z" duration-ms="62" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -232,7 +265,7 @@ at java.base/java.lang.Thread.run(Thread.java:831)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanBrowser -->
-      </class> <!-- com.bankguru.livecodingproject.newCustomerTestcase -->
+      </class> <!-- com.bankguru.livecodingproject.paymentTestCase -->
     </test> <!-- Run on CHROME -->
   </suite> <!-- UploadFile -->
 </testng-results>

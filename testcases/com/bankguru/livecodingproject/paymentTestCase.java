@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.bankguru.data.PaymentData;
+
 //import com.relevantcodes.extentreports.LogStatus;
 
 import commons.BaseTest;
@@ -34,29 +36,8 @@ public class paymentTestCase extends BaseTest {
 		driver.manage().window().maximize();
 		emailRegister = getRandomEmail();
 		emailOtherUserRegister = getRandomEmail();
+		paymentData=PaymentData.getPayment();
 		urlPage = "http://demo.guru99.com/v4/";
-		customerName = "AUTOMATION TESTING";
-		dob = "01/01/1989";
-		address = "Thi Tran Can Giuoc Tinh Long An";
-		city = "Tampa";
-		state = "FL";
-		pin = "466250";
-		mobile = "4555442476";
-		emailCus = "automation@gmail.com";
-		editAddress = "1883 Can Giuoc";
-		editCity = "Go Cong";
-		editState = "Texas";
-		editPin = "166455";
-		initialDeposit = "50000";
-		amount = "5000";
-		description = "Deposit";
-		currentBalance = "55000";
-		amountWithdrawal = "15000";
-		descriptionWithdrawal = "Withdraw";
-		currentBalanceWithdrawal = "40000";
-		amountTransfer = "10000";
-		descriptionTransfer = "Transfer";
-		balance = "30000";
 		passwordCus = "emailrandom" + getRandomNumber();
 		loginPage = PageGenerator.getLoginPage(driver);
 	}
@@ -103,34 +84,34 @@ public class paymentTestCase extends BaseTest {
 		newCustomerPage = PageGenerator.getNewCustomerPage(driver);
 
 		log.info("Input To Customer Name Textbox");
-		newCustomerPage.inputToCustomerNameTextbox(driver, "name", customerName);
+		newCustomerPage.inputToCustomerNameTextbox(driver, "name",paymentData.getcustomerName());
 
 		log.info("Click To Male Radio Button");
 		newCustomerPage.clickToMaleRadioButton(driver);
 
 		log.info("Input To DOB Textbox");
-		newCustomerPage.inputToDOBTextbox(driver, "type", dob);
+		newCustomerPage.inputToDOBTextbox(driver, "type", paymentData.getDob());
 
 		log.info("Input to Address Textbox");
-		newCustomerPage.inputToAddressField(driver, "addr", address);
+		newCustomerPage.inputToAddressField(driver, "addr", paymentData.getAddress());
 
 		log.info("Input to City Textbox ");
-		newCustomerPage.inputToCityTextbox(driver, "city", city);
+		newCustomerPage.inputToCityTextbox(driver, "city", paymentData.getCity());
 
 		log.info("Input to State Textbox ");
-		newCustomerPage.inputToStateTextbox(driver, "state", state);
+		newCustomerPage.inputToStateTextbox(driver, "state", paymentData.getState());
 
 		log.info("Input to PIN Textbox ");
-		newCustomerPage.inputToPINTextbox(driver, "pinno", pin);
+		newCustomerPage.inputToPINTextbox(driver, "pinno", paymentData.getPin());
 
 		log.info("Input to Phone Number TextBox ");
-		newCustomerPage.inputToPhoneNumBerTextbox(driver, "telephoneno", mobile);
+		newCustomerPage.inputToPhoneNumBerTextbox(driver, "telephoneno", paymentData.getMobile());
 
 		log.info("Input to Email Textbox ");
 		newCustomerPage.inputToEmailTextbox(driver, "emailid", emailOtherUserRegister);
 
 		log.info("Input to PasswordTextbox ");
-		newCustomerPage.inputToPasswordTextBox(driver, "password", mobile);
+		newCustomerPage.inputToPasswordTextBox(driver, "password", paymentData.getPassword());
 
 		log.info("Click To Submit Button");
 		newCustomerPage.clickToSubmitButton(driver, "sub");
@@ -142,28 +123,28 @@ public class paymentTestCase extends BaseTest {
 		otherUserCustomerID = newCustomerPage.getCustomerID(driver, "Customer ID");
 
 		log.info("Verify CustomerName");
-		verifyEquals(newCustomerPage.verifyCustomerName(driver, "Customer Name"), customerName);
+		verifyEquals(newCustomerPage.verifyCustomerName(driver, "Customer Name"), paymentData.getcustomerName());
 
 		log.info("Verify Gender");
-		verifyEquals(newCustomerPage.verifyGender(driver, "Gender"), "male");
+		verifyEquals(newCustomerPage.verifyGender(driver, "Gender"), paymentData.getGender());
 
 		log.info("Verify DOB");
-		verifyEquals(newCustomerPage.verifyDOB(driver, "Birthdate"), "1989-01-01");
+		verifyEquals(newCustomerPage.verifyDOB(driver, "Birthdate"), paymentData.getDob());
 
 		log.info("Verify Address");
-		verifyEquals(newCustomerPage.verifyAddress(driver, "Address"), address);
+		verifyEquals(newCustomerPage.verifyAddress(driver, "Address"), paymentData.getAddress());
 
 		log.info("Verify City");
-		verifyEquals(newCustomerPage.verifyCity(driver, "City"), city);
+		verifyEquals(newCustomerPage.verifyCity(driver, "City"), paymentData.getdobOutput());
 
 		log.info("Verify State");
-		verifyEquals(newCustomerPage.verifyState(driver, "State"), state);
+		verifyEquals(newCustomerPage.verifyState(driver, "State"), paymentData.getState());
 
 		log.info("Verify Pin");
-		verifyEquals(newCustomerPage.verifyPin(driver, "Pin"), pin);
+		verifyEquals(newCustomerPage.verifyPin(driver, "Pin"), paymentData.getPin());
 
 		log.info("Verify Phone Number");
-		verifyEquals(newCustomerPage.verifyPhoneNumber(driver, "Mobile No."), mobile);
+		verifyEquals(newCustomerPage.verifyPhoneNumber(driver, "Mobile No."), paymentData.getMobile());
 
 		log.info("Verify Email");
 		verifyEquals(newCustomerPage.verifyEmail(driver, "Email"), emailOtherUserRegister);
@@ -183,7 +164,7 @@ public class paymentTestCase extends BaseTest {
 		newAccountPage.selectAccountTypeInDropdown(driver, "selaccount", "Savings");
 
 		log.info("Input To Initial Deposit Textbox");
-		newAccountPage.inputToInitialDepositTextbox(driver, "inideposit", initialDeposit);
+		newAccountPage.inputToInitialDepositTextbox(driver, "inideposit", paymentData.getInitialDeposit());
 
 		log.info("Click To Submit button");
 		newAccountPage.clickToSubmitButton(driver, "button2");
@@ -242,34 +223,34 @@ public class paymentTestCase extends BaseTest {
 		newCustomerPage = PageGenerator.getNewCustomerPage(driver);
 
 		log.info("Input To Customer Name Textbox");
-		newCustomerPage.inputToCustomerNameTextbox(driver, "name", customerName);
+		newCustomerPage.inputToCustomerNameTextbox(driver, "name", paymentData.getcustomerName());
 
 		log.info("Click To Male Radio Button");
 		newCustomerPage.clickToMaleRadioButton(driver);
 
 		log.info("Input To DOB Textbox");
-		newCustomerPage.inputToDOBTextbox(driver, "type", dob);
+		newCustomerPage.inputToDOBTextbox(driver, "type", paymentData.getDob());
 
 		log.info("Input to Address Textbox");
-		newCustomerPage.inputToAddressField(driver, "addr", address);
+		newCustomerPage.inputToAddressField(driver, "addr", paymentData.getAddress());
 
 		log.info("Input to City Textbox ");
-		newCustomerPage.inputToCityTextbox(driver, "city", city);
+		newCustomerPage.inputToCityTextbox(driver, "city", paymentData.getCity());
 
 		log.info("Input to State Textbox ");
-		newCustomerPage.inputToStateTextbox(driver, "state", state);
+		newCustomerPage.inputToStateTextbox(driver, "state", paymentData.getState());
 
 		log.info("Input to PIN Textbox ");
-		newCustomerPage.inputToPINTextbox(driver, "pinno", pin);
+		newCustomerPage.inputToPINTextbox(driver, "pinno", paymentData.getPin());
 
 		log.info("Input to Phone Number TextBox ");
-		newCustomerPage.inputToPhoneNumBerTextbox(driver, "telephoneno", mobile);
+		newCustomerPage.inputToPhoneNumBerTextbox(driver, "telephoneno", paymentData.getMobile());
 
 		log.info("Input to Email Textbox ");
 		newCustomerPage.inputToEmailTextbox(driver, "emailid", emailRegister);
 
 		log.info("Input to PasswordTextbox ");
-		newCustomerPage.inputToPasswordTextBox(driver, "password", mobile);
+		newCustomerPage.inputToPasswordTextBox(driver, "password", paymentData.getPassword());
 
 		log.info("Click To Submit Button");
 		newCustomerPage.clickToSubmitButton(driver, "sub");
@@ -281,28 +262,28 @@ public class paymentTestCase extends BaseTest {
 		customerID = newCustomerPage.getCustomerID(driver, "Customer ID");
 
 		log.info("Verify CustomerName");
-		verifyEquals(newCustomerPage.verifyCustomerName(driver, "Customer Name"), customerName);
+		verifyEquals(newCustomerPage.verifyCustomerName(driver, "Customer Name"), paymentData.getcustomerName());
 
 		log.info("Verify Gender");
-		verifyEquals(newCustomerPage.verifyGender(driver, "Gender"), "male");
+		verifyEquals(newCustomerPage.verifyGender(driver, "Gender"), paymentData.getGender());
 
 		log.info("Verify DOB");
-		verifyEquals(newCustomerPage.verifyDOB(driver, "Birthdate"), "1989-01-01");
+		verifyEquals(newCustomerPage.verifyDOB(driver, "Birthdate"), paymentData.getdobOutput());
 
 		log.info("Verify Address");
-		verifyEquals(newCustomerPage.verifyAddress(driver, "Address"), address);
+		verifyEquals(newCustomerPage.verifyAddress(driver, "Address"), paymentData.getAddress());
 
 		log.info("Verify City");
-		verifyEquals(newCustomerPage.verifyCity(driver, "City"), city);
+		verifyEquals(newCustomerPage.verifyCity(driver, "City"), paymentData.getCity());
 
 		log.info("Verify State");
-		verifyEquals(newCustomerPage.verifyState(driver, "State"), state);
+		verifyEquals(newCustomerPage.verifyState(driver, "State"), paymentData.getState());
 
 		log.info("Verify Pin");
-		verifyEquals(newCustomerPage.verifyPin(driver, "Pin"), pin);
+		verifyEquals(newCustomerPage.verifyPin(driver, "Pin"), paymentData.getPin());
 
 		log.info("Verify Phone Number");
-		verifyEquals(newCustomerPage.verifyPhoneNumber(driver, "Mobile No."), mobile);
+		verifyEquals(newCustomerPage.verifyPhoneNumber(driver, "Mobile No."), paymentData.getMobile());
 
 		log.info("Verify Email");
 		verifyEquals(newCustomerPage.verifyEmail(driver, "Email"), emailRegister);
@@ -337,16 +318,16 @@ public class paymentTestCase extends BaseTest {
 		editCustomerPage.clickToSubmitButton(driver, "AccSubmit");
 
 		log.info("Input To Edit Address");
-		editCustomerPage.inputToEditAddress(driver, "addr", editAddress);
+		editCustomerPage.inputToEditAddress(driver, "addr", paymentData.getEditAddress());
 
 		log.info("Input To Edit City");
-		editCustomerPage.inputToEditCity(driver, "city", editCity);
+		editCustomerPage.inputToEditCity(driver, "city", paymentData.getEditCity());
 
 		log.info("Input To Edit State");
-		editCustomerPage.inputToEditState(driver, "state", editState);
+		editCustomerPage.inputToEditState(driver, "state", paymentData.getEditState());
 
 		log.info("Input To Edit Pin");
-		editCustomerPage.inputToEditPin(driver, "pinno", editPin);
+		editCustomerPage.inputToEditPin(driver, "pinno", paymentData.getEditPin());
 
 		log.info("Click To Submit button");
 		editCustomerPage.clickToSubmitButtonForEdit(driver, "sub");
@@ -385,7 +366,7 @@ public class paymentTestCase extends BaseTest {
 		newAccountPage.selectAccountTypeInDropdown(driver, "selaccount", "Savings");
 
 		log.info("Input To Initial Deposit Textbox");
-		newAccountPage.inputToInitialDepositTextbox(driver, "inideposit", initialDeposit);
+		newAccountPage.inputToInitialDepositTextbox(driver, "inideposit", paymentData.getInitialDeposit());
 
 		log.info("Click To Submit button");
 		newAccountPage.clickToSubmitButton(driver, "button2");
@@ -462,10 +443,10 @@ public class paymentTestCase extends BaseTest {
 		depositPage.inputAccountIDToTextbox(driver, "accountno", accountID);
 
 		log.info("Input Amount To Textbox");
-		depositPage.inputAmountToTextbox(driver, "ammount", amount);
+		depositPage.inputAmountToTextbox(driver, "ammount", paymentData.getAmount());
 
 		log.info("Input Description To Textbox");
-		depositPage.inputDescriptionToTextbox(driver, "desc", description);
+		depositPage.inputDescriptionToTextbox(driver, "desc", paymentData.getDescription());
 
 		log.info("Click to Submit Button");
 		depositPage.clickToSubmitButton(driver, "AccSubmit");
@@ -474,7 +455,7 @@ public class paymentTestCase extends BaseTest {
 		verifyTrue(depositPage.verifyTransactionDetailsForAccount(driver, accountID));
 
 		log.info("Verify Current Amount");
-		verifyEquals(depositPage.verifyCurrentAmount(driver), currentBalance);
+		verifyEquals(depositPage.verifyCurrentAmount(driver), paymentData.getCurrentBalace());
 
 	}
 
@@ -504,10 +485,10 @@ public class paymentTestCase extends BaseTest {
 		withdrawalPage.inputToAccountIDTextbox(driver, "accountno", accountID);
 
 		log.info("Input To Amount Textbox");
-		withdrawalPage.inputToAmoutTextbox(driver, "ammount", amountWithdrawal);
+		withdrawalPage.inputToAmoutTextbox(driver, "ammount", paymentData.getAmountWithdrawal());
 
 		log.info("Input TO Description Textbox");
-		withdrawalPage.inputToDescriptionTextbox(driver, "desc", descriptionWithdrawal);
+		withdrawalPage.inputToDescriptionTextbox(driver, "desc", paymentData.getdescriptionWithdrawal());
 
 		log.info("Click To Submit Button");
 		withdrawalPage.clickToSubmitButton(driver, "AccSubmit");
@@ -516,7 +497,7 @@ public class paymentTestCase extends BaseTest {
 		verifyTrue(withdrawalPage.verifyTransactionDetailsOfWithDrawalForAccountToastIsDisplayed(driver, accountID));
 
 		log.info("Verify Current Balance");
-		verifyEquals(withdrawalPage.verifyCurrentBalance(driver), currentBalanceWithdrawal);
+		verifyEquals(withdrawalPage.verifyCurrentBalance(driver), paymentData.getCurrentBalanceWithdrawal());
 		System.out.println(accountID);
 		System.out.println(otherUserCustomerID);
 
@@ -551,10 +532,10 @@ public class paymentTestCase extends BaseTest {
 		fundTransferPage.inputToPayeesAccountIDTextbox(driver, "payeeaccount", otherUserAccountID);
 
 		log.info("Input To Amount Textbox");
-		fundTransferPage.inputToAmountTextbox(driver, "ammount", amountTransfer);
+		fundTransferPage.inputToAmountTextbox(driver, "ammount", paymentData.getAmountTransfer());
 
 		log.info("Input To Description Textbox");
-		fundTransferPage.inputToDescriptionTextbox(driver, "desc", descriptionTransfer);
+		fundTransferPage.inputToDescriptionTextbox(driver, "desc", paymentData.getDescriptionTransfer());
 
 		log.info("Click To Submit Button");
 		fundTransferPage.clickToSubmitButton(driver, "AccSubmit");
@@ -566,10 +547,10 @@ public class paymentTestCase extends BaseTest {
 		verifyEquals(fundTransferPage.verifyPayeesAccountID(driver, "To Account Number"), otherUserAccountID);
 
 		log.info("Verify Amount Transfer");
-		verifyEquals(fundTransferPage.verifyAmountTransfer(driver, "Amount"), amountTransfer);
+		verifyEquals(fundTransferPage.verifyAmountTransfer(driver, "Amount"), paymentData.getAmountTransfer());
 
 		log.info("Verify Description Transfer");
-		verifyEquals(fundTransferPage.verifyDescriptionTransfer(driver, "Description"), descriptionTransfer);
+		verifyEquals(fundTransferPage.verifyDescriptionTransfer(driver, "Description"), paymentData.getDescriptionTransfer());
 
 	}
 
@@ -601,7 +582,7 @@ public class paymentTestCase extends BaseTest {
 		balanceEnquiryPage.clickToSubmitButton(driver, "AccSubmit");
 
 		log.info("Verify Balance Details for Account Is Displayed");
-		verifyEquals(balanceEnquiryPage.verifyBalanceDetailsForAccountIsDisplayed(driver, "Balance"), balance);
+		verifyEquals(balanceEnquiryPage.verifyBalanceDetailsForAccountIsDisplayed(driver, "Balance"), paymentData.getBalance());
 
 	}
 
@@ -661,41 +642,44 @@ public class paymentTestCase extends BaseTest {
 
 	
 	
-	@Test
-	public void TC_11_Delete_Exist_Customer_Account() {
-		log.info("Open Guru 99 Site");
-		loginPage=deleteAccountPage.openGuru99Site(driver,urlPage);
-		loginPage=PageGenerator.getLoginPage(driver);
-		
-		log.info("Input UserID To Textbox");
-		loginPage.inputUserNametoTextBox(driver, "uid", userID);
-
-		log.info("Input Password To Textbox");
-		loginPage.inputPasswordToTextBox(driver, "password", password);
-
-		log.info("Click To Submit Button");
-		homePage = loginPage.clickToLoginButton(driver, "btnLogin");
-		
-		log.info("Open Delete Customer On SubMenu");
-		deleteCustomerPage=homePage.openDeleteCustomerOnSubMenu(driver,"Delete Customer");
-		deleteCustomerPage=PageGenerator.getDeleteCustomerPage(driver);
-		
-		log.info("Verify Delete Customer Page Is Displayed");
-		verifyTrue(deleteCustomerPage.verifyDeleteCustomerPageIsDisplayed(driver));
-		
-		log.info("Input To CustomerID textbox");
-		deleteCustomerPage.inputToCustomerIDTextbox(driver,"cusid",customerID);
-		
-		log.info("Click to Submit Button");
-		deleteCustomerPage.clickToSubmitButton(driver,"AccSubmit");
-		
-		log.info("Verify Delete Customer Successfully");
-		verifyEquals(deleteCustomerPage.verifyCustomerDeleteSuccessfully(driver),"Customer Deleted Successfully");
-		
-		
-		
-		
-	}
+	/*
+	 * @Test public void TC_11_Delete_Exist_Customer_Account() {
+	 * log.info("Open Guru 99 Site");
+	 * loginPage=deleteAccountPage.openGuru99Site(driver,urlPage);
+	 * loginPage=PageGenerator.getLoginPage(driver);
+	 * 
+	 * log.info("Input UserID To Textbox"); loginPage.inputUserNametoTextBox(driver,
+	 * "uid", userID);
+	 * 
+	 * log.info("Input Password To Textbox");
+	 * loginPage.inputPasswordToTextBox(driver, "password", password);
+	 * 
+	 * log.info("Click To Submit Button"); homePage =
+	 * loginPage.clickToLoginButton(driver, "btnLogin");
+	 * 
+	 * log.info("Open Delete Customer On SubMenu");
+	 * deleteCustomerPage=homePage.openDeleteCustomerOnSubMenu(
+	 * driver,"Delete Customer");
+	 * deleteCustomerPage=PageGenerator.getDeleteCustomerPage(driver);
+	 * 
+	 * log.info("Verify Delete Customer Page Is Displayed");
+	 * verifyTrue(deleteCustomerPage.verifyDeleteCustomerPageIsDisplayed(driver));
+	 * 
+	 * log.info("Input To CustomerID textbox");
+	 * deleteCustomerPage.inputToCustomerIDTextbox(driver,"cusid",customerID);
+	 * 
+	 * log.info("Click to Submit Button");
+	 * deleteCustomerPage.clickToSubmitButton(driver,"AccSubmit");
+	 * 
+	 * log.info("Verify Delete Customer Successfully");
+	 * verifyEquals(deleteCustomerPage.verifyCustomerDeleteSuccessfully(driver)
+	 * ,"Customer Deleted Successfully");
+	 * 
+	 * 
+	 * 
+	 * 
+	 * }
+	 */
 	
 	public WebDriver getWebDriver() {
 		return this.driver;
@@ -722,11 +706,9 @@ public class paymentTestCase extends BaseTest {
 	BalanceEnquiryPO balanceEnquiryPage;
 	DeleteAccountPO deleteAccountPage;
 	DeleteCustomerPO deleteCustomerPage;
+	PaymentData paymentData;
 
-	String emailRegister, urlPage, userID, customerName, dob, address, city, state, pin, mobile, emailCus, passwordCus,
-			customerID;
-	String password, emailOtherUserRegister, otherUserCustomerID, otheruserID, passwordOtherUser;
-	String editAddress, editCity, editState, editPin, initialDeposit, accountID, amount, description, currentBalance;
-	String amountWithdrawal, descriptionWithdrawal, currentBalanceWithdrawal, otherUserAccountID;
-	String amountTransfer, descriptionTransfer, balance;
+	String emailRegister,emailOtherUserRegister,urlPage,passwordCus,otheruserID,passwordOtherUser,otherUserCustomerID,otherUserAccountID;
+	String userID,password,customerID,accountID;
+	
 }
