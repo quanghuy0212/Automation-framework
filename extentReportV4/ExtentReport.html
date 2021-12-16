@@ -46,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 1, 2021 10:24:56 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 6, 2021 11:31:00 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -61,8 +61,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -105,10 +104,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='70%'><span class='strong'>7</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='30%'>3</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>6</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -128,15 +127,15 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>TC_01_Create_New_Other_User</span>
-						<span class='test-time'>Dec 1, 2021 10:24:04 PM</span>
+						<span class='test-name'>TC_02_Verify_CustomerID_Cannot_Be_Empty</span>
+						<span class='test-time'>Dec 6, 2021 11:30:59 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:04 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+442ms</span>
+	<span class='label start-time'>Dec 6, 2021 11:30:59 PM</span>
+	<span class='label end-time'>Dec 6, 2021 11:31:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+207ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -150,17 +149,10 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
+				<td class='timestamp'>11:31:00 PM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User(paymentTestCase.java:154)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_02_Verify_CustomerID_Cannot_Be_Empty(deleteCustomerTestcases.java:176)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -192,15 +184,15 @@
 				</li>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>TC_10_Delete_All_Account</span>
-						<span class='test-time'>Dec 1, 2021 10:24:46 PM</span>
+						<span class='test-name'>TC_04_Verify_CustomerID_Cannot_Have_Special_Characters</span>
+						<span class='test-time'>Dec 6, 2021 11:30:59 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:46 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+170ms</span>
+	<span class='label start-time'>Dec 6, 2021 11:30:59 PM</span>
+	<span class='label end-time'>Dec 6, 2021 11:31:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+76ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -214,49 +206,10 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
+				<td class='timestamp'>11:31:00 PM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">java.lang.Throwable: Multiple failures (2):
-Failure 1 of 2
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at commons.BaseTest.checkTrue(BaseTest.java:127)
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:630)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-
-Failure 2 of 2
-java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:640)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_04_Verify_CustomerID_Cannot_Have_Special_Characters(deleteCustomerTestcases.java:199)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -288,15 +241,15 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 				</li>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
 					<div class='test-heading'>
-						<span class='test-name'>TC_02_Create_New_Customer_And_Checked_Created_Succesfully</span>
-						<span class='test-time'>Dec 1, 2021 10:24:13 PM</span>
+						<span class='test-name'>TC_06_Verify_CustomerID_Cannot_Be_Space</span>
+						<span class='test-time'>Dec 6, 2021 11:30:59 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:13 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+711ms</span>
+	<span class='label start-time'>Dec 6, 2021 11:30:59 PM</span>
+	<span class='label end-time'>Dec 6, 2021 11:31:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+943ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -310,17 +263,10 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
+				<td class='timestamp'>11:31:00 PM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:293)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_06_Verify_CustomerID_Cannot_Be_Space(deleteCustomerTestcases.java:219)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -350,17 +296,17 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
 					<div class='test-heading'>
-						<span class='test-name'>TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully</span>
-						<span class='test-time'>Dec 1, 2021 10:24:19 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>TC_05_Verify_CustomerID_Cannot_Have_Black_Space</span>
+						<span class='test-time'>Dec 6, 2021 11:30:59 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:19 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+206ms</span>
+	<span class='label start-time'>Dec 6, 2021 11:30:59 PM</span>
+	<span class='label end-time'>Dec 6, 2021 11:31:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+11ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -372,11 +318,33 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:31:00 PM</td>
 				<td class='step-details'>
-						Test passed
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_05_Verify_CustomerID_Cannot_Have_Black_Space(deleteCustomerTestcases.java:209)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</textarea>
 					
 				</td>
 			</tr>
@@ -385,17 +353,17 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
 					<div class='test-heading'>
-						<span class='test-name'>TC_05_Edit_Account</span>
-						<span class='test-time'>Dec 1, 2021 10:24:27 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>TC_03_Verify_CustomerID_Must_Be_Numeric</span>
+						<span class='test-time'>Dec 6, 2021 11:30:59 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:27 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+712ms</span>
+	<span class='label start-time'>Dec 6, 2021 11:30:59 PM</span>
+	<span class='label end-time'>Dec 6, 2021 11:31:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+145ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -407,11 +375,33 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:31:00 PM</td>
 				<td class='step-details'>
-						Test passed
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_03_Verify_CustomerID_Must_Be_Numeric(deleteCustomerTestcases.java:189)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</textarea>
 					
 				</td>
 			</tr>
@@ -420,17 +410,17 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
 					<div class='test-heading'>
-						<span class='test-name'>TC_09_Check_Current_Account_Balance_Equal_3000</span>
-						<span class='test-time'>Dec 1, 2021 10:24:43 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>TC_01_Create_New_Customer_And_Checked_Created_Succesfully</span>
+						<span class='test-time'>Dec 6, 2021 11:30:53 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:43 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+324ms</span>
+	<span class='label start-time'>Dec 6, 2021 11:30:53 PM</span>
+	<span class='label end-time'>Dec 6, 2021 11:31:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+248ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -442,151 +432,53 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:31:00 PM</td>
 				<td class='step-details'>
-						Test passed
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
-					<div class='test-heading'>
-						<span class='test-name'>TC_08_Transfer_The_Money_Into_Another_Account</span>
-						<span class='test-time'>Dec 1, 2021 10:24:39 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:39 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+230ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
-				<td class='step-details'>
-						Test passed
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
-					<div class='test-heading'>
-						<span class='test-name'>TC_04_Add_New_Account</span>
-						<span class='test-time'>Dec 1, 2021 10:24:24 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:24 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+696ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
-				<td class='step-details'>
-						Test passed
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
-					<div class='test-heading'>
-						<span class='test-name'>TC_06_Tranfer_Money_Into_A_Current_Account</span>
-						<span class='test-time'>Dec 1, 2021 10:24:32 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:32 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+912ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
-				<td class='step-details'>
-						Test passed
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
-					<div class='test-heading'>
-						<span class='test-name'>TC_07_WithDraw_Money_From_Current_Account</span>
-						<span class='test-time'>Dec 1, 2021 10:24:35 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Dec 1, 2021 10:24:35 PM</span>
-	<span class='label end-time'>Dec 1, 2021 10:24:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+38ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:24:56 PM</td>
-				<td class='step-details'>
-						Test passed
+						<textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Customer could not be added !!: 
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-05J6JRM', ip: '192.168.1.44', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211119140621, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 12484, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 51780b14-1e13-4279-aaf6-d7a825bb77ec
+*** Element info: {Using=xpath, value=//p[text()='Customer Registered Successfully!!!']}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at commons.BasePage.waitForElementVisible(BasePage.java:510)
+	at pageObjects.bankguru.NewCustomerPO.verifyToastRegisterSuccessfully(NewCustomerPO.java:76)
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(deleteCustomerTestcases.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</textarea>
 					
 				</td>
 			</tr>
@@ -635,8 +527,8 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.AssertionError</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+						<span class='exception-name'>java.lang.NullPointerException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>5</span></span>
 					</div>
 					<div class='exception-content hide'>
 						<div class='exception-tests'>
@@ -650,18 +542,11 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 1, 2021 10:24:04 PM</td>
-										<td class='linked' test-id='1'>TC_01_Create_New_Other_User</td>
+										<td>Dec 6, 2021 11:30:59 PM</td>
+										<td class='linked' test-id='1'>TC_02_Verify_CustomerID_Cannot_Be_Empty</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User(paymentTestCase.java:154)
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_02_Verify_CustomerID_Cannot_Be_Empty(deleteCustomerTestcases.java:176)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -686,18 +571,98 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 1, 2021 10:24:13 PM</td>
-										<td class='linked' test-id='3'>TC_02_Create_New_Customer_And_Checked_Created_Succesfully</td>
+										<td>Dec 6, 2021 11:30:59 PM</td>
+										<td class='linked' test-id='2'>TC_04_Verify_CustomerID_Cannot_Have_Special_Characters</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:293)
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_04_Verify_CustomerID_Cannot_Have_Special_Characters(deleteCustomerTestcases.java:199)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 6, 2021 11:30:59 PM</td>
+										<td class='linked' test-id='3'>TC_06_Verify_CustomerID_Cannot_Be_Space</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_06_Verify_CustomerID_Cannot_Be_Space(deleteCustomerTestcases.java:219)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 6, 2021 11:30:59 PM</td>
+										<td class='linked' test-id='4'>TC_05_Verify_CustomerID_Cannot_Have_Black_Space</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_05_Verify_CustomerID_Cannot_Have_Black_Space(deleteCustomerTestcases.java:209)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 6, 2021 11:30:59 PM</td>
+										<td class='linked' test-id='5'>TC_03_Verify_CustomerID_Must_Be_Numeric</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)" because "this.deleteCustomerPage" is null
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_03_Verify_CustomerID_Must_Be_Numeric(deleteCustomerTestcases.java:189)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -728,7 +693,7 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 				</li>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.Throwable</span>
+						<span class='exception-name'>org.openqa.selenium.UnhandledAlertException</span>
 						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
@@ -743,50 +708,31 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 1, 2021 10:24:46 PM</td>
-										<td class='linked' test-id='2'>TC_10_Delete_All_Account</td>
+										<td>Dec 6, 2021 11:30:53 PM</td>
+										<td class='linked' test-id='6'>TC_01_Create_New_Customer_And_Checked_Created_Succesfully</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.Throwable: Multiple failures (2):
-Failure 1 of 2
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at commons.BaseTest.checkTrue(BaseTest.java:127)
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:630)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-
-Failure 2 of 2
-java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:640)
+											<textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Customer could not be added !!: 
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-05J6JRM', ip: '192.168.1.44', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211119140621, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 12484, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 51780b14-1e13-4279-aaf6-d7a825bb77ec
+*** Element info: {Using=xpath, value=//p[text()='Customer Registered Successfully!!!']}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at commons.BasePage.waitForElementVisible(BasePage.java:510)
+	at pageObjects.bankguru.NewCustomerPO.verifyToastRegisterSuccessfully(NewCustomerPO.java:76)
+	at com.bankguru.livecodingproject.deleteCustomerTestcases.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(deleteCustomerTestcases.java:125)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -832,7 +778,7 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>10</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -844,19 +790,19 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 1, 2021 10:24:56 PM</div>
+					<div class='panel-lead'>Dec 6, 2021 11:31:00 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 1, 2021 10:24:56 PM</div>
+			 		<div class='panel-lead'>Dec 6, 2021 11:31:00 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 0s+70ms</div>
+					<div class='panel-lead'>0h 0m 0s+62ms</div>
 				</div>
 			</div>
 		</div>
@@ -868,8 +814,12 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 		<h5>TestRunner Logs</h5>
 		
 		<div class='card-panel'>
-				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png" height='100' width='150'/> </a></br><br>
-				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png" height='100' width='150'/> </a></br><br>
+				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br><br>
+				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Verify_CustomerID_Cannot_Be_Empty_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Verify_CustomerID_Cannot_Be_Empty_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br><br>
+				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_03_Verify_CustomerID_Must_Be_Numeric_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_03_Verify_CustomerID_Must_Be_Numeric_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br><br>
+				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_04_Verify_CustomerID_Cannot_Have_Special_Characters_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_04_Verify_CustomerID_Cannot_Have_Special_Characters_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br><br>
+				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_05_Verify_CustomerID_Cannot_Have_Black_Space_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_05_Verify_CustomerID_Cannot_Have_Black_Space_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br><br>
+				<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_06_Verify_CustomerID_Cannot_Be_Space_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_06_Verify_CustomerID_Cannot_Be_Space_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br><br>
 		</div>
 	</div>
 </div>
@@ -877,14 +827,14 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 10,
-				passParent: 7,
-				failParent: 3,
+                parentCount: 6,
+				passParent: 0,
+				failParent: 6,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 3,
+				exceptionsParent: 6,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -909,7 +859,7 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 		</script>
 		<script>
 			var timeline = {
-			        "TC_01_Create_New_Other_User":52.442,"TC_10_Delete_All_Account":10.17,"TC_02_Create_New_Customer_And_Checked_Created_Succesfully":43.711,"TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully":37.206,"TC_05_Edit_Account":29.712,"TC_09_Check_Current_Account_Balance_Equal_3000":13.324,"TC_08_Transfer_The_Money_Into_Another_Account":17.23,"TC_04_Add_New_Account":32.696,"TC_06_Tranfer_Money_Into_A_Current_Account":24.912,"TC_07_WithDraw_Money_From_Current_Account":21.038
+			        "TC_02_Verify_CustomerID_Cannot_Be_Empty":1.207,"TC_04_Verify_CustomerID_Cannot_Have_Special_Characters":1.076,"TC_06_Verify_CustomerID_Cannot_Be_Space":0.943,"TC_05_Verify_CustomerID_Cannot_Have_Black_Space":1.011,"TC_03_Verify_CustomerID_Must_Be_Numeric":1.145,"TC_01_Create_New_Customer_And_Checked_Created_Succesfully":7.248
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

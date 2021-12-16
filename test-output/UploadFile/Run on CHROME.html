@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run on CHROME</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/21/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 01 22:23:58 ICT 2021</td>
+<td>Started on:</td><td>Mon Dec 06 22:01:25 ICT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>57 seconds (57733 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7704 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,32 +75,23 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User()'><b>TC_01_Create_New_Other_User</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase<br/>
-<a href="#Output-921492287" onClick='toggleBox("Output-921492287", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_01_Create_New_Customer_And_Checked_Created_Succesfully()'><b>TC_01_Create_New_Customer_And_Checked_Created_Succesfully</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-965622203" onClick='toggleBox("Output-965622203", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-921492287" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-921492287">
-<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png" height='100' width='150'/> </a></br><br/>
+<a href="#Output-965622203" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-965622203">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User(paymentTestCase.java:154)
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.NewCustomerPO.openGuru99Site(org.openqa.selenium.WebDriver, String)&quot; because &quot;this.newCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(editCustomerTestcases.java:47)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace921492287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace921492287'><pre>java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User(paymentTestCase.java:154)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace965622203", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace965622203'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.NewCustomerPO.openGuru99Site(org.openqa.selenium.WebDriver, String)&quot; because &quot;this.newCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(editCustomerTestcases.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -122,35 +113,26 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
-<td>8</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully()'><b>TC_02_Create_New_Customer_And_Checked_Created_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase<br/>
-<a href="#Output-2036256698" onClick='toggleBox("Output-2036256698", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty()'><b>TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-221977837" onClick='toggleBox("Output-221977837", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2036256698" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2036256698">
-<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png" height='100' width='150'/> </a></br><br/>
+<a href="#Output-221977837" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-221977837">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:293)
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty(editCustomerTestcases.java:166)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2036256698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2036256698'><pre>java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:293)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace221977837", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace221977837'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty(editCustomerTestcases.java:166)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,72 +154,26 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
-<td>6</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account()'><b>TC_10_Delete_All_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td><div><pre>java.lang.Throwable: Multiple failures (2):
-Failure 1 of 2
-java.lang.AssertionError: expected [true] but found [false]
-	at commons.BaseTest.checkTrue(BaseTest.java:127)
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:630)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:831)
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric()'><b>TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1520611018" onClick='toggleBox("Output-1520611018", this, "Show output", "Hide output");'>Show output</a>
 
-Failure 2 of 2
-java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null]
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:640)
+<a href="#Output-1520611018" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1520611018">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric(editCustomerTestcases.java:177)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1466042721", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1466042721'><pre>java.lang.Throwable: Multiple failures (2):
-Failure 1 of 2
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at commons.BaseTest.checkTrue(BaseTest.java:127)
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:630)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-
-Failure 2 of 2
-java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:166)
-	at commons.BaseTest.verifyEquals(BaseTest.java:178)
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:640)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1520611018", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1520611018'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric(editCustomerTestcases.java:177)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -259,51 +195,746 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
-<td>9</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully()'><b>TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character()'><b>TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1378337519" onClick='toggleBox("Output-1378337519", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1378337519" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1378337519">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character(editCustomerTestcases.java:188)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1378337519", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1378337519'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character(editCustomerTestcases.java:188)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_04_Add_New_Account()'><b>TC_04_Add_New_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>2</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_05_Input_Valid_Data_To_Textbox()'><b>TC_05_Input_Valid_Data_To_Textbox</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1069292120" onClick='toggleBox("Output-1069292120", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1069292120" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1069292120">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_05_Input_Valid_Data_To_Textbox_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_05_Input_Valid_Data_To_Textbox_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_05_Input_Valid_Data_To_Textbox(editCustomerTestcases.java:200)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1069292120", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1069292120'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputCustomerIDToTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_05_Input_Valid_Data_To_Textbox(editCustomerTestcases.java:200)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_05_Edit_Account()'><b>TC_05_Edit_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>4</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_06_Verify_Address_Field_Cannot_Be_Empty()'><b>TC_06_Verify_Address_Field_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-669947645" onClick='toggleBox("Output-669947645", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-669947645" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-669947645">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_06_Verify_Address_Field_Cannot_Be_Empty_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_06_Verify_Address_Field_Cannot_Be_Empty_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditAddress(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_06_Verify_Address_Field_Cannot_Be_Empty(editCustomerTestcases.java:210)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace669947645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace669947645'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditAddress(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_06_Verify_Address_Field_Cannot_Be_Empty(editCustomerTestcases.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_06_Tranfer_Money_Into_A_Current_Account()'><b>TC_06_Tranfer_Money_Into_A_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>3</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_07_Verify_City_Field_Cannot_Be_Empty()'><b>TC_07_Verify_City_Field_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-834830810" onClick='toggleBox("Output-834830810", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-834830810" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-834830810">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_07_Verify_City_Field_Cannot_Be_Empty_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_07_Verify_City_Field_Cannot_Be_Empty_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditCity(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_07_Verify_City_Field_Cannot_Be_Empty(editCustomerTestcases.java:220)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace834830810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace834830810'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditCity(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_07_Verify_City_Field_Cannot_Be_Empty(editCustomerTestcases.java:220)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_07_WithDraw_Money_From_Current_Account()'><b>TC_07_WithDraw_Money_From_Current_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>3</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_08_Verify_City_Field_Cannot_Be_Numeric()'><b>TC_08_Verify_City_Field_Cannot_Be_Numeric</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-957301786" onClick='toggleBox("Output-957301786", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-957301786" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-957301786">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_08_Verify_City_Field_Cannot_Be_Numeric_06_12_2021_10_01_31.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_08_Verify_City_Field_Cannot_Be_Numeric_06_12_2021_10_01_31.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditCity(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_08_Verify_City_Field_Cannot_Be_Numeric(editCustomerTestcases.java:230)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace957301786", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace957301786'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditCity(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_08_Verify_City_Field_Cannot_Be_Numeric(editCustomerTestcases.java:230)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_08_Transfer_The_Money_Into_Another_Account()'><b>TC_08_Transfer_The_Money_Into_Another_Account</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>3</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_09_Verify_City_Field_Cannot_Have_Special_Character()'><b>TC_09_Verify_City_Field_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1797716199" onClick='toggleBox("Output-1797716199", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1797716199" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1797716199">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_09_Verify_City_Field_Cannot_Have_Special_Character_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_09_Verify_City_Field_Cannot_Have_Special_Character_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditCity(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_09_Verify_City_Field_Cannot_Have_Special_Character(editCustomerTestcases.java:240)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1797716199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1797716199'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditCity(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_09_Verify_City_Field_Cannot_Have_Special_Character(editCustomerTestcases.java:240)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 <tr>
-<td title='com.bankguru.livecodingproject.paymentTestCase.TC_09_Check_Current_Account_Balance_Equal_3000()'><b>TC_09_Check_Current_Account_Balance_Equal_3000</b><br>Test class: com.bankguru.livecodingproject.paymentTestCase</td>
-<td></td>
-<td>3</td>
-<td>com.bankguru.livecodingproject.paymentTestCase@45385f75</td></tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_10_Verify_State_Field_Cannot_Be_Empty()'><b>TC_10_Verify_State_Field_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1777868320" onClick='toggleBox("Output-1777868320", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1777868320" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1777868320">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_10_Verify_State_Field_Cannot_Be_Empty_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_10_Verify_State_Field_Cannot_Be_Empty_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditState(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_10_Verify_State_Field_Cannot_Be_Empty(editCustomerTestcases.java:250)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1777868320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1777868320'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditState(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_10_Verify_State_Field_Cannot_Be_Empty(editCustomerTestcases.java:250)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_11_Verify_State_Field_Cannot_Be_Numeric()'><b>TC_11_Verify_State_Field_Cannot_Be_Numeric</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-14309317" onClick='toggleBox("Output-14309317", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-14309317" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-14309317">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_11_Verify_State_Field_Cannot_Be_Numeric_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_11_Verify_State_Field_Cannot_Be_Numeric_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditState(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_11_Verify_State_Field_Cannot_Be_Numeric(editCustomerTestcases.java:260)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace14309317", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace14309317'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditState(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_11_Verify_State_Field_Cannot_Be_Numeric(editCustomerTestcases.java:260)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_12_Verify_State_Field_Cannot_Have_Special_Character()'><b>TC_12_Verify_State_Field_Cannot_Have_Special_Character</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-652608052" onClick='toggleBox("Output-652608052", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-652608052" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-652608052">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_12_Verify_State_Field_Cannot_Have_Special_Character_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_12_Verify_State_Field_Cannot_Have_Special_Character_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditState(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_12_Verify_State_Field_Cannot_Have_Special_Character(editCustomerTestcases.java:270)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace652608052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace652608052'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditState(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_12_Verify_State_Field_Cannot_Have_Special_Character(editCustomerTestcases.java:270)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_13_Verify_Pin_Field_Must_Be_Numeric()'><b>TC_13_Verify_Pin_Field_Must_Be_Numeric</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-331060240" onClick='toggleBox("Output-331060240", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-331060240" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-331060240">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_13_Verify_Pin_Field_Must_Be_Numeric_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_13_Verify_Pin_Field_Must_Be_Numeric_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_13_Verify_Pin_Field_Must_Be_Numeric(editCustomerTestcases.java:280)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace331060240", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331060240'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_13_Verify_Pin_Field_Must_Be_Numeric(editCustomerTestcases.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_14_Verify_Pin_Field_Cannot_Be_Empty()'><b>TC_14_Verify_Pin_Field_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-973349787" onClick='toggleBox("Output-973349787", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-973349787" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-973349787">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_14_Verify_Pin_Field_Cannot_Be_Empty_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_14_Verify_Pin_Field_Cannot_Be_Empty_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_14_Verify_Pin_Field_Cannot_Be_Empty(editCustomerTestcases.java:290)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace973349787", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace973349787'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_14_Verify_Pin_Field_Cannot_Be_Empty(editCustomerTestcases.java:290)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_15_Verify_Pin_Field_Must_Have_6_Digits()'><b>TC_15_Verify_Pin_Field_Must_Have_6_Digits</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1489782648" onClick='toggleBox("Output-1489782648", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1489782648" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1489782648">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_15_Verify_Pin_Field_Must_Have_6_Digits_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_15_Verify_Pin_Field_Must_Have_6_Digits_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_15_Verify_Pin_Field_Must_Have_6_Digits(editCustomerTestcases.java:301)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1489782648", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1489782648'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_15_Verify_Pin_Field_Must_Have_6_Digits(editCustomerTestcases.java:301)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters()'><b>TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1152460317" onClick='toggleBox("Output-1152460317", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1152460317" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1152460317">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters(editCustomerTestcases.java:311)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1152460317", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1152460317'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters(editCustomerTestcases.java:311)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters()'><b>TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-799421443" onClick='toggleBox("Output-799421443", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-799421443" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-799421443">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters(editCustomerTestcases.java:321)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace799421443", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace799421443'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters(editCustomerTestcases.java:321)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_18_Verify_Telephone_Field_Cannot_Be_Empty()'><b>TC_18_Verify_Telephone_Field_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-2116863876" onClick='toggleBox("Output-2116863876", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2116863876" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2116863876">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_18_Verify_Telephone_Field_Cannot_Be_Empty_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_18_Verify_Telephone_Field_Cannot_Be_Empty_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_18_Verify_Telephone_Field_Cannot_Be_Empty(editCustomerTestcases.java:331)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2116863876", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2116863876'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_18_Verify_Telephone_Field_Cannot_Be_Empty(editCustomerTestcases.java:331)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters()'><b>TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1372824085" onClick='toggleBox("Output-1372824085", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1372824085" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1372824085">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters(editCustomerTestcases.java:341)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1372824085", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1372824085'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters(editCustomerTestcases.java:341)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_20_Verify_Telephone_Email_Cannot_Be_Empty()'><b>TC_20_Verify_Telephone_Email_Cannot_Be_Empty</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-1392057159" onClick='toggleBox("Output-1392057159", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1392057159" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1392057159">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_20_Verify_Telephone_Email_Cannot_Be_Empty_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_20_Verify_Telephone_Email_Cannot_Be_Empty_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_20_Verify_Telephone_Email_Cannot_Be_Empty(editCustomerTestcases.java:351)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1392057159", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1392057159'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_20_Verify_Telephone_Email_Cannot_Be_Empty(editCustomerTestcases.java:351)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
+<tr>
+<td title='com.bankguru.livecodingproject.editCustomerTestcases.TC_21_Verify_Telephone_Email_Must_Be_Correct_Format()'><b>TC_21_Verify_Telephone_Email_Must_Be_Correct_Format</b><br>Test class: com.bankguru.livecodingproject.editCustomerTestcases<br/>
+<a href="#Output-220237048" onClick='toggleBox("Output-220237048", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-220237048" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-220237048">
+<br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_21_Verify_Telephone_Email_Must_Be_Correct_Format_06_12_2021_10_01_32.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_21_Verify_Telephone_Email_Must_Be_Correct_Format_06_12_2021_10_01_32.png" height='100' width='150'/> </a></br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_21_Verify_Telephone_Email_Must_Be_Correct_Format(editCustomerTestcases.java:361)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace220237048", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace220237048'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.EditCustomerPO.inputToEditPin(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.editCustomerPage&quot; is null
+	at com.bankguru.livecodingproject.editCustomerTestcases.TC_21_Verify_Telephone_Email_Must_Be_Correct_Format(editCustomerTestcases.java:361)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+</pre></div></td>
+<td>0</td>
+<td>com.bankguru.livecodingproject.editCustomerTestcases@3bcd05cb</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package pageObjects.bankguru;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
@@ -88,8 +89,23 @@ public class EditCustomerPO extends BasePage {
 		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_STATE_FIELD);
 	}
 
-	public Object verifyErrorMessagePinIsDisplayed(WebDriver driver2) {
-		// TODO Auto-generated method stub
-		return null;
+	public String verifyErrorMessagePinIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver, EditCustomerUI.ERROR_MESSAGE_PIN_FIELD);
+		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_PIN_FIELD);
+	}
+
+	public String verifyErrorMessageTelephoneIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver, EditCustomerUI.ERROR_MESSAGE_TELEPHONE_FIELD);
+		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_TELEPHONE_FIELD);
+	}
+
+	public String verifyErrorMessageEmailIsDisplayed(WebDriver driver) {
+		waitForElementVisible(driver, EditCustomerUI.ERROR_MESSAGE_EMAIL_FIELD);
+		return getTextElement(driver,  EditCustomerUI.ERROR_MESSAGE_EMAIL_FIELD);
+	}
+
+	public void deleteValueInCustomerTextbox(WebDriver driver,String textboxName) {
+		waitForElementVisible(driver,BasePageUI.TEXT_BOX_BY_NAME,textboxName);
+		pressKeyToElement(driver, BasePageUI.TEXT_BOX_BY_NAME, Keys.DELETE, textboxName);
 	}
 }

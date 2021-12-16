@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on FIREFOX"
+           tests="21"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="8.981">
+  <properties />
+  
+  
+            <testcase name="TC_20_Verify_Telephone_Email_Cannot_Be_Empty" time="0.061" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_21_Verify_Telephone_Email_Must_Be_Correct_Format" time="0.095" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_10_Verify_State_Field_Cannot_Be_Empty" time="0.071" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_12_Verify_State_Field_Cannot_Have_Special_Character" time="0.058" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_06_Verify_Address_Field_Cannot_Be_Empty" time="0.077" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_09_Verify_City_Field_Cannot_Have_Special_Character" time="0.067" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_11_Verify_State_Field_Cannot_Be_Numeric" time="0.060" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_13_Verify_Pin_Field_Must_Be_Numeric" time="0.064" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_18_Verify_Telephone_Field_Cannot_Be_Empty" time="0.059" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_14_Verify_Pin_Field_Cannot_Be_Empty" time="0.062" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters" time="0.061" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters" time="0.060" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric" time="0.068" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters" time="0.054" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character" time="0.068" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_05_Input_Valid_Data_To_Textbox" time="0.674" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_07_Verify_City_Field_Cannot_Be_Empty" time="0.066" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty" time="0.203" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_08_Verify_City_Field_Cannot_Be_Numeric" time="0.080" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_01_Create_New_Customer_And_Checked_Created_Succesfully" time="6.917" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+                <testcase name="TC_15_Verify_Pin_Field_Must_Have_6_Digits" time="0.056" classname="com.bankguru.livecodingproject.editCustomerTestcases" />
+      
+</testsuite>

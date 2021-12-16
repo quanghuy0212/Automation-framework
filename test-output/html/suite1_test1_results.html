@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Run on CHROME</title>
+  <title>Test Results Report - Run on FIREFOX</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Run on CHROME</h1>
+<h1>Run on FIREFOX</h1>
 <p>
-  Test duration: 57.553s
+  Test duration: 11.855s
 </p>
 
 
@@ -20,34 +20,47 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.bankguru.livecodingproject.paymentTestCase</td>
+        <td colspan="3" class="group">com.bankguru.livecodingproject.deleteCustomerTestcases</td>
       </tr>
             
 <tr>
   <td class="method">
-                  TC_01_Create_New_Other_User
+                  TC_01_Create_New_Customer_And_Checked_Created_Succesfully
       </td>
   <td class="duration">
-    8.649s
+    5.937s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Other_User_01_12_2021_10_24_13.png" height='100' width='150'/> </a></br>
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_01_Create_New_Customer_And_Checked_Created_Succesfully_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br>
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: Customer could not be added !!: <br/>
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;<br/>
+System info: host: &apos;DESKTOP-05J6JRM&apos;, ip: &apos;192.168.1.44&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;<br/>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211119140621, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 12484, moz:profile: C:\Users\quanh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 51780b14-1e13-4279-aaf6-d7a825bb77ec<br/>
+*** Element info: {Using=xpath, value=//p[text()=&apos;Customer Registered Successfully!!!&apos;]}</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:96)<br />
-              org.testng.Assert.failNotEquals(Assert.java:776)<br />
-              org.testng.Assert.assertEqualsImpl(Assert.java:137)<br />
-              org.testng.Assert.assertEquals(Assert.java:118)<br />
-              org.testng.Assert.assertEquals(Assert.java:442)<br />
-              commons.BaseTest.checkEquals(BaseTest.java:166)<br />
-              commons.BaseTest.verifyEquals(BaseTest.java:178)<br />
-              com.bankguru.livecodingproject.paymentTestCase.TC_01_Create_New_Other_User(paymentTestCase.java:154)<br />
+              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)<br />
+              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br />
+              org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)<br />
+              org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)<br />
+              org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)<br />
+              commons.BasePage.waitForElementVisible(BasePage.java:510)<br />
+              pageObjects.bankguru.NewCustomerPO.verifyToastRegisterSuccessfully(NewCustomerPO.java:76)<br />
+              com.bankguru.livecodingproject.deleteCustomerTestcases.TC_01_Create_New_Customer_And_Checked_Created_Succesfully(deleteCustomerTestcases.java:125)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -73,29 +86,22 @@
 </tr>
 <tr>
   <td class="method">
-                  TC_02_Create_New_Customer_And_Checked_Created_Succesfully
+                  TC_02_Verify_CustomerID_Cannot_Be_Empty
       </td>
   <td class="duration">
-    6.437s
+    0.001s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Create_New_Customer_And_Checked_Created_Succesfully_01_12_2021_10_24_19.png" height='100' width='150'/> </a></br>
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Verify_CustomerID_Cannot_Be_Empty_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_02_Verify_CustomerID_Cannot_Be_Empty_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br>
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [01/01/1989] but found [1989-01-01]</b></a><br />
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.deleteCustomerPage&quot; is null</b></a><br />
     <div class="stackTrace" id="exception-1">
-              org.testng.Assert.fail(Assert.java:96)<br />
-              org.testng.Assert.failNotEquals(Assert.java:776)<br />
-              org.testng.Assert.assertEqualsImpl(Assert.java:137)<br />
-              org.testng.Assert.assertEquals(Assert.java:118)<br />
-              org.testng.Assert.assertEquals(Assert.java:442)<br />
-              commons.BaseTest.checkEquals(BaseTest.java:166)<br />
-              commons.BaseTest.verifyEquals(BaseTest.java:178)<br />
-              com.bankguru.livecodingproject.paymentTestCase.TC_02_Create_New_Customer_And_Checked_Created_Succesfully(paymentTestCase.java:293)<br />
+              com.bankguru.livecodingproject.deleteCustomerTestcases.TC_02_Verify_CustomerID_Cannot_Be_Empty(deleteCustomerTestcases.java:176)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -121,58 +127,145 @@
 </tr>
 <tr>
   <td class="method">
-                  TC_10_Delete_All_Account
+                  TC_03_Verify_CustomerID_Must_Be_Numeric
       </td>
   <td class="duration">
-    9.860s
+    0.001s
   </td>
   <td class="result">
         
     
-        
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_03_Verify_CustomerID_Must_Be_Numeric_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_03_Verify_CustomerID_Must_Be_Numeric_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br>
+                  </div>
+    
 
-        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.Throwable: Multiple failures (2):<br/>
-Failure 1 of 2<br/>
-java.lang.AssertionError: expected [true] but found [false]<br/>
-	at org.testng.Assert.fail(Assert.java:96)<br/>
-	at org.testng.Assert.failNotEquals(Assert.java:776)<br/>
-	at org.testng.Assert.assertTrue(Assert.java:44)<br/>
-	at org.testng.Assert.assertTrue(Assert.java:54)<br/>
-	at commons.BaseTest.checkTrue(BaseTest.java:127)<br/>
-	at commons.BaseTest.verifyTrue(BaseTest.java:139)<br/>
-	at com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:630)<br/>
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br/>
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)<br/>
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br/>
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)<br/>
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br/>
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br/>
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br/>
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br/>
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)<br/>
-	at org.testng.TestRunner.run(TestRunner.java:505)<br/>
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br/>
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)<br/>
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)<br/>
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br/>
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)<br/>
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>
-	at java.base/java.lang.Thread.run(Thread.java:831)<br/>
-<br/>
-Failure 2 of 2<br/>
-java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null]</b></a><br />
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.deleteCustomerPage&quot; is null</b></a><br />
     <div class="stackTrace" id="exception-2">
-              org.testng.Assert.fail(Assert.java:96)<br />
-              org.testng.Assert.failNotEquals(Assert.java:776)<br />
-              org.testng.Assert.assertEqualsImpl(Assert.java:132)<br />
-              org.testng.Assert.assertEquals(Assert.java:118)<br />
-              org.testng.Assert.assertEquals(Assert.java:442)<br />
-              commons.BaseTest.checkEquals(BaseTest.java:166)<br />
-              commons.BaseTest.verifyEquals(BaseTest.java:178)<br />
-              com.bankguru.livecodingproject.paymentTestCase.TC_10_Delete_All_Account(paymentTestCase.java:640)<br />
+              com.bankguru.livecodingproject.deleteCustomerTestcases.TC_03_Verify_CustomerID_Must_Be_Numeric(deleteCustomerTestcases.java:189)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:567)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:583)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:40)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)<br />
+              org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+              java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br />
+              java.base/java.lang.Thread.run(Thread.java:831)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  TC_04_Verify_CustomerID_Cannot_Have_Special_Characters
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_04_Verify_CustomerID_Cannot_Have_Special_Characters_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_04_Verify_CustomerID_Cannot_Have_Special_Characters_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.deleteCustomerPage&quot; is null</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              com.bankguru.livecodingproject.deleteCustomerTestcases.TC_04_Verify_CustomerID_Cannot_Have_Special_Characters(deleteCustomerTestcases.java:199)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:567)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:583)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:40)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)<br />
+              org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+              java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br />
+              java.base/java.lang.Thread.run(Thread.java:831)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  TC_05_Verify_CustomerID_Cannot_Have_Black_Space
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_05_Verify_CustomerID_Cannot_Have_Black_Space_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_05_Verify_CustomerID_Cannot_Have_Black_Space_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.deleteCustomerPage&quot; is null</b></a><br />
+    <div class="stackTrace" id="exception-4">
+              com.bankguru.livecodingproject.deleteCustomerTestcases.TC_05_Verify_CustomerID_Cannot_Have_Black_Space(deleteCustomerTestcases.java:209)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:567)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:583)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:40)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)<br />
+              org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+              java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br />
+              java.base/java.lang.Thread.run(Thread.java:831)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  TC_06_Verify_CustomerID_Cannot_Be_Space
+      </td>
+  <td class="duration">
+    0.001s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_06_Verify_CustomerID_Cannot_Be_Space_06_12_2021_11_30_59.png"><img src="file:///C:\Users\quanh\git\Automation-framework/screenshotReportNG/TC_06_Verify_CustomerID_Cannot_Be_Space_06_12_2021_11_30_59.png" height='100' width='150'/> </a></br>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.bankguru.DeleteCustomerPO.inputToCustomerIDTextbox(org.openqa.selenium.WebDriver, String, String)&quot; because &quot;this.deleteCustomerPage&quot; is null</b></a><br />
+    <div class="stackTrace" id="exception-5">
+              com.bankguru.livecodingproject.deleteCustomerTestcases.TC_06_Verify_CustomerID_Cannot_Be_Space(deleteCustomerTestcases.java:219)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -199,111 +292,6 @@ java.lang.AssertionError: expected [Account Deleted Sucessfully] but found [null
       </table>
 
 
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.bankguru.livecodingproject.paymentTestCase</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  TC_03_Edit_Customer_Account_And_Check_Edit_Succesfully
-      </td>
-  <td class="duration">
-    4.510s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  TC_04_Add_New_Account
-      </td>
-  <td class="duration">
-    2.981s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  TC_05_Edit_Account
-      </td>
-  <td class="duration">
-    4.801s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  TC_06_Tranfer_Money_Into_A_Current_Account
-      </td>
-  <td class="duration">
-    3.875s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  TC_07_WithDraw_Money_From_Current_Account
-      </td>
-  <td class="duration">
-    3.805s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  TC_08_Transfer_The_Money_Into_Another_Account
-      </td>
-  <td class="duration">
-    3.904s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  TC_09_Check_Current_Account_Balance_Equal_3000
-      </td>
-  <td class="duration">
-    3.151s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-      </table>
   
 </body>
 </html>

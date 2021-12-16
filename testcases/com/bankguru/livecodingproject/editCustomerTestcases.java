@@ -36,6 +36,7 @@ public class editCustomerTestcases extends BaseTest {
 		driver.manage().window().maximize();
 		urlPage = "http://demo.guru99.com/V4";
 		emailRegister = getRandomEmail();
+		paymentData=PaymentData.getPayment();
 
 		loginPage = PageGenerator.getLoginPage(driver);
 	}
@@ -43,8 +44,10 @@ public class editCustomerTestcases extends BaseTest {
 	@Test
 	public void TC_01_Create_New_Customer_And_Checked_Created_Succesfully() {
 
-		log.info("Open Guru99 Site");
-		newCustomerPage.openGuru99Site(driver, urlPage);
+		/*
+		 * log.info("Open Guru99 Site"); newCustomerPage.openGuru99Site(driver,
+		 * urlPage);
+		 */
 
 		log.info("Click to here link to get username and password");
 		loginPage.clickToHereLinkToGetAccount(driver);
@@ -153,17 +156,25 @@ public class editCustomerTestcases extends BaseTest {
 
 		log.info("Open EditCustomer On SubMenu");
 		editCustomerPage = homePage.clickToEditCustomerOnSubMenu(driver, "Edit Customer");
+		
 
 		log.info("Verify text Edit Customer Form IsDisplayed");
 		verifyTrue(editCustomerPage.verifyTextEditCustomerIsDisplayed(driver));
 
+		/*
+		 * log.info("Input Customer ID To Textbox");
+		 * editCustomerPage.inputCustomerIDToTextbox(driver, "cusid", customerID);
+		 * 
+		 * log.info("Click To Submit Button");
+		 * editCustomerPage.clickToSubmitButton(driver, "AccSubmit");
+		 */
 	}
 
 	@Test
 	public void TC_02_Verify_Customer_ID_Textbox_Is_Not_Empty() {
 
 		log.info("Do Not Enter Value To Customer ID Textbox");
-		editCustomerPage.inputCustomerIDToTextbox(driver, emailRegister, "");
+		editCustomerPage.deleteValueInCustomerTextbox(driver,"cusid");
 
 		log.info("Verify Error Message Is Displayed");
 		verifyEquals(editCustomerPage.verifyErrorMessageCustomerIDIsDisplayed(driver), "Customer ID is required");
@@ -174,7 +185,7 @@ public class editCustomerTestcases extends BaseTest {
 	public void TC_03_Verify_Customer_ID_Textbox_Must_Be_Numeric() {
 
 		log.info("Input Character And Number To CustomerID Textbox");
-		editCustomerPage.inputCustomerIDToTextbox(driver, emailRegister, "123abc");
+		editCustomerPage.inputCustomerIDToTextbox(driver, "cusid", "123abc");
 
 		log.info("Verify Error Message Is Displayed");
 		verifyEquals(editCustomerPage.verifyErrorMessageCustomerIDIsDisplayed(driver), "Characters are not allowed");
@@ -185,11 +196,10 @@ public class editCustomerTestcases extends BaseTest {
 	public void TC_04_Verify_Customer_ID_Textbox_Cannot_Have_Special_Character() {
 
 		log.info("Input Special Character To CustomerID Textbox");
-		editCustomerPage.inputCustomerIDToTextbox(driver, emailRegister, "123@!#");
+		editCustomerPage.inputCustomerIDToTextbox(driver, "cusid", "123@!#");
 
 		log.info("Verify Error Message Is Displayed");
-		verifyEquals(editCustomerPage.verifyErrorMessageCustomerIDIsDisplayed(driver),
-				"Special characters are not allowed");
+		verifyEquals(editCustomerPage.verifyErrorMessageCustomerIDIsDisplayed(driver),"Special characters are not allowed");
 
 	}
 
@@ -197,13 +207,14 @@ public class editCustomerTestcases extends BaseTest {
 	public void TC_05_Input_Valid_Data_To_Textbox() {
 
 		log.info("Input Special Character To CustomerID Textbox");
-		editCustomerPage.inputCustomerIDToTextbox(driver, emailRegister, customerID);
+		editCustomerPage.inputCustomerIDToTextbox(driver, "cusid", customerID);
 
 		log.info("Click To Submit Button");
 		editCustomerPage.clickToSubmitButton(driver, "AccSubmit");
 
 	}
 
+	@Test
 	public void TC_06_Verify_Address_Field_Cannot_Be_Empty() {
 		log.info("Do Not Input Data To Address Textbox");
 		editCustomerPage.inputToEditAddress(driver, "addr", "");
@@ -279,10 +290,93 @@ public class editCustomerTestcases extends BaseTest {
 		editCustomerPage.inputToEditPin(driver, "pinno", "123abc");
 		
 		log.info("Verify Error Message Is Displayed");
-		verifyEquals(editCustomerPage.verifyErrorMessagePinIsDisplayed(driver), "Special characters are not allowed");
+		verifyEquals(editCustomerPage.verifyErrorMessagePinIsDisplayed(driver), "Characters are not allowed");
+		
+	}
+	
+	@Test
+	public void TC_14_Verify_Pin_Field_Cannot_Be_Empty() {
+		log.info(" Do Not Input Value To Pin Textbox");
+		editCustomerPage.inputToEditPin(driver, "pinno", "");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessagePinIsDisplayed(driver), "PIN Code must not be blank");
 		
 	}
 
+	
+	@Test
+	public void TC_15_Verify_Pin_Field_Must_Have_6_Digits() {
+		log.info(" Input 5 numerics To Pin Textbox");
+		editCustomerPage.inputToEditPin(driver, "pinno", "12345");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessagePinIsDisplayed(driver), "PIN Code must have 6 Digits");
+		
+	}
+	
+	@Test
+	public void TC_16_Verify_Pin_Field_Cannot_Have_Special_Characters() {
+		log.info("Input Special Character To Pin Textbox");
+		editCustomerPage.inputToEditPin(driver, "pinno", "123@!#");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessagePinIsDisplayed(driver), "Special characters are not allowed");
+		
+	}
+	
+	@Test
+	public void TC_17_Verify_Pin_Field_Cannot_Have_Special_Characters() {
+		log.info("Input Special Character To Pin Textbox");
+		editCustomerPage.inputToEditPin(driver, "pinno", "123@!#");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessagePinIsDisplayed(driver), "Special characters are not allowed");
+		
+	}
+	
+	@Test
+	public void TC_18_Verify_Telephone_Field_Cannot_Be_Empty() {
+		log.info("Do Not Input Value To Telephone Textbox");
+		editCustomerPage.inputToEditPin(driver, "telephoneno", "");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessageTelephoneIsDisplayed(driver), "Mobile no must not be blank");
+		
+	}
+	
+	@Test
+	public void TC_19_Verify_Telephone_Field_Cannot_Have_Special_Characters() {
+		log.info("Input Special Character To Telephone Textbox");
+		editCustomerPage.inputToEditPin(driver, "telephoneno", "@!#");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessageTelephoneIsDisplayed(driver), "Special characters are not allowed");
+		
+	}
+	
+	@Test
+	public void TC_20_Verify_Telephone_Email_Cannot_Be_Empty() {
+		log.info("Do Not Input Value To Telephone Textbox");
+		editCustomerPage.inputToEditPin(driver, "emailid", "");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessageEmailIsDisplayed(driver), "Email-ID must not be blank");
+		
+	}
+	
+	@Test
+	public void TC_21_Verify_Telephone_Email_Must_Be_Correct_Format() {
+		log.info("Input Special Character To Telephone Textbox");
+		editCustomerPage.inputToEditPin(driver, "emailid", "alo@gm");
+		
+		log.info("Verify Error Message Is Displayed");
+		verifyEquals(editCustomerPage.verifyErrorMessageEmailIsDisplayed(driver), "Email-ID is not valid");
+		
+	}
+	
+	
+	
 	
 	public WebDriver getWebDriver() {
 		return this.driver;

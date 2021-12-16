@@ -9,19 +9,22 @@
     <listener class-name="reportConfig.ExtentTestListener"/>
     <listener class-name="reportConfig.ReportNGListener"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="Run on CHROME(failed)">
+  <test thread-count="2" parallel="tests" name="Run on FIREFOX(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.bankguru.livecodingproject.paymentTestCase">
+      <class name="com.bankguru.livecodingproject.deleteCustomerTestcases">
         <methods>
-          <include name="beforeClass"/>
-          <include name="TC_02_Create_New_Customer_And_Checked_Created_Succesfully"/>
+          <include name="TC_01_Create_New_Customer_And_Checked_Created_Succesfully"/>
+          <include name="TC_04_Verify_CustomerID_Cannot_Have_Special_Characters"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="TC_10_Delete_All_Account"/>
+          <include name="TC_05_Verify_CustomerID_Cannot_Have_Black_Space"/>
+          <include name="beforeClass"/>
+          <include name="TC_03_Verify_CustomerID_Must_Be_Numeric"/>
+          <include name="TC_06_Verify_CustomerID_Cannot_Be_Space"/>
+          <include name="TC_02_Verify_CustomerID_Cannot_Be_Empty"/>
           <include name="cleanBrowser"/>
-          <include name="TC_01_Create_New_Other_User"/>
         </methods>
-      </class> <!-- com.bankguru.livecodingproject.paymentTestCase -->
+      </class> <!-- com.bankguru.livecodingproject.deleteCustomerTestcases -->
     </classes>
-  </test> <!-- Run on CHROME(failed) -->
+  </test> <!-- Run on FIREFOX(failed) -->
 </suite> <!-- Failed suite [UploadFile] -->
