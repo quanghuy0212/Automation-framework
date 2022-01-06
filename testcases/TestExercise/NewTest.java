@@ -35,7 +35,7 @@ public class NewTest {
 		Assert.assertTrue(verifyProductIsDisplayed());
 		
 		
-		
+		 
 	}
 
 	public boolean verifyProductIsDisplayed() {
